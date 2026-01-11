@@ -1,4 +1,4 @@
-const possible_values = {
+const possible_geo_identifiers = {
   "postcodes": [
     1000,
     1020,

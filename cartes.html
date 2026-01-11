@@ -18,6 +18,8 @@
   <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="leaflet/leaflet.js"></script>
   <script src="https://unpkg.com/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="geodata/possible_geo_identifiers.js"></script>
+  <script src="js/data_parser.js"></script>
 
   <script>
     document.getElementById('excelFile').addEventListener('change', function(e) {
@@ -38,6 +40,8 @@
       };
       reader.readAsArrayBuffer(file);
     });
+
+    
   </script>
 </body>
 </html>
