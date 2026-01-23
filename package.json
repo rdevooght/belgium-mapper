@@ -1,0 +1,25 @@
+{
+    "name": "belgium-mapper",
+    "version": "1.0.0",
+    "description": "Simple online mapping tool for Belgium",
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest --watch"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0"
+    },
+    "jest": {
+        "testEnvironment": "jsdom",
+        "moduleDirectories": [
+            "node_modules",
+            "js",
+            "geodata"
+        ],
+        "moduleNameMapper": {
+            "^js/(.*)$": "<rootDir>/js/$1",
+            "^geodata/(.*)$": "<rootDir>/geodata/$1"
+        }
+    }
+}

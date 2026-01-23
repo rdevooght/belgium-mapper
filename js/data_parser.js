@@ -1,119 +1,332 @@
-
-function parseData(filedata) {
-  var data = extractData(filedata);
-  var columnsTypesPredictions = getColumnsTypesPredictions(data);
-}
-
 /**
- * Takes a file and returns a JSON object contaning the data
- * it uses the XLSX library to parse the file
- * the json has the following structure:
- * [{col1: value1, col2: value1, ...}, {col1: value2, col2: value2, ...}, ...]
- * @param {*} filedata is the output of a FileReader object
+ * Data Parser Module
+ * Analyzes data columns to detect geographic information and values
  */
-function extractData(filedata) {
-  var data = new Uint8Array(e.target.result);
-  var workbook = XLSX.read(data, {type: 'array'});
-  // Now you can access the workbook object and read its sheets.
-  // For example, to read the first sheet as JSON:
-  var firstSheet = workbook.SheetNames[0];
-  var jsonData = XLSX.utils.sheet_to_json(workbook.Sheets[firstSheet]);
-  return jsonData;
-}
 
+const DataParser = {
+  /**
+   * Analyze all columns and detect their types
+   * @param {Array<Object>} data - Array of row objects
+   * @param {string[]} columns - Column names
+   * @returns {Object} Column analysis results
+   */
+  analyzeColumns(data, columns) {
+    const analysis = {};
 
-/**
- * For each column, guess the type of data it contains:
- * - postcode
- * - NIS + NIS level
- * - geo_name + level
- * - numerical value
- * - other
- * 
- * The detection of geographical data is based on lists of known geographical names, NIS and postcodes, that are in a possible_geo_identifiers variable
- * @param {*} data array of objects: [{col1: value1, col2: value1, ...}, {col1: value2, col2: value2, ...}, ...]
- */
-function getColumnsTypesPredictions(data) {
+    columns.forEach(col => {
+      analysis[col] = this.analyzeColumn(data, col);
+    });
 
-}
+    return analysis;
+  },
 
-/**
- * Return true if the value is a postcode
- * 
- * Uses possible_geo_identifiers.postcodes as a list of known postcodes
- * 
- * @param {string or int} value 
- */
-function matchPostcode(value) {
-  // First check if it is a string or an int
-  if (typeof value === 'string' || value instanceof String) {
-    // check if that string is a 4 digit number
-    if (!value.match(/^\d{4}$/)) {
-      return false;
+  /**
+   * Analyze a single column
+   * @param {Array<Object>} data 
+   * @param {string} column 
+   * @returns {Object} Column type info
+   */
+  analyzeColumn(data, column) {
+    const values = data.map(row => row[column]).filter(v => v !== null && v !== undefined);
+
+    if (values.length === 0) {
+      return { type: 'empty', matchRate: 0 };
     }
-    // parse the string to an int
-    value = parseInt(value);
-  }
-  // check if the value is in the list of postcodes
-  return possible_geo_identifiers.postcodes.includes(value);
-}
 
-/**
- * Return true if the value is a nis of the given level
- * 
- * Uses possible_geo_identifiers.nis[level] as a list of known NIS
- * 
- * @param {string or int} value 
- * @param {string} level :  Region | Province | Arrondissement | Commune
- */
-function matchNIS(value, level) {
-  // First check if it is a string or an int
-  if (typeof value === 'string' || value instanceof String) {
-    // check if that string is a 4 or 5 digit number
-    if (!value.match(/^\d{4,5}$/)) {
-      return false;
+    // Check for numeric values
+    const numericCount = values.filter(v => typeof v === 'number').length;
+    const numericRate = numericCount / values.length;
+
+    // Check for geographic types
+    const postcodeMatch = this.matchPostcodes(values);
+    const nisMatch = this.matchNIS(values);
+    const nameMatch = this.matchNames(values);
+
+    // Determine best type
+    if (postcodeMatch.rate > 0.7) {
+      return { type: 'postcode', matchRate: postcodeMatch.rate, level: 'municipality' };
     }
-    // parse the string to an int
-    value = parseInt(value);
+
+    if (nisMatch.rate > 0.7) {
+      return { type: 'nis', matchRate: nisMatch.rate, level: nisMatch.level };
+    }
+
+    if (nameMatch.rate > 0.5) {
+      return { type: 'name', matchRate: nameMatch.rate, level: nameMatch.level };
+    }
+
+    if (numericRate > 0.8) {
+      return { type: 'numeric', matchRate: numericRate };
+    }
+
+    return { type: 'other', matchRate: 0 };
+  },
+
+  /**
+   * Check how many values match Belgian postcodes
+   * @param {Array} values 
+   * @returns {{ rate: number }}
+   */
+  matchPostcodes(values) {
+    if (!geoLookups || !geoLookups.postcodeToNis) {
+      return { rate: 0 };
+    }
+
+    let matches = 0;
+
+    for (const value of values) {
+      const postcode = this.normalizePostcode(value);
+      if (postcode && geoLookups.postcodeToNis[postcode]) {
+        matches++;
+      }
+    }
+
+    return { rate: matches / values.length };
+  },
+
+  /**
+   * Check how many values match NIS codes
+   * @param {Array} values 
+   * @returns {{ rate: number, level: string }}
+   */
+  matchNIS(values) {
+    if (!geoLookups || !geoLookups.nisToEntity) {
+      return { rate: 0, level: null };
+    }
+
+    let matches = 0;
+    const levelCounts = {};
+
+    for (const value of values) {
+      const nis = String(value).trim();
+      const entity = geoLookups.nisToEntity[nis];
+
+      if (entity) {
+        matches++;
+        const level = entity.level;
+        levelCounts[level] = (levelCounts[level] || 0) + 1;
+      }
+    }
+
+    // Find dominant level
+    let dominantLevel = null;
+    let maxCount = 0;
+    for (const [level, count] of Object.entries(levelCounts)) {
+      if (count > maxCount) {
+        maxCount = count;
+        dominantLevel = level;
+      }
+    }
+
+    return { rate: matches / values.length, level: dominantLevel };
+  },
+
+  /**
+   * Check how many values match geographic names
+   * @param {Array} values 
+   * @returns {{ rate: number, level: string }}
+   */
+  matchNames(values) {
+    if (!geoLookups || !geoLookups.nameToNis) {
+      return { rate: 0, level: null };
+    }
+
+    let matches = 0;
+    const levelCounts = {};
+
+    for (const value of values) {
+      if (typeof value !== 'string') continue;
+
+      const normalized = this.normalizeString(value);
+      const nisMatches = geoLookups.nameToNis[normalized];
+
+      if (nisMatches && nisMatches.length > 0) {
+        matches++;
+
+        // Get level from first matched NIS
+        const entity = geoLookups.nisToEntity[String(nisMatches[0])];
+        if (entity) {
+          const level = entity.level;
+          levelCounts[level] = (levelCounts[level] || 0) + 1;
+        }
+      }
+    }
+
+    // Find dominant level
+    let dominantLevel = null;
+    let maxCount = 0;
+    for (const [level, count] of Object.entries(levelCounts)) {
+      if (count > maxCount) {
+        maxCount = count;
+        dominantLevel = level;
+      }
+    }
+
+    return { rate: matches / values.length, level: dominantLevel };
+  },
+
+  /**
+   * Detect the best geographic column
+   * @param {Array<Object>} data 
+   * @param {string[]} columns 
+   * @returns {{ column: string, type: string, level: string } | null}
+   */
+  detectGeoColumn(data, columns) {
+    const analysis = this.analyzeColumns(data, columns);
+
+    let bestColumn = null;
+    let bestRate = 0;
+    let bestType = null;
+    let bestLevel = null;
+
+    for (const [col, info] of Object.entries(analysis)) {
+      if (['postcode', 'nis', 'name'].includes(info.type) && info.matchRate > bestRate) {
+        bestRate = info.matchRate;
+        bestColumn = col;
+        bestType = info.type;
+        bestLevel = info.level;
+      }
+    }
+
+    if (bestColumn) {
+      return { column: bestColumn, type: bestType, level: bestLevel, matchRate: bestRate };
+    }
+
+    return null;
+  },
+
+  /**
+   * Detect numeric columns that could be used as values
+   * @param {Array<Object>} data 
+   * @param {string[]} columns 
+   * @returns {string[]}
+   */
+  detectValueColumns(data, columns) {
+    const analysis = this.analyzeColumns(data, columns);
+
+    return columns.filter(col => {
+      const info = analysis[col];
+      return info.type === 'numeric' && info.matchRate > 0.5;
+    });
+  },
+
+  /**
+   * Map data rows to NIS codes
+   * @param {Array<Object>} data 
+   * @param {string} geoColumn 
+   * @param {string} geoType - 'postcode', 'nis', or 'name'
+   * @returns {Map<number, Array>} NIS code to data rows mapping
+   */
+  mapToNIS(data, geoColumn, geoType) {
+    const mapping = new Map();
+
+    for (const row of data) {
+      const value = row[geoColumn];
+      let nisCodes = [];
+
+      if (geoType === 'postcode') {
+        const postcode = this.normalizePostcode(value);
+        if (postcode && geoLookups.postcodeToNis[postcode]) {
+          nisCodes = geoLookups.postcodeToNis[postcode];
+        }
+      } else if (geoType === 'nis') {
+        const nis = parseInt(String(value).trim());
+        if (!isNaN(nis) && geoLookups.nisToEntity[String(nis)]) {
+          nisCodes = [nis];
+        }
+      } else if (geoType === 'name') {
+        const normalized = this.normalizeString(String(value));
+        if (geoLookups.nameToNis[normalized]) {
+          nisCodes = geoLookups.nameToNis[normalized];
+        }
+      }
+
+      // Add row to each matched NIS
+      for (const nis of nisCodes) {
+        if (!mapping.has(nis)) {
+          mapping.set(nis, []);
+        }
+        mapping.get(nis).push(row);
+      }
+    }
+
+    return mapping;
+  },
+
+  /**
+   * Aggregate values by NIS code
+   * @param {Map<number, Array>} nisMapping 
+   * @param {string} valueColumn 
+   * @param {'sum' | 'avg' | 'count'} aggregation 
+   * @returns {Map<number, number>}
+   */
+  aggregateByNIS(nisMapping, valueColumn, aggregation = 'sum') {
+    const result = new Map();
+
+    for (const [nis, rows] of nisMapping) {
+      const values = rows
+        .map(r => r[valueColumn])
+        .filter(v => typeof v === 'number');
+
+      if (values.length === 0) continue;
+
+      let aggregated;
+      switch (aggregation) {
+        case 'sum':
+          aggregated = values.reduce((a, b) => a + b, 0);
+          break;
+        case 'avg':
+          aggregated = values.reduce((a, b) => a + b, 0) / values.length;
+          break;
+        case 'count':
+          aggregated = values.length;
+          break;
+        default:
+          aggregated = values.reduce((a, b) => a + b, 0);
+      }
+
+      result.set(nis, aggregated);
+    }
+
+    return result;
+  },
+
+  /**
+   * Normalize a postcode value to string
+   * @param {any} value 
+   * @returns {string | null}
+   */
+  normalizePostcode(value) {
+    if (value === null || value === undefined) return null;
+
+    const str = String(value).trim();
+
+    // Belgian postcodes are 4 digits
+    if (/^\d{4}$/.test(str)) {
+      return str;
+    }
+
+    // Try to extract 4 digits
+    const match = str.match(/^\d{4}/);
+    if (match) return match[0];
+
+    return null;
+  },
+
+  /**
+   * Normalize a string for matching
+   * @param {string} s 
+   * @returns {string}
+   */
+  normalizeString(s) {
+    if (!s) return '';
+
+    return s
+      .trim()
+      .toLowerCase()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '') // Remove accents
+      .replace(/-/g, ' ')
+      .replace(/\s+/g, ' ');
   }
-  // check if the value is in the list of NIS
-  return possible_geo_identifiers.nis[level].includes(value);
-}
-
-/**
- * Return true if the value is the name of a geographical entity of the given level
- * 
- * Uses possible_geo_identifiers.normalised_names[level] as a list of known names
- * 
- * @param {*} value 
- * @param {string} level :  Region | Province | Arrondissement | Commune
- */
-function matchNIS(value, level) {
-  // First check if it is a string or an int
-  if (typeof value === 'string' || value instanceof String) {
-    // normalise the string
-    value = normalise_string(value);
-
-    // check if the value is in the list of postcodes
-    return possible_geo_identifiers.normalised_names[level].includes(value);
-  } else {
-    return false;
-  }
-  
-}
-
-/**
- * Normalise a given string
- * 
- * @param {*} s 
- * @returns 
- */
-function normalise_string(s) {
-  s = s.trim();  // Remove leading and trailing whitespace
-  s = s.toLowerCase();  // Convert to lowercase
-  s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, "");  // Remove accents
-  s = s.replace('-', ' ');  // Replace dashes with spaces
-  s = s.replace(/\s+/g, ' ');  // Replace multiple spaces with a single space
-
-  return s;
-}
+};

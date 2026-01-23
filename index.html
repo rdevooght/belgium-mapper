@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Carto Facile - Carte de Belgique</title>
+        <meta
+            name="description"
+            content="Outil de cartographie simple pour visualiser des données sur une carte de Belgique"
+        />
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="leaflet/leaflet.css" />
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+
+    <body>
+        <div class="app-container" x-data="app">
+            <!-- Header -->
+            <header class="app-header">
+                <h1>🗺️ Carto Facile <span>| Belgique</span></h1>
+            </header>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <!-- File Upload Panel -->
+                <div class="panel">
+                    <h3>📁 Données</h3>
+                    <div
+                        class="drop-zone"
+                        :class="{ 'drag-over': isDragging }"
+                        @dragover.prevent="isDragging = true"
+                        @dragleave.prevent="isDragging = false"
+                        @drop.prevent="handleDrop($event)"
+                        @click="$refs.fileInput.click()"
+                    >
+                        <div class="drop-icon">📊</div>
+                        <p x-show="!fileName">
+                            Glissez un fichier Excel ou CSV ici
+                        </p>
+                        <p x-show="!fileName">ou cliquez pour sélectionner</p>
+                        <p
+                            class="file-name"
+                            x-show="fileName"
+                            x-text="fileName"
+                        ></p>
+                        <input
+                            type="file"
+                            x-ref="fileInput"
+                            accept=".xlsx,.xls,.csv"
+                            @change="handleFileSelect($event)"
+                        />
+                    </div>
+
+                    <!-- Data Stats -->
+                    <template x-if="data.length > 0">
+                        <div class="stats-grid" style="margin-top: 1rem">
+                            <div class="stat">
+                                <div class="value" x-text="data.length"></div>
+                                <div class="label">Lignes</div>
+                            </div>
+                            <div class="stat">
+                                <div
+                                    class="value"
+                                    x-text="columns.length"
+                                ></div>
+                                <div class="label">Colonnes</div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+
+                <!-- Column Configuration (shown after file upload) -->
+                <template x-if="data.length > 0">
+                    <div class="panel">
+                        <h3>⚙️ Configuration</h3>
+
+                        <!-- Detected Geo Column -->
+                        <template x-if="detectedGeoColumn">
+                            <div
+                                class="detected-info"
+                                style="margin-bottom: 1rem"
+                            >
+                                <strong>Détecté :</strong>
+                                <span x-text="detectedGeoColumn.name"></span>
+                                (<span x-text="detectedGeoColumn.type"></span>)
+                            </div>
+                        </template>
+
+                        <div class="column-config">
+                            <!-- Geographic Column -->
+                            <label>
+                                Colonne géographique
+                                <span
+                                    >Postcodes, codes NIS, noms de
+                                    communes...</span
+                                >
+                                <select
+                                    x-model="selectedGeoColumn"
+                                    @change="updateMap()"
+                                >
+                                    <option value="">-- Sélectionner --</option>
+                                    <template x-for="col in columns" :key="col">
+                                        <option
+                                            :value="col"
+                                            x-text="col"
+                                        ></option>
+                                    </template>
+                                </select>
+                            </label>
+
+                            <!-- Value Column -->
+                            <label>
+                                Colonne des valeurs
+                                <span>Valeur numérique à afficher</span>
+                                <select
+                                    x-model="selectedValueColumn"
+                                    @change="updateMap()"
+                                >
+                                    <option value="">-- Sélectionner --</option>
+                                    <template
+                                        x-for="col in numericColumns"
+                                        :key="col"
+                                    >
+                                        <option
+                                            :value="col"
+                                            x-text="col"
+                                        ></option>
+                                    </template>
+                                </select>
+                            </label>
+
+                            <!-- Admin Level -->
+                            <label>
+                                Niveau administratif
+                                <div
+                                    class="level-tabs"
+                                    style="margin-top: 0.5rem"
+                                >
+                                    <button
+                                        :class="{ active: adminLevel === 'municipalities' }"
+                                        @click="adminLevel = 'municipalities'; updateMap()"
+                                    >
+                                        Communes
+                                    </button>
+                                    <button
+                                        :class="{ active: adminLevel === 'provinces' }"
+                                        @click="adminLevel = 'provinces'; updateMap()"
+                                    >
+                                        Provinces
+                                    </button>
+                                    <button
+                                        :class="{ active: adminLevel === 'regions' }"
+                                        @click="adminLevel = 'regions'; updateMap()"
+                                    >
+                                        Régions
+                                    </button>
+                                </div>
+                            </label>
+
+                            <!-- Color Scale -->
+                            <label>
+                                Palette de couleurs
+                                <select
+                                    x-model="selectedColorScale"
+                                    @change="updateMap()"
+                                >
+                                    <option value="blue">Bleu</option>
+                                    <option value="green">Vert</option>
+                                    <option value="red">Rouge</option>
+                                    <option value="purple">Violet</option>
+                                </select>
+                            </label>
+
+                            <!-- Actions -->
+                            <button
+                                class="btn btn-primary"
+                                @click="fitMapBounds()"
+                                style="margin-top: 0.5rem"
+                            >
+                                Recentrer la carte
+                            </button>
+
+                            <!-- Error Message -->
+                            <template x-if="errorMessage">
+                                <div
+                                    class="error-message"
+                                    x-text="errorMessage"
+                                ></div>
+                            </template>
+                        </div>
+                    </div>
+                </template>
+            </aside>
+
+            <!-- Map Container -->
+            <main class="map-container">
+                <div id="map"></div>
+
+                <!-- Loading Overlay -->
+                <div class="loading-overlay" x-show="isLoading">
+                    <div class="spinner"></div>
+                </div>
+
+                <!-- Legend -->
+                <template x-if="showLegend && legendConfig">
+                    <div class="map-legend">
+                        <h4 x-text="legendConfig.title"></h4>
+                        <div
+                            class="legend-scale"
+                            :style="legendConfig.gradient"
+                        ></div>
+                        <div class="legend-labels">
+                            <span x-text="legendConfig.min"></span>
+                            <span x-text="legendConfig.max"></span>
+                        </div>
+                    </div>
+                </template>
+            </main>
+        </div>
+
+        <!-- Libraries -->
+        <script src="leaflet/leaflet.js"></script>
+        <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+        <script
+            defer
+            src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+        ></script>
+
+        <!-- Geo Lookups -->
+        <script src="geodata/geo_lookups.js"></script>
+
+        <!-- App Modules -->
+        <script src="js/data_uploader.js"></script>
+        <script src="js/data_parser.js"></script>
+        <script src="js/map_renderer.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>

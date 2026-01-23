@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Belgium Mapper - Unit Tests</title>
+    <style>
+        body {
+            font-family: system-ui, sans-serif;
+            padding: 20px;
+        }
+
+        .status {
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .status.pending {
+            background: #eab308;
+        }
+
+        .status.success {
+            background: #22c55e;
+            color: white;
+        }
+
+        .status.failure {
+            background: #ef4444;
+            color: white;
+        }
+
+        .test-suite {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .test-case {
+            margin: 5px 0;
+            padding: 5px;
+            border-left: 3px solid #ccc;
+        }
+
+        .test-case.pass {
+            border-left-color: #22c55e;
+            background: #f0fdf4;
+        }
+
+        .test-case.fail {
+            border-left-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .error-msg {
+            color: #b91c1c;
+            font-family: monospace;
+            font-size: 0.9em;
+            margin-top: 5px;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Test Runner</h1>
+    <div id="status" class="status pending">Running...</div>
+    <div id="results"></div>
+
+    <!-- Dependencies -->
+    <script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+    <!-- App Modules -->
+    <script src="../geodata/geo_lookups.js"></script>
+    <script src="../js/data_parser.js"></script>
+    <script src="../js/data_uploader.js"></script>
+
+    <!-- Tests -->
+    <script>
+        const resultsDiv = document.getElementById('results');
+        const statusDiv = document.getElementById('status');
+        let totalTests = 0;
+        let passedTests = 0;
+        let failedTests = 0;
+
+        function describe(suiteName, fn) {
+            const suiteDiv = document.createElement('div');
+            suiteDiv.className = 'test-suite';
+            suiteDiv.innerHTML = `<h3>${suiteName}</h3>`;
+            resultsDiv.appendChild(suiteDiv);
+
+            const currentSuite = { div: suiteDiv };
+
+            try {
+                fn(currentSuite);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function it(testName, fn, suite) {
+            totalTests++;
+            const testDiv = document.createElement('div');
+            testDiv.className = 'test-case';
+            testDiv.textContent = testName;
+
+            try {
+                fn();
+                testDiv.classList.add('pass');
+                testDiv.innerHTML += ' ✅';
+                passedTests++;
+            } catch (e) {
+                testDiv.classList.add('fail');
+                testDiv.innerHTML += ' ❌';
+                testDiv.innerHTML += `<div class="error-msg">${e.message}\n${e.stack}</div>`;
+                failedTests++;
+                console.error(`Test failed: ${testName}`, e);
+            }
+
+            // If suite argument is passed (from describe closure), append to it
+            if (suite && suite.div) {
+                suite.div.appendChild(testDiv);
+            } else {
+                resultsDiv.appendChild(testDiv);
+            }
+
+            updateStatus();
+        }
+
+        function expect(actual) {
+            return {
+                toBe: (expected) => {
+                    if (actual !== expected) throw new Error(`Expected ${expected} but got ${actual}`);
+                },
+                toEqual: (expected) => {
+                    const actualStr = JSON.stringify(actual);
+                    const expectedStr = JSON.stringify(expected);
+                    if (actualStr !== expectedStr) throw new Error(`Expected ${expectedStr} but got ${actualStr}`);
+                },
+                toBeTruthy: () => {
+                    if (!actual) throw new Error(`Expected truthy but got ${actual}`);
+                },
+                toBeNull: () => {
+                    if (actual !== null) throw new Error(`Expected null but got ${actual}`);
+                },
+                toBeGreaterThan: (n) => {
+                    if (!(actual > n)) throw new Error(`Expected > ${n} but got ${actual}`);
+                }
+            };
+        }
+
+        function updateStatus() {
+            if (failedTests > 0) {
+                statusDiv.className = 'status failure';
+                statusDiv.textContent = `FAILED (${failedTests} failed, ${passedTests} passed)`;
+            } else if (passedTests === totalTests) {
+                statusDiv.className = 'status success';
+                statusDiv.textContent = `SUCCESS (${passedTests} passed)`;
+            }
+        }
+
+        // --- UNIT TESTS ---
+
+        describe('DataParser', (suite) => {
+
+            it('should normalize strings correctly', () => {
+                expect(DataParser.normalizeString('  Bruxelles-Capitale  ')).toBe('bruxelles capitale');
+                expect(DataParser.normalizeString('Liège')).toBe('liege');
+            }, suite);
+
+            it('should detect postcode columns', () => {
+                const data = [
+                    { pc: 1000, val: 10 },
+                    { pc: '1050', val: 20 },
+                    { pc: 4000, val: 30 }
+                ];
+                const columns = ['pc', 'val'];
+                const detected = DataParser.detectGeoColumn(data, columns);
+
+                expect(detected.column).toBe('pc');
+                expect(detected.type).toBe('postcode');
+            }, suite);
+
+            it('should map postcodes to NIS', () => {
+                // Mock lookup data if needed, or rely on real loaded data
+                // 1000 -> 21004 (Brussels)
+                const mapping = DataParser.mapToNIS([{ pc: 1000, v: 1 }], 'pc', 'postcode');
+                expect(mapping.has(21004)).toBeTruthy();
+            }, suite);
+
+            it('should aggregate values by NIS', () => {
+                const nisMapping = new Map();
+                nisMapping.set(21004, [{ v: 10 }, { v: 20 }]); // Brussels
+
+                const aggregated = DataParser.aggregateByNIS(nisMapping, 'v', 'sum');
+                expect(aggregated.get(21004)).toBe(30);
+            }, suite);
+        });
+
+    </script>
+</body>
+
+</html>

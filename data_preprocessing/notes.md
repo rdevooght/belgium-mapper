@@ -24,3 +24,6 @@ Fichier: REFNIS_pre_DEFINITIEF.csv
 Source: https://statbel.fgov.be/fr/open-data/code-refnis
 Fichier: TU_COM_REFNIS.xlsx
 
+# Geodata
+sectors2025.gpkg contient les polygones des secteurs statistiques belges liés au communes de 2025. 
+Il vient de https://github.com/rdevooght/belgium-statistical-sectors-2025.
