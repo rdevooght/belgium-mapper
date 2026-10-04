@@ -1,4 +1,5 @@
 import * as XLSX from "https://cdn.sheetjs.com/xlsx-0.20.3/package/xlsx.mjs";
+import { normalizeCsvDecimalCommas } from "./csv_decimal_comma.js";
 
 // Reads a csv or Excel file and returns its content as a JSON object.
 // { rows: [], columns: [], fileName: "" }
@@ -21,7 +22,8 @@ export async function loadFile(file) {
 // CSV is read as text (keeps accents correct); Excel is read as binary.
 async function readWorkbook(file) {
   if (file.name.toLowerCase().endsWith(".csv")) {
-    return XLSX.read(await file.text(), { type: "string" });
+    const csv = normalizeCsvDecimalCommas(await file.text());
+    return XLSX.read(csv, { type: "string" });
   }
   return XLSX.read(await file.arrayBuffer(), { type: "array" });
 }
