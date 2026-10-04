@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Table loader</title>
+
+  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+  <script type="module" src="static/js/app.js"></script>
+</head>
+
+<body>
+  <main x-data="App">
+    <h1>Load a CSV or Excel file</h1>
+
+    <!-- Clicking the label opens the file picker; dropping a file on it loads it -->
+    <label class="dropzone"
+           :class="{ dragging }"
+           @dragover.prevent="dragging = true"
+           @dragleave.prevent="dragging = false"
+           @drop.prevent="dragging = false; loadFile($event.dataTransfer.files[0])">
+      Drop a file here, or click to choose one (.csv, .xlsx, .xls)
+      <input type="file" accept=".csv,.xlsx,.xls" hidden
+             @change="loadFile($event.target.files[0])">
+    </label>
+
+    <p class="error" x-show="error" x-text="error" x-cloak></p>
+
+    <section x-show="fileName" x-cloak>
+      <p class="count">
+        <strong x-text="fileName"></strong>:
+        <span x-text="rows.length"></span> rows
+      </p>
+
+      <h2>Columns (<span x-text="columns.length"></span>)</h2>
+      <ul>
+        <template x-for="column in columns" :key="column">
+          <li x-text="column"></li>
+        </template>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

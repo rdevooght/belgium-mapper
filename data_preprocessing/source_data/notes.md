@@ -17,10 +17,9 @@ colonnes: Code INS, Entités administratives, Langue, Code NIS, Administratieve 
 
 Numéro NIS avant 2019
 Source: https://statbel.fgov.be/sites/default/files/Over_Statbel_FR/Nomenclaturen/REFNIS_DEFINITIEF.csv
-Fichier: REFNIS_pre_DEFINITIEF.csv
+Fichier: REFNIS_pre_2019.csv
 
 # Structure hierarchique et historique des NIS
 
 Source: https://statbel.fgov.be/fr/open-data/code-refnis
 Fichier: TU_COM_REFNIS.xlsx
-
