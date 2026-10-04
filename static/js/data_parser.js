@@ -4,6 +4,7 @@ import nisHierarchy from "../data/nis_hierarchy.json" with { type: "json" };
 import postcode2nis from "../data/postcode2nis.json" with { type: "json" };
 
 const LEVELS = ["Region", "Province", "District", "Municipality"];
+const GEO_THRESHOLD = 0.9;
 
 /**
  * Return all the entities (objects with `nis`, `name` and `alternateNames`) of the given level
@@ -70,7 +71,8 @@ const normalisedNames = Object.fromEntries(LEVELS.map((level) => [level, new Set
  *
  * Each guess has the shape:
  * {type: 'postcode' | 'nis' | 'geo_name' | 'numeric' | 'other', level?: 'region' | 'province' | 'district' | 'municipality',
- *  matchRate: share of the non-empty values matching (0 to 1), uniqueMatches: number of distinct matching values}
+ *  matchRate: share of the non-empty values matching (0 to 1), uniqueMatches: number of distinct matching values,
+ *  unmatchedValues: distinct non-empty values that do not match this type}
  *
  * Guesses that match nothing are left out. They are ordered from the most specific to the most generic type:
  * the geographical guesses first (best matchRate first), then the generic ones, 'numeric' and 'other'
@@ -90,30 +92,29 @@ export function guessType(values) {
     counts.set(value, (counts.get(value) || 0) + 1);
   }
 
-  if (total === 0) return [{ type: "other", matchRate: 0, uniqueMatches: 0 }];
+  if (total === 0) return [{ type: "other", matchRate: 0, uniqueMatches: 0, unmatchedValues: [] }];
 
   // `group` gives the priority of the type, `key` identifies a distinct match
   // (e.g. "Gent" and " gent " are the same name, 1000 and "1000" the same postcode)
   const finestFirst = [...LEVELS].reverse();
   const candidates = [
-    { group: 0, type: "postcode", test: matchPostcode, key: toNumber },
+    { type: "postcode", geo: true, test: matchPostcode, key: toNumber },
     ...finestFirst.map((level) => ({
-      group: 0,
       type: "nis",
+      geo: true,
       level,
       test: (value) => matchNIS(value, level),
       key: toNumber,
     })),
     ...finestFirst.map((level) => ({
-      group: 0,
       type: "geo_name",
+      geo: true,
       level,
       test: (value) => matchName(value, level),
       key: normalise_string,
     })),
-    { group: 1, type: "numeric", test: matchNumeric, key: toNumber },
+    { type: "numeric", test: matchNumeric, key: toNumber },
     {
-      group: 1,
       type: "other",
       test: (value) => !matchNumeric(value),
       key: (value) => (typeof value === "string" ? normalise_string(value) : String(value)),
@@ -121,23 +122,30 @@ export function guessType(values) {
   ];
 
   const guesses = [];
-  for (const { group, type, level, test, key } of candidates) {
+  for (const { type, level, test, key, geo = false } of candidates) {
     let matches = 0;
     const uniqueMatches = new Set();
+    const unmatchedValues = [];
     for (const [value, count] of counts) {
       if (test(value)) {
         matches += count;
         uniqueMatches.add(key(value));
-      }
+      } else unmatchedValues.push(value);
     }
     if (matches === 0) continue;
 
-    const guess = { type, matchRate: matches / total, uniqueMatches: uniqueMatches.size };
+    const matchRate = matches / total;
+    const guess = {
+      type,
+      matchRate,
+      uniqueMatches: uniqueMatches.size,
+      unmatchedValues,
+    };
     if (level) guess.level = level.toLowerCase();
-    guesses.push({ group, guess });
+    guesses.push({ group: geo && matchRate >= GEO_THRESHOLD ? 0 : geo ? 2 : 1, guess });
   }
 
-  // Array.prototype.sort is stable, so ties keep the order of the candidates above
+  // Qualified geographic guesses lead; generic types come next, then lower confidence geo guesses.
   guesses.sort(
     (a, b) =>
       a.group - b.group || b.guess.matchRate - a.guess.matchRate || b.guess.uniqueMatches - a.guess.uniqueMatches,

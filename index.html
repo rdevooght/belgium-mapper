@@ -58,6 +58,14 @@
                 <dd x-text="selectedGuess(column).uniqueMatches"></dd>
               </div>
             </dl>
+            <details x-show="selectedGuess(column).unmatchedValues.length > 0" class="unmatched-values">
+              <summary>Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)</summary>
+              <ul>
+                <template x-for="(value, valueIndex) in selectedGuess(column).unmatchedValues" :key="valueIndex">
+                  <li x-text="String(value)"></li>
+                </template>
+              </ul>
+            </details>
           </article>
         </template>
       </div>
