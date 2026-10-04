@@ -1,0 +1,9 @@
+{
+  "name": "belgiummapper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test",
+    "dev": "uv run python -m http.server 4173 --bind 127.0.0.1"
+  }
+}

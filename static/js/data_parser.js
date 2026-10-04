@@ -190,7 +190,7 @@ function toDigits(value) {
  *
  * @param {string or number} value
  */
-function matchNumeric(value) {
+export function matchNumeric(value) {
   if (typeof value === "number") return Number.isFinite(value);
   return typeof value === "string" && /^[-+]?\d+([.,]\d+)?$/.test(value.trim());
 }
@@ -209,7 +209,7 @@ function toNumber(value) {
  *
  * @param {string or int} value
  */
-function matchPostcode(value) {
+export function matchPostcode(value) {
   // First check that it is a 4 digit number (it can be stored as a string or a number)
   const digits = toDigits(value);
   if (digits === null || digits.length !== 4) return false;
@@ -224,7 +224,9 @@ function matchPostcode(value) {
  * @param {string or int} value
  * @param {string} level :  Region | Province | District | Municipality
  */
-function matchNIS(value, level) {
+export function matchNIS(value, level) {
+  if (!nisCodes[level]) return false;
+
   // First check that it is a 4 or 5 digit number (it can be stored as a string or a number)
   const digits = toDigits(value);
   if (digits === null || (digits.length !== 4 && digits.length !== 5)) return false;
@@ -240,7 +242,9 @@ function matchNIS(value, level) {
  * @param {*} value
  * @param {string} level :  Region | Province | District | Municipality
  */
-function matchName(value, level) {
+export function matchName(value, level) {
+  if (!normalisedNames[level]) return false;
+
   // Check if the value is a string
   if (typeof value !== "string") return false;
 
