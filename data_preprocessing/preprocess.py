@@ -128,8 +128,8 @@ def _(LANGS, re, unidecode):
     PAREN_RE = re.compile(r"\s*\([^)]*\)\s*$")  # « Forest (Bruxelles-Capitale) »
 
     def norm(text: str) -> str:
-        """Trim + minuscules + espaces normalisés + apostrophes droites."""
-        return " ".join(unidecode.unidecode(text).split()).lower().replace("’", "'")
+        """Trim + minuscules + espaces normalisés + apostrophes droites + remove -"""
+        return " ".join(unidecode.unidecode(text).split()).lower().replace("’", "'").replace("-", " ")
 
     def strip_specifier(level: str, lang: str, raw: str) -> str:
         stripped = SPECIFIER_RE[level][lang].sub("", raw.strip(), count=1)
@@ -296,6 +296,33 @@ def _(
 
 
 @app.cell
+def _(hierarchy, norm):
+    # Ajouts manuels
+
+    MANUAL_ADD = {
+        '02000': ['Flandre'],
+        '03000': ['Wallonie'],
+        '04000': ['Région Bruxelles Capitale', 'Bruxelles Capitale'],
+    }
+
+    def _walk(h):
+        for reg in h["regions"]:
+            yield reg
+            for prov in reg["provinces"]:
+                yield prov
+                for dist in prov["districts"]:
+                    yield dist
+                    for mun in dist['municipalities']:
+                        yield mun
+
+    for entity in _walk(hierarchy):
+        if entity['nis'] in MANUAL_ADD:
+            entity['alternateNames'] = list(set(entity['alternateNames'] + [norm(x) for x in MANUAL_ADD[entity['nis']]]))
+
+    return
+
+
+@app.cell
 def _(hierarchy, mo, norm, rows_by_level: dict[str, list[dict]]):
     # --- Contrôles d'intégrité -------------------------------------------------
     def _walk(h):
@@ -397,7 +424,7 @@ def _(hierarchy, mo):
                     ### {_level} ({len(_nodes)})
 
                     **Même nom principal : {len(_same_main)} cas** {"\n" if len(_same_main) else ""}{_table(_same_main)}
-            
+        
                     **Nom principal ou alternatif en commun : {len(_shared_any)} cas** {"\n" if len(_shared_any) else ""}            {_table(_shared_any)}
                     """
                 )

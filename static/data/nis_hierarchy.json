@@ -4,9 +4,10 @@
       "nis": "02000",
       "name": "Vlaams Gewest",
       "alternateNames": [
-        "vlaams gewest",
+        "flamische region",
         "region flamande",
-        "flamische region"
+        "vlaams gewest",
+        "flandre"
       ],
       "provinces": [
         {
@@ -393,10 +394,10 @@
                   "nis": "12014",
                   "name": "Heist-op-den-Berg",
                   "alternateNames": [
-                    "heist-op-den-berg",
-                    "gemeente heist-op-den-berg",
-                    "commune de heist-op-den-berg",
-                    "gemeinde heist-op-den-berg"
+                    "heist op den berg",
+                    "gemeente heist op den berg",
+                    "commune de heist op den berg",
+                    "gemeinde heist op den berg"
                   ]
                 },
                 {
@@ -445,10 +446,10 @@
                   "nis": "12035",
                   "name": "Sint-Katelijne-Waver",
                   "alternateNames": [
-                    "sint-katelijne-waver",
-                    "gemeente sint-katelijne-waver",
-                    "commune de sint-katelijne-waver",
-                    "gemeinde sint-katelijne-waver"
+                    "sint katelijne waver",
+                    "gemeente sint katelijne waver",
+                    "commune de sint katelijne waver",
+                    "gemeinde sint katelijne waver"
                   ]
                 },
                 {
@@ -465,10 +466,10 @@
                   "nis": "12041",
                   "name": "Puurs-Sint-Amands",
                   "alternateNames": [
-                    "puurs-sint-amands",
-                    "gemeente puurs-sint-amands",
-                    "commune de puurs-sint-amands",
-                    "gemeinde puurs-sint-amands"
+                    "puurs sint amands",
+                    "gemeente puurs sint amands",
+                    "commune de puurs sint amands",
+                    "gemeinde puurs sint amands"
                   ]
                 }
               ]
@@ -497,11 +498,11 @@
                   "nis": "13002",
                   "name": "Baarle-Hertog",
                   "alternateNames": [
-                    "baarle-hertog",
-                    "baerle-duc",
-                    "gemeente baarle-hertog",
-                    "commune de baerle-duc",
-                    "gemeinde baarle-hertog"
+                    "baarle hertog",
+                    "baerle duc",
+                    "gemeente baarle hertog",
+                    "commune de baerle duc",
+                    "gemeinde baarle hertog"
                   ]
                 },
                 {
@@ -668,10 +669,10 @@
                   "nis": "13031",
                   "name": "Oud-Turnhout",
                   "alternateNames": [
-                    "oud-turnhout",
-                    "gemeente oud-turnhout",
-                    "commune d'oud-turnhout",
-                    "gemeinde oud-turnhout"
+                    "oud turnhout",
+                    "gemeente oud turnhout",
+                    "commune d'oud turnhout",
+                    "gemeinde oud turnhout"
                   ]
                 },
                 {
@@ -762,23 +763,23 @@
           "nis": "20001",
           "name": "Provincie Vlaams-Brabant",
           "alternateNames": [
-            "provincie vlaams-brabant",
+            "provincie vlaams brabant",
             "province du brabant flamand",
-            "provinz flamisch-brabant",
-            "vlaams-brabant",
+            "provinz flamisch brabant",
+            "vlaams brabant",
             "brabant flamand",
-            "flamisch-brabant"
+            "flamisch brabant"
           ],
           "districts": [
             {
               "nis": "23000",
               "name": "Arrondissement Halle-Vilvoorde",
               "alternateNames": [
-                "arrondissement halle-vilvoorde",
-                "arrondissement de hal-vilvorde",
-                "bezirk halle-vilvoorde",
-                "halle-vilvoorde",
-                "hal-vilvorde"
+                "arrondissement halle vilvoorde",
+                "arrondissement de hal vilvorde",
+                "bezirk halle vilvoorde",
+                "halle vilvoorde",
+                "hal vilvorde"
               ],
               "municipalities": [
                 {
@@ -859,8 +860,8 @@
                   "alternateNames": [
                     "halle",
                     "hal",
-                    "halle (halle-vilvoorde)",
-                    "hal (hal-vilvorde)",
+                    "halle (halle vilvoorde)",
+                    "hal (hal vilvorde)",
                     "gemeente halle",
                     "commune de hal",
                     "gemeinde halle"
@@ -900,10 +901,10 @@
                   "nis": "23039",
                   "name": "Kapelle-op-den-Bos",
                   "alternateNames": [
-                    "kapelle-op-den-bos",
-                    "gemeente kapelle-op-den-bos",
-                    "commune de kapelle-op-den-bos",
-                    "gemeinde kapelle-op-den-bos"
+                    "kapelle op den bos",
+                    "gemeente kapelle op den bos",
+                    "commune de kapelle op den bos",
+                    "gemeinde kapelle op den bos"
                   ]
                 },
                 {
@@ -931,8 +932,8 @@
                   "name": "Machelen (Halle-Vilvoorde)",
                   "alternateNames": [
                     "machelen",
-                    "machelen (halle-vilvoorde)",
-                    "machelen (hal-vilvorde)",
+                    "machelen (halle vilvoorde)",
+                    "machelen (hal vilvorde)",
                     "gemeente machelen",
                     "commune de machelen",
                     "gemeinde machelen"
@@ -992,10 +993,10 @@
                   "nis": "23077",
                   "name": "Sint-Pieters-Leeuw",
                   "alternateNames": [
-                    "sint-pieters-leeuw",
-                    "gemeente sint-pieters-leeuw",
-                    "commune de sint-pieters-leeuw",
-                    "gemeinde sint-pieters-leeuw"
+                    "sint pieters leeuw",
+                    "gemeente sint pieters leeuw",
+                    "commune de sint pieters leeuw",
+                    "gemeinde sint pieters leeuw"
                   ]
                 },
                 {
@@ -1093,11 +1094,11 @@
                   "nis": "23101",
                   "name": "Sint-Genesius-Rode",
                   "alternateNames": [
-                    "sint-genesius-rode",
-                    "rhode-saint-genese",
-                    "gemeente sint-genesius-rode",
-                    "commune de rhode-saint-genese",
-                    "gemeinde sint-genesius-rode"
+                    "sint genesius rode",
+                    "rhode saint genese",
+                    "gemeente sint genesius rode",
+                    "commune de rhode saint genese",
+                    "gemeinde sint genesius rode"
                   ]
                 },
                 {
@@ -1114,10 +1115,10 @@
                   "nis": "23103",
                   "name": "Wezembeek-Oppem",
                   "alternateNames": [
-                    "wezembeek-oppem",
-                    "gemeente wezembeek-oppem",
-                    "commune de wezembeek-oppem",
-                    "gemeinde wezembeek-oppem"
+                    "wezembeek oppem",
+                    "gemeente wezembeek oppem",
+                    "commune de wezembeek oppem",
+                    "gemeinde wezembeek oppem"
                   ]
                 },
                 {
@@ -1360,10 +1361,10 @@
                   "nis": "24086",
                   "name": "Oud-Heverlee",
                   "alternateNames": [
-                    "oud-heverlee",
-                    "gemeente oud-heverlee",
-                    "commune d'oud-heverlee",
-                    "gemeinde oud-heverlee"
+                    "oud heverlee",
+                    "gemeente oud heverlee",
+                    "commune d'oud heverlee",
+                    "gemeinde oud heverlee"
                   ]
                 },
                 {
@@ -1432,21 +1433,21 @@
                   "nis": "24134",
                   "name": "Scherpenheuvel-Zichem",
                   "alternateNames": [
-                    "scherpenheuvel-zichem",
-                    "montaigu-zichem",
-                    "gemeente scherpenheuvel-zichem",
-                    "commune de montaigu-zichem",
-                    "gemeinde scherpenheuvel-zichem"
+                    "scherpenheuvel zichem",
+                    "montaigu zichem",
+                    "gemeente scherpenheuvel zichem",
+                    "commune de montaigu zichem",
+                    "gemeinde scherpenheuvel zichem"
                   ]
                 },
                 {
                   "nis": "24135",
                   "name": "Tielt-Winge",
                   "alternateNames": [
-                    "tielt-winge",
-                    "gemeente tielt-winge",
-                    "commune de tielt-winge",
-                    "gemeinde tielt-winge"
+                    "tielt winge",
+                    "gemeente tielt winge",
+                    "commune de tielt winge",
+                    "gemeinde tielt winge"
                   ]
                 },
                 {
@@ -1467,10 +1468,10 @@
           "nis": "30000",
           "name": "Provincie West-Vlaanderen",
           "alternateNames": [
-            "provincie west-vlaanderen",
+            "provincie west vlaanderen",
             "province de flandre occidentale",
             "provinz westflandern",
-            "west-vlaanderen",
+            "west vlaanderen",
             "flandre occidentale",
             "westflandern"
           ],
@@ -1581,10 +1582,10 @@
                   "nis": "31043",
                   "name": "Knokke-Heist",
                   "alternateNames": [
-                    "knokke-heist",
-                    "gemeente knokke-heist",
-                    "commune de knokke-heist",
-                    "gemeinde knokke-heist"
+                    "knokke heist",
+                    "gemeente knokke heist",
+                    "commune de knokke heist",
+                    "gemeinde knokke heist"
                   ]
                 }
               ]
@@ -1645,10 +1646,10 @@
                   "nis": "32030",
                   "name": "Lo-Reninge",
                   "alternateNames": [
-                    "lo-reninge",
-                    "gemeente lo-reninge",
-                    "commune de lo-reninge",
-                    "gemeinde lo-reninge"
+                    "lo reninge",
+                    "gemeente lo reninge",
+                    "commune de lo reninge",
+                    "gemeinde lo reninge"
                   ]
                 }
               ]
@@ -1732,10 +1733,10 @@
                   "nis": "33040",
                   "name": "Langemark-Poelkapelle",
                   "alternateNames": [
-                    "langemark-poelkapelle",
-                    "gemeente langemark-poelkapelle",
-                    "commune de langemark-poelkapelle",
-                    "gemeinde langemark-poelkapelle"
+                    "langemark poelkapelle",
+                    "gemeente langemark poelkapelle",
+                    "commune de langemark poelkapelle",
+                    "gemeinde langemark poelkapelle"
                   ]
                 },
                 {
@@ -1877,11 +1878,11 @@
                   "nis": "34043",
                   "name": "Spiere-Helkijn",
                   "alternateNames": [
-                    "spiere-helkijn",
-                    "espierres-helchin",
-                    "gemeente spiere-helkijn",
-                    "commune d'espierres-helchin",
-                    "gemeinde spiere-helkijn"
+                    "spiere helkijn",
+                    "espierres helchin",
+                    "gemeente spiere helkijn",
+                    "commune d'espierres helchin",
+                    "gemeinde spiere helkijn"
                   ]
                 }
               ]
@@ -2239,10 +2240,10 @@
           "nis": "40000",
           "name": "Provincie Oost-Vlaanderen",
           "alternateNames": [
-            "provincie oost-vlaanderen",
+            "provincie oost vlaanderen",
             "province de flandre orientale",
             "provinz ostflandern",
-            "oost-vlaanderen",
+            "oost vlaanderen",
             "flandre orientale",
             "ostflandern"
           ],
@@ -2336,10 +2337,10 @@
                   "nis": "41063",
                   "name": "Sint-Lievens-Houtem",
                   "alternateNames": [
-                    "sint-lievens-houtem",
-                    "gemeente sint-lievens-houtem",
-                    "commune de sint-lievens-houtem",
-                    "gemeinde sint-lievens-houtem"
+                    "sint lievens houtem",
+                    "gemeente sint lievens houtem",
+                    "commune de sint lievens houtem",
+                    "gemeinde sint lievens houtem"
                   ]
                 },
                 {
@@ -2356,10 +2357,10 @@
                   "nis": "41082",
                   "name": "Erpe-Mere",
                   "alternateNames": [
-                    "erpe-mere",
-                    "gemeente erpe-mere",
-                    "commune d'erpe-mere",
-                    "gemeinde erpe-mere"
+                    "erpe mere",
+                    "gemeente erpe mere",
+                    "commune d'erpe mere",
+                    "gemeinde erpe mere"
                   ]
                 }
               ]
@@ -2534,10 +2535,10 @@
                   "nis": "43014",
                   "name": "Sint-Laureins",
                   "alternateNames": [
-                    "sint-laureins",
-                    "gemeente sint-laureins",
-                    "commune de sint-laureins",
-                    "gemeinde sint-laureins"
+                    "sint laureins",
+                    "gemeente sint laureins",
+                    "commune de sint laureins",
+                    "gemeinde sint laureins"
                   ]
                 },
                 {
@@ -2680,10 +2681,10 @@
                   "nis": "44064",
                   "name": "Sint-Martens-Latem",
                   "alternateNames": [
-                    "sint-martens-latem",
-                    "gemeente sint-martens-latem",
-                    "commune de sint-martens-latem",
-                    "gemeinde sint-martens-latem"
+                    "sint martens latem",
+                    "gemeente sint martens latem",
+                    "commune de sint martens latem",
+                    "gemeinde sint martens latem"
                   ]
                 },
                 {
@@ -2795,10 +2796,10 @@
                   "nis": "45061",
                   "name": "Wortegem-Petegem",
                   "alternateNames": [
-                    "wortegem-petegem",
-                    "gemeente wortegem-petegem",
-                    "commune de wortegem-petegem",
-                    "gemeinde wortegem-petegem"
+                    "wortegem petegem",
+                    "gemeente wortegem petegem",
+                    "commune de wortegem petegem",
+                    "gemeinde wortegem petegem"
                   ]
                 },
                 {
@@ -2858,11 +2859,11 @@
               "nis": "46000",
               "name": "Arrondissement Sint-Niklaas",
               "alternateNames": [
-                "arrondissement sint-niklaas",
-                "arrondissement de saint-nicolas",
-                "bezirk sint-niklaas",
-                "sint-niklaas",
-                "saint-nicolas"
+                "arrondissement sint niklaas",
+                "arrondissement de saint nicolas",
+                "bezirk sint niklaas",
+                "sint niklaas",
+                "saint nicolas"
               ],
               "municipalities": [
                 {
@@ -2870,8 +2871,8 @@
                   "name": "Beveren (Sint-Niklaas)",
                   "alternateNames": [
                     "beveren",
-                    "beveren (sint-niklaas)",
-                    "beveren (saint-nicolas)",
+                    "beveren (sint niklaas)",
+                    "beveren (saint nicolas)",
                     "gemeente beveren",
                     "commune de beveren",
                     "gemeinde beveren"
@@ -2901,23 +2902,23 @@
                   "nis": "46020",
                   "name": "Sint-Gillis-Waas",
                   "alternateNames": [
-                    "sint-gillis-waas",
-                    "gemeente sint-gillis-waas",
-                    "commune de sint-gillis-waas",
-                    "gemeinde sint-gillis-waas"
+                    "sint gillis waas",
+                    "gemeente sint gillis waas",
+                    "commune de sint gillis waas",
+                    "gemeinde sint gillis waas"
                   ]
                 },
                 {
                   "nis": "46021",
                   "name": "Sint-Niklaas (Sint-Niklaas)",
                   "alternateNames": [
-                    "sint-niklaas",
-                    "saint-nicolas",
-                    "sint-niklaas (sint-niklaas)",
-                    "saint-nicolas (saint-nicolas)",
-                    "gemeente sint-niklaas",
-                    "commune de saint-nicolas",
-                    "gemeinde sint-niklaas"
+                    "sint niklaas",
+                    "saint nicolas",
+                    "sint niklaas (sint niklaas)",
+                    "saint nicolas (saint nicolas)",
+                    "gemeente sint niklaas",
+                    "commune de saint nicolas",
+                    "gemeinde sint niklaas"
                   ]
                 },
                 {
@@ -3040,11 +3041,11 @@
                   "nis": "71024",
                   "name": "Herk-de-Stad",
                   "alternateNames": [
-                    "herk-de-stad",
-                    "herck-la-ville",
-                    "gemeente herk-de-stad",
-                    "commune de herck-la-ville",
-                    "gemeinde herk-de-stad"
+                    "herk de stad",
+                    "herck la ville",
+                    "gemeente herk de stad",
+                    "commune de herck la ville",
+                    "gemeinde herk de stad"
                   ]
                 },
                 {
@@ -3052,9 +3053,9 @@
                   "name": "Leopoldsburg",
                   "alternateNames": [
                     "leopoldsburg",
-                    "bourg-leopold",
+                    "bourg leopold",
                     "gemeente leopoldsburg",
-                    "commune de bourg-leopold",
+                    "commune de bourg leopold",
                     "gemeinde leopoldsburg"
                   ]
                 },
@@ -3083,11 +3084,11 @@
                   "nis": "71053",
                   "name": "Sint-Truiden",
                   "alternateNames": [
-                    "sint-truiden",
-                    "saint-trond",
-                    "gemeente sint-truiden",
-                    "commune de saint-trond",
-                    "gemeinde sint-truiden"
+                    "sint truiden",
+                    "saint trond",
+                    "gemeente sint truiden",
+                    "commune de saint trond",
+                    "gemeinde sint truiden"
                   ]
                 },
                 {
@@ -3134,10 +3135,10 @@
                   "nis": "71070",
                   "name": "Heusden-Zolder",
                   "alternateNames": [
-                    "heusden-zolder",
-                    "gemeente heusden-zolder",
-                    "commune de heusden-zolder",
-                    "gemeinde heusden-zolder"
+                    "heusden zolder",
+                    "gemeente heusden zolder",
+                    "commune de heusden zolder",
+                    "gemeinde heusden zolder"
                   ]
                 }
               ]
@@ -3216,40 +3217,40 @@
                   "nis": "72037",
                   "name": "Hamont-Achel",
                   "alternateNames": [
-                    "hamont-achel",
-                    "gemeente hamont-achel",
-                    "commune de hamont-achel",
-                    "gemeinde hamont-achel"
+                    "hamont achel",
+                    "gemeente hamont achel",
+                    "commune de hamont achel",
+                    "gemeinde hamont achel"
                   ]
                 },
                 {
                   "nis": "72038",
                   "name": "Hechtel-Eksel",
                   "alternateNames": [
-                    "hechtel-eksel",
-                    "gemeente hechtel-eksel",
-                    "commune de hechtel-eksel",
-                    "gemeinde hechtel-eksel"
+                    "hechtel eksel",
+                    "gemeente hechtel eksel",
+                    "commune de hechtel eksel",
+                    "gemeinde hechtel eksel"
                   ]
                 },
                 {
                   "nis": "72039",
                   "name": "Houthalen-Helchteren",
                   "alternateNames": [
-                    "houthalen-helchteren",
-                    "gemeente houthalen-helchteren",
-                    "commune de houthalen-helchteren",
-                    "gemeinde houthalen-helchteren"
+                    "houthalen helchteren",
+                    "gemeente houthalen helchteren",
+                    "commune de houthalen helchteren",
+                    "gemeinde houthalen helchteren"
                   ]
                 },
                 {
                   "nis": "72041",
                   "name": "Dilsen-Stokkem",
                   "alternateNames": [
-                    "dilsen-stokkem",
-                    "gemeente dilsen-stokkem",
-                    "commune de dilsen-stokkem",
-                    "gemeinde dilsen-stokkem"
+                    "dilsen stokkem",
+                    "gemeente dilsen stokkem",
+                    "commune de dilsen stokkem",
+                    "gemeinde dilsen stokkem"
                   ]
                 },
                 {
@@ -3428,9 +3429,10 @@
       "nis": "03000",
       "name": "Région wallonne",
       "alternateNames": [
+        "wallonische region",
         "region wallonne",
         "waals gewest",
-        "wallonische region"
+        "wallonie"
       ],
       "provinces": [
         {
@@ -3438,11 +3440,11 @@
           "name": "Province du Brabant wallon",
           "alternateNames": [
             "province du brabant wallon",
-            "provincie waals-brabant",
-            "provinz wallonisch-brabant",
+            "provincie waals brabant",
+            "provinz wallonisch brabant",
             "brabant wallon",
-            "waals-brabant",
-            "wallonisch-brabant"
+            "waals brabant",
+            "wallonisch brabant"
           ],
           "districts": [
             {
@@ -3471,42 +3473,42 @@
                   "nis": "25014",
                   "name": "Braine-l’Alleud",
                   "alternateNames": [
-                    "braine-l'alleud",
+                    "braine l'alleud",
                     "eigenbrakel",
-                    "commune de braine-l'alleud",
+                    "commune de braine l'alleud",
                     "gemeente eigenbrakel",
-                    "gemeinde braine-l'alleud"
+                    "gemeinde braine l'alleud"
                   ]
                 },
                 {
                   "nis": "25015",
                   "name": "Braine-le-Château",
                   "alternateNames": [
-                    "braine-le-chateau",
+                    "braine le chateau",
                     "kasteelbrakel",
-                    "commune de braine-le-chateau",
+                    "commune de braine le chateau",
                     "gemeente kasteelbrakel",
-                    "gemeinde braine-le-chateau"
+                    "gemeinde braine le chateau"
                   ]
                 },
                 {
                   "nis": "25018",
                   "name": "Chaumont-Gistoux",
                   "alternateNames": [
-                    "chaumont-gistoux",
-                    "commune de chaumont-gistoux",
-                    "gemeente chaumont-gistoux",
-                    "gemeinde chaumont-gistoux"
+                    "chaumont gistoux",
+                    "commune de chaumont gistoux",
+                    "gemeente chaumont gistoux",
+                    "gemeinde chaumont gistoux"
                   ]
                 },
                 {
                   "nis": "25023",
                   "name": "Court-Saint-Etienne",
                   "alternateNames": [
-                    "court-saint-etienne",
-                    "commune de court-saint-etienne",
-                    "gemeente court-saint-etienne",
-                    "gemeinde court-saint-etienne"
+                    "court saint etienne",
+                    "commune de court saint etienne",
+                    "gemeente court saint etienne",
+                    "gemeinde court saint etienne"
                   ]
                 },
                 {
@@ -3524,11 +3526,11 @@
                   "nis": "25037",
                   "name": "Grez-Doiceau",
                   "alternateNames": [
-                    "grez-doiceau",
+                    "grez doiceau",
                     "graven",
-                    "commune de grez-doiceau",
+                    "commune de grez doiceau",
                     "gemeente graven",
-                    "gemeinde grez-doiceau"
+                    "gemeinde grez doiceau"
                   ]
                 },
                 {
@@ -3578,10 +3580,10 @@
                   "nis": "25068",
                   "name": "Mont-Saint-Guibert",
                   "alternateNames": [
-                    "mont-saint-guibert",
-                    "commune de mont-saint-guibert",
-                    "gemeente mont-saint-guibert",
-                    "gemeinde mont-saint-guibert"
+                    "mont saint guibert",
+                    "commune de mont saint guibert",
+                    "gemeente mont saint guibert",
+                    "gemeinde mont saint guibert"
                   ]
                 },
                 {
@@ -3633,10 +3635,10 @@
                   "nis": "25107",
                   "name": "Villers-la-Ville",
                   "alternateNames": [
-                    "villers-la-ville",
-                    "commune de villers-la-ville",
-                    "gemeente villers-la-ville",
-                    "gemeinde villers-la-ville"
+                    "villers la ville",
+                    "commune de villers la ville",
+                    "gemeente villers la ville",
+                    "gemeinde villers la ville"
                   ]
                 },
                 {
@@ -3694,20 +3696,20 @@
                   "nis": "25120",
                   "name": "Orp-Jauche",
                   "alternateNames": [
-                    "orp-jauche",
-                    "commune d'orp-jauche",
-                    "gemeente orp-jauche",
-                    "gemeinde orp-jauche"
+                    "orp jauche",
+                    "commune d'orp jauche",
+                    "gemeente orp jauche",
+                    "gemeinde orp jauche"
                   ]
                 },
                 {
                   "nis": "25121",
                   "name": "Ottignies-Louvain-la-Neuve",
                   "alternateNames": [
-                    "ottignies-louvain-la-neuve",
-                    "commune d'ottignies-louvain-la-neuve",
-                    "gemeente ottignies-louvain-la-neuve",
-                    "gemeinde ottignies-louvain-la-neuve"
+                    "ottignies louvain la neuve",
+                    "commune d'ottignies louvain la neuve",
+                    "gemeente ottignies louvain la neuve",
+                    "gemeinde ottignies louvain la neuve"
                   ]
                 },
                 {
@@ -3844,10 +3846,10 @@
                   "nis": "51065",
                   "name": "Frasnes-lez-Anvaing",
                   "alternateNames": [
-                    "frasnes-lez-anvaing",
-                    "commune de frasnes-lez-anvaing",
-                    "gemeente frasnes-lez-anvaing",
-                    "gemeinde frasnes-lez-anvaing"
+                    "frasnes lez anvaing",
+                    "commune de frasnes lez anvaing",
+                    "gemeente frasnes lez anvaing",
+                    "gemeinde frasnes lez anvaing"
                   ]
                 },
                 {
@@ -3899,10 +3901,10 @@
                   "nis": "52010",
                   "name": "Chapelle-lez-Herlaimont",
                   "alternateNames": [
-                    "chapelle-lez-herlaimont",
-                    "commune de chapelle-lez-herlaimont",
-                    "gemeente chapelle-lez-herlaimont",
-                    "gemeinde chapelle-lez-herlaimont"
+                    "chapelle lez herlaimont",
+                    "commune de chapelle lez herlaimont",
+                    "gemeente chapelle lez herlaimont",
+                    "gemeinde chapelle lez herlaimont"
                   ]
                 },
                 {
@@ -3959,10 +3961,10 @@
                   "nis": "52022",
                   "name": "Fontaine-l’Evêque",
                   "alternateNames": [
-                    "fontaine-l'eveque",
-                    "commune de fontaine-l'eveque",
-                    "gemeente fontaine-l'eveque",
-                    "gemeinde fontaine-l'eveque"
+                    "fontaine l'eveque",
+                    "commune de fontaine l'eveque",
+                    "gemeente fontaine l'eveque",
+                    "gemeinde fontaine l'eveque"
                   ]
                 },
                 {
@@ -3979,30 +3981,30 @@
                   "nis": "52048",
                   "name": "Montigny-le-Tilleul",
                   "alternateNames": [
-                    "montigny-le-tilleul",
-                    "commune de montigny-le-tilleul",
-                    "gemeente montigny-le-tilleul",
-                    "gemeinde montigny-le-tilleul"
+                    "montigny le tilleul",
+                    "commune de montigny le tilleul",
+                    "gemeente montigny le tilleul",
+                    "gemeinde montigny le tilleul"
                   ]
                 },
                 {
                   "nis": "52055",
                   "name": "Pont-à-Celles",
                   "alternateNames": [
-                    "pont-a-celles",
-                    "commune de pont-a-celles",
-                    "gemeente pont-a-celles",
-                    "gemeinde pont-a-celles"
+                    "pont a celles",
+                    "commune de pont a celles",
+                    "gemeente pont a celles",
+                    "gemeinde pont a celles"
                   ]
                 },
                 {
                   "nis": "52074",
                   "name": "Aiseau-Presles",
                   "alternateNames": [
-                    "aiseau-presles",
-                    "commune d'aiseau-presles",
-                    "gemeente aiseau-presles",
-                    "gemeinde aiseau-presles"
+                    "aiseau presles",
+                    "commune d'aiseau presles",
+                    "gemeente aiseau presles",
+                    "gemeinde aiseau presles"
                   ]
                 },
                 {
@@ -4124,10 +4126,10 @@
                   "nis": "53070",
                   "name": "Saint-Ghislain",
                   "alternateNames": [
-                    "saint-ghislain",
-                    "commune de saint-ghislain",
-                    "gemeente saint-ghislain",
-                    "gemeinde saint-ghislain"
+                    "saint ghislain",
+                    "commune de saint ghislain",
+                    "gemeente saint ghislain",
+                    "gemeinde saint ghislain"
                   ]
                 },
                 {
@@ -4177,11 +4179,11 @@
                   "nis": "55004",
                   "name": "Braine-le-Comte",
                   "alternateNames": [
-                    "braine-le-comte",
+                    "braine le comte",
                     "'s gravenbrakel",
-                    "commune de braine-le-comte",
+                    "commune de braine le comte",
                     "gemeente 's gravenbrakel",
-                    "gemeinde braine-le-comte"
+                    "gemeinde braine le comte"
                   ]
                 },
                 {
@@ -4311,10 +4313,10 @@
                   "nis": "56049",
                   "name": "Merbes-le-Château",
                   "alternateNames": [
-                    "merbes-le-chateau",
-                    "commune de merbes-le-chateau",
-                    "gemeente merbes-le-chateau",
-                    "gemeinde merbes-le-chateau"
+                    "merbes le chateau",
+                    "commune de merbes le chateau",
+                    "gemeente merbes le chateau",
+                    "gemeinde merbes le chateau"
                   ]
                 },
                 {
@@ -4341,20 +4343,20 @@
                   "nis": "56086",
                   "name": "Ham-sur-Heure-Nalinnes",
                   "alternateNames": [
-                    "ham-sur-heure-nalinnes",
-                    "commune de ham-sur-heure-nalinnes",
-                    "gemeente ham-sur-heure-nalinnes",
-                    "gemeinde ham-sur-heure-nalinnes"
+                    "ham sur heure nalinnes",
+                    "commune de ham sur heure nalinnes",
+                    "gemeente ham sur heure nalinnes",
+                    "gemeinde ham sur heure nalinnes"
                   ]
                 },
                 {
                   "nis": "56088",
                   "name": "Sivry-Rance",
                   "alternateNames": [
-                    "sivry-rance",
-                    "commune de sivry-rance",
-                    "gemeente sivry-rance",
-                    "gemeinde sivry-rance"
+                    "sivry rance",
+                    "commune de sivry rance",
+                    "gemeente sivry rance",
+                    "gemeinde sivry rance"
                   ]
                 }
               ]
@@ -4363,11 +4365,11 @@
               "nis": "57000",
               "name": "Arrondissement de Tournai-Mouscron",
               "alternateNames": [
-                "arrondissement de tournai-mouscron",
-                "arrondissement doornik-moeskroen",
-                "bezirk tournai-mouscron",
-                "tournai-mouscron",
-                "doornik-moeskroen"
+                "arrondissement de tournai mouscron",
+                "arrondissement doornik moeskroen",
+                "bezirk tournai mouscron",
+                "tournai mouscron",
+                "doornik moeskroen"
               ],
               "municipalities": [
                 {
@@ -4457,20 +4459,20 @@
                   "nis": "57094",
                   "name": "Leuze-en-Hainaut",
                   "alternateNames": [
-                    "leuze-en-hainaut",
-                    "commune de leuze-en-hainaut",
-                    "gemeente leuze-en-hainaut",
-                    "gemeinde leuze-en-hainaut"
+                    "leuze en hainaut",
+                    "commune de leuze en hainaut",
+                    "gemeente leuze en hainaut",
+                    "gemeinde leuze en hainaut"
                   ]
                 },
                 {
                   "nis": "57095",
                   "name": "Mont-de-l’Enclus",
                   "alternateNames": [
-                    "mont-de-l'enclus",
-                    "commune de mont-de-l'enclus",
-                    "gemeente mont-de-l'enclus",
-                    "gemeinde mont-de-l'enclus"
+                    "mont de l'enclus",
+                    "commune de mont de l'enclus",
+                    "gemeente mont de l'enclus",
+                    "gemeinde mont de l'enclus"
                   ]
                 },
                 {
@@ -4488,11 +4490,11 @@
                   "nis": "57097",
                   "name": "Comines-Warneton",
                   "alternateNames": [
-                    "comines-warneton",
-                    "komen-waasten",
-                    "commune de comines-warneton",
-                    "gemeente komen-waasten",
-                    "gemeinde comines-warneton"
+                    "comines warneton",
+                    "komen waasten",
+                    "commune de comines warneton",
+                    "gemeente komen waasten",
+                    "gemeinde comines warneton"
                   ]
                 }
               ]
@@ -4699,10 +4701,10 @@
                   "nis": "61068",
                   "name": "Villers-Le-Bouillet",
                   "alternateNames": [
-                    "villers-le-bouillet",
-                    "commune de villers-le-bouillet",
-                    "gemeente villers-le-bouillet",
-                    "gemeinde villers-le-bouillet"
+                    "villers le bouillet",
+                    "commune de villers le bouillet",
+                    "gemeente villers le bouillet",
+                    "gemeinde villers le bouillet"
                   ]
                 },
                 {
@@ -4804,10 +4806,10 @@
                   "nis": "62015",
                   "name": "Beyne-Heusay",
                   "alternateNames": [
-                    "beyne-heusay",
-                    "commune de beyne-heusay",
-                    "gemeente beyne-heusay",
-                    "gemeinde beyne-heusay"
+                    "beyne heusay",
+                    "commune de beyne heusay",
+                    "gemeente beyne heusay",
+                    "gemeinde beyne heusay"
                   ]
                 },
                 {
@@ -4824,10 +4826,10 @@
                   "nis": "62026",
                   "name": "Comblain-au-Pont",
                   "alternateNames": [
-                    "comblain-au-pont",
-                    "commune de comblain-au-pont",
-                    "gemeente comblain-au-pont",
-                    "gemeinde comblain-au-pont"
+                    "comblain au pont",
+                    "commune de comblain au pont",
+                    "gemeente comblain au pont",
+                    "gemeinde comblain au pont"
                   ]
                 },
                 {
@@ -4906,13 +4908,13 @@
                   "nis": "62093",
                   "name": "Saint-Nicolas (Liège)",
                   "alternateNames": [
-                    "saint-nicolas",
-                    "saint-nicolas (liege)",
-                    "saint-nicolas (luik)",
-                    "saint-nicolas (luttich)",
-                    "commune de saint-nicolas",
-                    "gemeente saint-nicolas",
-                    "gemeinde saint-nicolas"
+                    "saint nicolas",
+                    "saint nicolas (liege)",
+                    "saint nicolas (luik)",
+                    "saint nicolas (luttich)",
+                    "commune de saint nicolas",
+                    "gemeente saint nicolas",
+                    "gemeinde saint nicolas"
                   ]
                 },
                 {
@@ -4960,10 +4962,10 @@
                   "nis": "62118",
                   "name": "Grâce-Hollogne",
                   "alternateNames": [
-                    "grace-hollogne",
-                    "commune de grace-hollogne",
-                    "gemeente grace-hollogne",
-                    "gemeinde grace-hollogne"
+                    "grace hollogne",
+                    "commune de grace hollogne",
+                    "gemeente grace hollogne",
+                    "gemeinde grace hollogne"
                   ]
                 },
                 {
@@ -5197,9 +5199,9 @@
                   "name": "Sankt Vith",
                   "alternateNames": [
                     "sankt vith",
-                    "saint-vith",
+                    "saint vith",
                     "gemeinde sankt vith",
-                    "commune de saint-vith",
+                    "commune de saint vith",
                     "gemeente sankt vith"
                   ]
                 },
@@ -5278,20 +5280,20 @@
                   "nis": "63086",
                   "name": "Trois-Ponts",
                   "alternateNames": [
-                    "trois-ponts",
-                    "commune de trois-ponts",
-                    "gemeente trois-ponts",
-                    "gemeinde trois-ponts"
+                    "trois ponts",
+                    "commune de trois ponts",
+                    "gemeente trois ponts",
+                    "gemeinde trois ponts"
                   ]
                 },
                 {
                   "nis": "63087",
                   "name": "Burg-Reuland",
                   "alternateNames": [
-                    "burg-reuland",
-                    "gemeinde burg-reuland",
-                    "commune de burg-reuland",
-                    "gemeente burg-reuland"
+                    "burg reuland",
+                    "gemeinde burg reuland",
+                    "commune de burg reuland",
+                    "gemeente burg reuland"
                   ]
                 },
                 {
@@ -5308,10 +5310,10 @@
                   "nis": "63089",
                   "name": "Thimister-Clermont",
                   "alternateNames": [
-                    "thimister-clermont",
-                    "commune de thimister-clermont",
-                    "gemeente thimister-clermont",
-                    "gemeinde thimister-clermont"
+                    "thimister clermont",
+                    "commune de thimister clermont",
+                    "gemeente thimister clermont",
+                    "gemeinde thimister clermont"
                   ]
                 }
               ]
@@ -5371,10 +5373,10 @@
                   "nis": "64025",
                   "name": "Fexhe-le-Haut-Clocher",
                   "alternateNames": [
-                    "fexhe-le-haut-clocher",
-                    "commune de fexhe-le-haut-clocher",
-                    "gemeente fexhe-le-haut-clocher",
-                    "gemeinde fexhe-le-haut-clocher"
+                    "fexhe le haut clocher",
+                    "commune de fexhe le haut clocher",
+                    "gemeente fexhe le haut clocher",
+                    "gemeinde fexhe le haut clocher"
                   ]
                 },
                 {
@@ -5434,10 +5436,10 @@
                   "nis": "64065",
                   "name": "Saint-Georges-sur-Meuse",
                   "alternateNames": [
-                    "saint-georges-sur-meuse",
-                    "commune de saint-georges-sur-meuse",
-                    "gemeente saint-georges-sur-meuse",
-                    "gemeinde saint-georges-sur-meuse"
+                    "saint georges sur meuse",
+                    "commune de saint georges sur meuse",
+                    "gemeente saint georges sur meuse",
+                    "gemeinde saint georges sur meuse"
                   ]
                 },
                 {
@@ -5617,10 +5619,10 @@
                   "nis": "82036",
                   "name": "Vaux-sur-Sûre",
                   "alternateNames": [
-                    "vaux-sur-sure",
-                    "commune de vaux-sur-sure",
-                    "gemeente vaux-sur-sure",
-                    "gemeinde vaux-sur-sure"
+                    "vaux sur sure",
+                    "commune de vaux sur sure",
+                    "gemeente vaux sur sure",
+                    "gemeinde vaux sur sure"
                   ]
                 },
                 {
@@ -5637,10 +5639,10 @@
                   "nis": "82038",
                   "name": "Sainte-Ode",
                   "alternateNames": [
-                    "sainte-ode",
-                    "commune de sainte-ode",
-                    "gemeente sainte-ode",
-                    "gemeinde sainte-ode"
+                    "sainte ode",
+                    "commune de sainte ode",
+                    "gemeente sainte ode",
+                    "gemeinde sainte ode"
                   ]
                 }
               ]
@@ -5649,10 +5651,10 @@
               "nis": "83000",
               "name": "Arrondissement de Marche-en-Famenne",
               "alternateNames": [
-                "arrondissement de marche-en-famenne",
-                "arrondissement marche-en-famenne",
-                "bezirk marche-en-famenne",
-                "marche-en-famenne"
+                "arrondissement de marche en famenne",
+                "arrondissement marche en famenne",
+                "bezirk marche en famenne",
+                "marche en famenne"
               ],
               "municipalities": [
                 {
@@ -5689,20 +5691,20 @@
                   "nis": "83031",
                   "name": "La Roche-en-Ardenne",
                   "alternateNames": [
-                    "la roche-en-ardenne",
-                    "commune de la roche-en-ardenne",
-                    "gemeente la roche-en-ardenne",
-                    "gemeinde la roche-en-ardenne"
+                    "la roche en ardenne",
+                    "commune de la roche en ardenne",
+                    "gemeente la roche en ardenne",
+                    "gemeinde la roche en ardenne"
                   ]
                 },
                 {
                   "nis": "83034",
                   "name": "Marche-en-Famenne",
                   "alternateNames": [
-                    "marche-en-famenne",
-                    "commune de marche-en-famenne",
-                    "gemeente marche-en-famenne",
-                    "gemeinde marche-en-famenne"
+                    "marche en famenne",
+                    "commune de marche en famenne",
+                    "gemeente marche en famenne",
+                    "gemeinde marche en famenne"
                   ]
                 },
                 {
@@ -5842,10 +5844,10 @@
                   "nis": "84059",
                   "name": "Saint-Hubert",
                   "alternateNames": [
-                    "saint-hubert",
-                    "commune de saint-hubert",
-                    "gemeente saint-hubert",
-                    "gemeinde saint-hubert"
+                    "saint hubert",
+                    "commune de saint hubert",
+                    "gemeente saint hubert",
+                    "gemeinde saint hubert"
                   ]
                 },
                 {
@@ -5872,10 +5874,10 @@
                   "nis": "84077",
                   "name": "Libramont-Chevigny",
                   "alternateNames": [
-                    "libramont-chevigny",
-                    "commune de libramont-chevigny",
-                    "gemeente libramont-chevigny",
-                    "gemeinde libramont-chevigny"
+                    "libramont chevigny",
+                    "commune de libramont chevigny",
+                    "gemeente libramont chevigny",
+                    "gemeinde libramont chevigny"
                   ]
                 }
               ]
@@ -5924,10 +5926,10 @@
                   "nis": "85024",
                   "name": "Meix-devant-Virton",
                   "alternateNames": [
-                    "meix-devant-virton",
-                    "commune de meix-devant-virton",
-                    "gemeente meix-devant-virton",
-                    "gemeinde meix-devant-virton"
+                    "meix devant virton",
+                    "commune de meix devant virton",
+                    "gemeente meix devant virton",
+                    "gemeinde meix devant virton"
                   ]
                 },
                 {
@@ -5944,11 +5946,11 @@
                   "nis": "85034",
                   "name": "Saint-Léger (Virton)",
                   "alternateNames": [
-                    "saint-leger",
-                    "saint-leger (virton)",
-                    "commune de saint-leger",
-                    "gemeente saint-leger",
-                    "gemeinde saint-leger"
+                    "saint leger",
+                    "saint leger (virton)",
+                    "commune de saint leger",
+                    "gemeente saint leger",
+                    "gemeinde saint leger"
                   ]
                 },
                 {
@@ -6130,10 +6132,10 @@
                   "nis": "91120",
                   "name": "Somme-Leuze",
                   "alternateNames": [
-                    "somme-leuze",
-                    "commune de somme-leuze",
-                    "gemeente somme-leuze",
-                    "gemeinde somme-leuze"
+                    "somme leuze",
+                    "commune de somme leuze",
+                    "gemeente somme leuze",
+                    "gemeinde somme leuze"
                   ]
                 },
                 {
@@ -6160,10 +6162,10 @@
                   "nis": "91143",
                   "name": "Vresse-sur-Semois",
                   "alternateNames": [
-                    "vresse-sur-semois",
-                    "commune de vresse-sur-semois",
-                    "gemeente vresse-sur-semois",
-                    "gemeinde vresse-sur-semois"
+                    "vresse sur semois",
+                    "commune de vresse sur semois",
+                    "gemeente vresse sur semois",
+                    "gemeinde vresse sur semois"
                   ]
                 }
               ]
@@ -6223,10 +6225,10 @@
                   "nis": "92048",
                   "name": "Fosses-la-Ville",
                   "alternateNames": [
-                    "fosses-la-ville",
-                    "commune de fosses-la-ville",
-                    "gemeente fosses-la-ville",
-                    "gemeinde fosses-la-ville"
+                    "fosses la ville",
+                    "commune de fosses la ville",
+                    "gemeente fosses la ville",
+                    "gemeinde fosses la ville"
                   ]
                 },
                 {
@@ -6314,10 +6316,10 @@
                   "nis": "92140",
                   "name": "Jemeppe-sur-Sambre",
                   "alternateNames": [
-                    "jemeppe-sur-sambre",
-                    "commune de jemeppe-sur-sambre",
-                    "gemeente jemeppe-sur-sambre",
-                    "gemeinde jemeppe-sur-sambre"
+                    "jemeppe sur sambre",
+                    "commune de jemeppe sur sambre",
+                    "gemeente jemeppe sur sambre",
+                    "gemeinde jemeppe sur sambre"
                   ]
                 },
                 {
@@ -6432,30 +6434,34 @@
       "nis": "04000",
       "name": "Région de Bruxelles-Capitale",
       "alternateNames": [
-        "region de bruxelles-capitale",
+        "region brussel hauptstadt",
         "brussels hoofdstedelijk gewest",
-        "region brussel-hauptstadt"
+        "bruxelles capitale",
+        "region de bruxelles capitale",
+        "region bruxelles capitale"
       ],
       "provinces": [
         {
           "nis": "04000",
           "name": "Région de Bruxelles-Capitale",
           "alternateNames": [
-            "region de bruxelles-capitale",
+            "region brussel hauptstadt",
             "brussels hoofdstedelijk gewest",
-            "region brussel-hauptstadt"
+            "bruxelles capitale",
+            "region de bruxelles capitale",
+            "region bruxelles capitale"
           ],
           "districts": [
             {
               "nis": "21000",
               "name": "Arrondissement de Bruxelles-Capitale",
               "alternateNames": [
-                "arrondissement de bruxelles-capitale",
-                "arrondissement brussel-hoofdstad",
-                "bezirk brussel-hauptstadt",
-                "bruxelles-capitale",
-                "brussel-hoofdstad",
-                "brussel-hauptstadt"
+                "arrondissement de bruxelles capitale",
+                "arrondissement brussel hoofdstad",
+                "bezirk brussel hauptstadt",
+                "bruxelles capitale",
+                "brussel hoofdstad",
+                "brussel hauptstadt"
               ],
               "municipalities": [
                 {
@@ -6483,11 +6489,11 @@
                   "nis": "21003",
                   "name": "Berchem-Sainte-Agathe",
                   "alternateNames": [
-                    "berchem-sainte-agathe",
-                    "sint-agatha-berchem",
-                    "commune de berchem-sainte-agathe",
-                    "gemeente sint-agatha-berchem",
-                    "gemeinde berchem-sainte-agathe"
+                    "berchem sainte agathe",
+                    "sint agatha berchem",
+                    "commune de berchem sainte agathe",
+                    "gemeente sint agatha berchem",
+                    "gemeinde berchem sainte agathe"
                   ]
                 },
                 {
@@ -6527,9 +6533,9 @@
                   "alternateNames": [
                     "forest",
                     "vorst",
-                    "forest (bruxelles-capitale)",
-                    "vorst (brussel-hoofdstad)",
-                    "forest (brussel-hauptstadt)",
+                    "forest (bruxelles capitale)",
+                    "vorst (brussel hoofdstad)",
+                    "forest (brussel hauptstadt)",
                     "commune de forest",
                     "gemeente vorst",
                     "gemeinde forest"
@@ -6580,33 +6586,33 @@
                   "nis": "21012",
                   "name": "Molenbeek-Saint-Jean",
                   "alternateNames": [
-                    "molenbeek-saint-jean",
-                    "sint-jans-molenbeek",
-                    "commune de molenbeek-saint-jean",
-                    "gemeente sint-jans-molenbeek",
-                    "gemeinde molenbeek-saint-jean"
+                    "molenbeek saint jean",
+                    "sint jans molenbeek",
+                    "commune de molenbeek saint jean",
+                    "gemeente sint jans molenbeek",
+                    "gemeinde molenbeek saint jean"
                   ]
                 },
                 {
                   "nis": "21013",
                   "name": "Saint-Gilles",
                   "alternateNames": [
-                    "saint-gilles",
-                    "sint-gillis",
-                    "commune de saint-gilles",
-                    "gemeente sint-gillis",
-                    "gemeinde saint-gilles"
+                    "saint gilles",
+                    "sint gillis",
+                    "commune de saint gilles",
+                    "gemeente sint gillis",
+                    "gemeinde saint gilles"
                   ]
                 },
                 {
                   "nis": "21014",
                   "name": "Saint-Josse-ten-Noode",
                   "alternateNames": [
-                    "saint-josse-ten-noode",
-                    "sint-joost-ten-node",
-                    "commune de saint-josse-ten-noode",
-                    "gemeente sint-joost-ten-node",
-                    "gemeinde saint-josse-ten-noode"
+                    "saint josse ten noode",
+                    "sint joost ten node",
+                    "commune de saint josse ten noode",
+                    "gemeente sint joost ten node",
+                    "gemeinde saint josse ten noode"
                   ]
                 },
                 {
@@ -6635,33 +6641,33 @@
                   "nis": "21017",
                   "name": "Watermael-Boitsfort",
                   "alternateNames": [
-                    "watermael-boitsfort",
-                    "watermaal-bosvoorde",
-                    "commune de watermael-boitsfort",
-                    "gemeente watermaal-bosvoorde",
-                    "gemeinde watermael-boitsfort"
+                    "watermael boitsfort",
+                    "watermaal bosvoorde",
+                    "commune de watermael boitsfort",
+                    "gemeente watermaal bosvoorde",
+                    "gemeinde watermael boitsfort"
                   ]
                 },
                 {
                   "nis": "21018",
                   "name": "Woluwe-Saint-Lambert",
                   "alternateNames": [
-                    "woluwe-saint-lambert",
-                    "sint-lambrechts-woluwe",
-                    "commune de woluwe-saint-lambert",
-                    "gemeente sint-lambrechts-woluwe",
-                    "gemeinde woluwe-saint-lambert"
+                    "woluwe saint lambert",
+                    "sint lambrechts woluwe",
+                    "commune de woluwe saint lambert",
+                    "gemeente sint lambrechts woluwe",
+                    "gemeinde woluwe saint lambert"
                   ]
                 },
                 {
                   "nis": "21019",
                   "name": "Woluwe-Saint-Pierre",
                   "alternateNames": [
-                    "woluwe-saint-pierre",
-                    "sint-pieters-woluwe",
-                    "commune de woluwe-saint-pierre",
-                    "gemeente sint-pieters-woluwe",
-                    "gemeinde woluwe-saint-pierre"
+                    "woluwe saint pierre",
+                    "sint pieters woluwe",
+                    "commune de woluwe saint pierre",
+                    "gemeente sint pieters woluwe",
+                    "gemeinde woluwe saint pierre"
                   ]
                 }
               ]
