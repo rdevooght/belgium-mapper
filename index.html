@@ -32,42 +32,59 @@
         <span x-text="rows.length"></span> rows
       </p>
 
-      <h2>Columns (<span x-text="columns.length"></span>)</h2>
-      <div class="columns">
-        <template x-for="(column, index) in columns" :key="index">
-          <article class="column-card">
-            <h3 x-text="column.name"></h3>
-            <label class="type-label">
-              Guessed type
-              <template x-if="column.guesses.length > 1">
-                <select x-model.number="column.selectedGuessIndex">
-                  <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
-                    <option :value="guessIndex" x-text="guessLabel(guess)"></option>
-                  </template>
-                </select>
+      <h2>Data preview</h2>
+      <div class="table-scroll" role="region" aria-label="Data preview table" tabindex="0">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <template x-for="(column, index) in columns" :key="index">
+                <th scope="col">
+                  <div class="column-info">
+                    <h3 x-text="column.name"></h3>
+                    <label class="type-label">
+                      Guessed type
+                      <template x-if="column.guesses.length > 1">
+                        <select x-model.number="column.selectedGuessIndex">
+                          <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
+                            <option :value="guessIndex" x-text="guessLabel(guess)"></option>
+                          </template>
+                        </select>
+                      </template>
+                      <strong x-show="column.guesses.length === 1" x-text="guessLabel(column.guesses[0])"></strong>
+                    </label>
+                    <dl class="guess-stats">
+                      <div>
+                        <dt>Matching values</dt>
+                        <dd x-text="`${(selectedGuess(column).matchRate * 100).toFixed(1)}%`"></dd>
+                      </div>
+                      <div>
+                        <dt>Unique matches</dt>
+                        <dd x-text="selectedGuess(column).uniqueMatches"></dd>
+                      </div>
+                    </dl>
+                    <details x-show="selectedGuess(column).unmatchedValues.length > 0" class="unmatched-values">
+                      <summary>Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)</summary>
+                      <ul>
+                        <template x-for="(value, valueIndex) in selectedGuess(column).unmatchedValues" :key="valueIndex">
+                          <li x-text="String(value)"></li>
+                        </template>
+                      </ul>
+                    </details>
+                  </div>
+                </th>
               </template>
-              <strong x-show="column.guesses.length === 1" x-text="guessLabel(column.guesses[0])"></strong>
-            </label>
-            <dl class="guess-stats">
-              <div>
-                <dt>Matching values</dt>
-                <dd x-text="`${(selectedGuess(column).matchRate * 100).toFixed(1)}%`"></dd>
-              </div>
-              <div>
-                <dt>Unique matches</dt>
-                <dd x-text="selectedGuess(column).uniqueMatches"></dd>
-              </div>
-            </dl>
-            <details x-show="selectedGuess(column).unmatchedValues.length > 0" class="unmatched-values">
-              <summary>Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)</summary>
-              <ul>
-                <template x-for="(value, valueIndex) in selectedGuess(column).unmatchedValues" :key="valueIndex">
-                  <li x-text="String(value)"></li>
+            </tr>
+          </thead>
+          <tbody>
+            <template x-for="(row, rowIndex) in rows" :key="rowIndex">
+              <tr>
+                <template x-for="(column, columnIndex) in columns" :key="columnIndex">
+                  <td x-text="row[column.name]"></td>
                 </template>
-              </ul>
-            </details>
-          </article>
-        </template>
+              </tr>
+            </template>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
