@@ -43,7 +43,7 @@ body {
     line-height: 1.5;
 }
 main {
-    max-width: 40rem;
+    max-width: 65rem;
     margin: 0 auto;
     padding: 2rem 1rem;
 }
@@ -75,8 +75,52 @@ h1 {
     font-size: 1.25rem;
     margin-top: 1.5rem;
 }
-ul {
-    padding-left: 1.25rem;
+.columns {
+    display: grid;
+    gap: 0.75rem;
+}
+.column-card {
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+    padding: 1rem;
+}
+.column-card h3 {
+    margin: 0 0 0.75rem;
+    overflow-wrap: anywhere;
+}
+.type-label {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--muted);
+}
+.type-label select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 0.35rem;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+.type-label strong {
+    color: var(--text);
+    font-weight: 600;
+}
+.guess-stats {
+    display: flex;
+    gap: 2rem;
+    margin: 0.75rem 0 0;
+}
+.guess-stats div {
+    display: grid;
+}
+.guess-stats dt {
+    color: var(--muted);
+    font-size: 0.875rem;
+}
+.guess-stats dd {
+    margin: 0;
+    font-weight: 600;
 }
 [x-cloak] {
     display: none !important;

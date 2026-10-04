@@ -33,11 +33,34 @@
       </p>
 
       <h2>Columns (<span x-text="columns.length"></span>)</h2>
-      <ul>
-        <template x-for="column in columns" :key="column">
-          <li x-text="column"></li>
+      <div class="columns">
+        <template x-for="(column, index) in columns" :key="index">
+          <article class="column-card">
+            <h3 x-text="column.name"></h3>
+            <label class="type-label">
+              Guessed type
+              <template x-if="column.guesses.length > 1">
+                <select x-model.number="column.selectedGuessIndex">
+                  <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
+                    <option :value="guessIndex" x-text="guessLabel(guess)"></option>
+                  </template>
+                </select>
+              </template>
+              <strong x-show="column.guesses.length === 1" x-text="guessLabel(column.guesses[0])"></strong>
+            </label>
+            <dl class="guess-stats">
+              <div>
+                <dt>Matching values</dt>
+                <dd x-text="`${(selectedGuess(column).matchRate * 100).toFixed(1)}%`"></dd>
+              </div>
+              <div>
+                <dt>Unique matches</dt>
+                <dd x-text="selectedGuess(column).uniqueMatches"></dd>
+              </div>
+            </dl>
+          </article>
         </template>
-      </ul>
+      </div>
     </section>
   </main>
 </body>
