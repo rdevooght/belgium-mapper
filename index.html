@@ -29,7 +29,7 @@
     <section x-show="fileName" x-cloak>
       <p class="count">
         <strong x-text="fileName"></strong>:
-        <span x-show="filter" x-cloak><span x-text="visibleRows.length"></span> of</span>
+        <span x-show="filter" x-cloak><span x-text="visibleCount"></span> of</span>
         <span x-text="rows.length"></span> rows
       </p>
 
@@ -85,8 +85,8 @@
             </tr>
           </thead>
           <tbody>
-            <template x-for="(row, rowIndex) in visibleRows" :key="rowIndex">
-              <tr>
+            <template x-for="(row, rowIndex) in rows" :key="rowIndex">
+              <tr :hidden="!isRowVisible(rowIndex)">
                 <template x-for="(column, columnIndex) in columns" :key="columnIndex">
                   <td x-text="row[column.name]"></td>
                 </template>

@@ -113,10 +113,10 @@ h1 {
 .data-table td:last-child {
     border-right: 0;
 }
-.data-table tbody tr:last-child td {
+.data-table tbody tr:nth-last-child(1 of :not([hidden])) td {
     border-bottom: 0;
 }
-.data-table tbody tr:nth-child(even) {
+.data-table tbody tr:nth-child(even of :not([hidden])) {
     background: color-mix(in srgb, var(--accent-soft) 35%, var(--bg));
 }
 .column-info {

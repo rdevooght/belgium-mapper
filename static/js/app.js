@@ -9,6 +9,7 @@ function App() {
     rows: [], // array of objects, one per line: { columnName: value, ... }
     columns: [], // { name, guesses, selectedGuessIndex, emptyCount }
     filter: null, // null, or { columnIndex, kind: "unmatched" | "empty" }: at most one filter at a time
+    matchingRows: null, // null when no filter is active, otherwise the Set of the indexes of the rows matching it
     error: "",
 
     async loadFile(file) {
@@ -24,7 +25,7 @@ function App() {
           selectedGuessIndex: 0,
           emptyCount: result.rows.filter((row) => isEmpty(row[name])).length,
         }));
-        this.filter = null;
+        this.setFilter(null);
         this.fileName = result.fileName;
       } catch (e) {
         this.error = "Could not read this file. Please use a valid CSV or Excel file.";
@@ -35,18 +36,14 @@ function App() {
       return column.guesses[column.selectedGuessIndex];
     },
 
-    // The rows to display: all of them, or only those matching the active filter
-    get visibleRows() {
-      if (!this.filter) return this.rows;
+    // All the rows stay in the table, the ones that do not match the filter are hidden:
+    // creating and destroying thousands of cells on each toggle would be slow
+    isRowVisible(rowIndex) {
+      return !this.matchingRows || this.matchingRows.has(rowIndex);
+    },
 
-      const column = this.columns[this.filter.columnIndex];
-      if (this.filter.kind === "empty") {
-        return this.rows.filter((row) => isEmpty(row[column.name]));
-      }
-
-      // Empty cells are never "unmatched": they are not part of unmatchedValues
-      const unmatched = new Set(this.selectedGuess(column).unmatchedValues);
-      return this.rows.filter((row) => unmatched.has(row[column.name]));
+    get visibleCount() {
+      return this.matchingRows ? this.matchingRows.size : this.rows.length;
     },
 
     isFilterActive(columnIndex, kind) {
@@ -55,12 +52,31 @@ function App() {
 
     // Clicking the active button turns the filter off; clicking another one switches to it
     toggleFilter(columnIndex, kind) {
-      this.filter = this.isFilterActive(columnIndex, kind) ? null : { columnIndex, kind };
+      this.setFilter(this.isFilterActive(columnIndex, kind) ? null : { columnIndex, kind });
     },
 
     // The unmatched values depend on the selected type: a filter on them no longer applies when it changes
     resetUnmatchedFilter(columnIndex) {
-      if (this.isFilterActive(columnIndex, "unmatched")) this.filter = null;
+      if (this.isFilterActive(columnIndex, "unmatched")) this.setFilter(null);
+    },
+
+    setFilter(filter) {
+      this.filter = filter;
+      this.matchingRows = filter ? this.findMatchingRows(filter) : null;
+    },
+
+    // Indexes of the rows with an empty / unmatched value in the filter's column
+    findMatchingRows({ columnIndex, kind }) {
+      const column = this.columns[columnIndex];
+      // Empty cells are never "unmatched": they are not part of unmatchedValues
+      const unmatched = kind === "unmatched" ? new Set(this.selectedGuess(column).unmatchedValues) : null;
+
+      const matching = new Set();
+      this.rows.forEach((row, rowIndex) => {
+        const value = row[column.name];
+        if (unmatched ? unmatched.has(value) : isEmpty(value)) matching.add(rowIndex);
+      });
+      return matching;
     },
 
     guessLabel(guess) {
