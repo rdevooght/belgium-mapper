@@ -159,7 +159,7 @@ export function guessType(values) {
  *
  * @param {*} value
  */
-function isEmpty(value) {
+export function isEmpty(value) {
   return (
     value === null ||
     value === undefined ||
