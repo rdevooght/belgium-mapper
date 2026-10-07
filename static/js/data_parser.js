@@ -1,64 +1,11 @@
 // nisEntities is the canonical flat geographic data: {"<nis>": {nis, type, name, alternateNames, parentNis, childrenNis}}
 // (see static/data/structure.md)
-import nisEntities from "../data/nis_entities.json" with { type: "json" };
-
-// postcode2nis is a map from postcode to NIS code of the shape {"postcode": "nis", ...}
-import postcode2nis from "../data/postcode2nis.json" with { type: "json" };
+import { geographicIndex, normalizeGeographicName } from "./geographic_index.js";
 
 const LEVELS = ["Region", "Province", "District", "Municipality"];
 const GEO_THRESHOLD = 0.9;
 
 const ENTITY_TYPE = { Region: "region", Province: "province", District: "district", Municipality: "municipality" };
-const entityList = Object.values(nisEntities);
-
-/**
- * Return all the entities (objects with `nis`, `name` and `alternateNames`) of the given level
- *
- * Brussels has no province: its district hangs directly under the region. For the detection of
- * geographical data, such a region also counts as a province (the old nested hierarchy used to
- * insert a fictional province with the same NIS and names for it).
- *
- * @param {string} level :  Region | Province | District | Municipality
- */
-function getEntities(level) {
-  const type = ENTITY_TYPE[level];
-  const entities = entityList.filter((entity) => entity.type === type);
-
-  if (level === "Province") {
-    const hasProvince = (region) => region.childrenNis.some((nis) => nisEntities[nis].type === "province");
-    entities.push(...entityList.filter((entity) => entity.type === "region" && !hasProvince(entity)));
-  }
-  return entities;
-}
-
-/**
- * Return the list of normalised names existing for the given level
- *
- * The names are extracted from the nisEntities object
- * (and normalised, as the alternate names can contain dashes, e.g. "vlaams-brabant")
- *
- * @param {string} level :  Region | Province | District | Municipality
- */
-function getNormalisedNames(level) {
-  const names = getEntities(level).flatMap((entity) => entity.alternateNames.map(normalise_string));
-
-  // Remove duplicates
-  return [...new Set(names)];
-}
-
-/**
- * Return the list of NIS codes (5 digit strings) existing for the given level
- *
- * @param {string} level :  Region | Province | District | Municipality
- */
-function getNIS(level) {
-  return [...new Set(getEntities(level).map((entity) => entity.nis))];
-}
-
-// Lookup tables, built once: Set.has is much faster than Array.includes
-const postcodes = new Set(Object.keys(postcode2nis));
-const nisCodes = Object.fromEntries(LEVELS.map((level) => [level, new Set(getNIS(level))]));
-const normalisedNames = Object.fromEntries(LEVELS.map((level) => [level, new Set(getNormalisedNames(level))]));
 
 /**
  * For each column, guess the type of data it contains:
@@ -118,13 +65,13 @@ export function guessType(values) {
       geo: true,
       level,
       test: (value) => matchName(value, level),
-      key: normalise_string,
+      key: normalizeGeographicName,
     })),
     { type: "numeric", test: matchNumeric, key: toNumber },
     {
       type: "other",
       test: (value) => !matchNumeric(value),
-      key: (value) => (typeof value === "string" ? normalise_string(value) : String(value)),
+      key: (value) => (typeof value === "string" ? normalizeGeographicName(value) : String(value)),
     },
   ];
 
@@ -222,7 +169,7 @@ export function matchPostcode(value) {
   if (digits === null || digits.length !== 4) return false;
 
   // Then check if the value is in the list of postcodes
-  return postcodes.has(digits);
+  return geographicIndex.findByPostcode(digits).length > 0;
 }
 
 /**
@@ -232,7 +179,7 @@ export function matchPostcode(value) {
  * @param {string} level :  Region | Province | District | Municipality
  */
 export function matchNIS(value, level) {
-  if (!nisCodes[level]) return false;
+  if (!ENTITY_TYPE[level]) return false;
 
   // First check that it is a 4 or 5 digit number (it can be stored as a string or a number)
   const digits = toDigits(value);
@@ -240,7 +187,13 @@ export function matchNIS(value, level) {
 
   // Then check if the value is in the list of NIS for the given level
   // A NIS has 5 digits: the leading zero of e.g. "02000" is lost when stored as a number
-  return nisCodes[level].has(digits.padStart(5, "0"));
+  const entity = geographicIndex.getEntityByNis(digits.padStart(5, "0"));
+  return (
+    entity !== null &&
+    (entity.type === ENTITY_TYPE[level] ||
+      // special case for Brussels
+      (level === "Province" && entity.nis === "04000"))
+  );
 }
 
 /**
@@ -250,27 +203,11 @@ export function matchNIS(value, level) {
  * @param {string} level :  Region | Province | District | Municipality
  */
 export function matchName(value, level) {
-  if (!normalisedNames[level]) return false;
+  if (!ENTITY_TYPE[level]) return false;
 
   // Check if the value is a string
   if (typeof value !== "string") return false;
 
   // Then check if the value is in the list of normalised names for the given level
-  return normalisedNames[level].has(normalise_string(value));
-}
-
-/**
- * Normalise a given string
- *
- * @param {*} s
- * @returns
- */
-function normalise_string(s) {
-  s = s.trim(); // Remove leading and trailing whitespace
-  s = s.toLowerCase(); // Convert to lowercase
-  s = s.normalize("NFD").replace(/[\u0300-\u036f]/g, ""); // Remove accents
-  s = s.replace(/-/g, " "); // Replace dashes with spaces
-  s = s.replace(/\s+/g, " "); // Replace multiple spaces with a single space
-
-  return s;
+  return geographicIndex.findByNameAndType(value, ENTITY_TYPE[level]).length > 0;
 }
