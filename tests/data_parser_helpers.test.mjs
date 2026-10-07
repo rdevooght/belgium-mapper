@@ -40,6 +40,17 @@ test("matchNIS accepts known codes with optional leading zeroes", () => {
   assert.equal(matchNIS("11002.0", "Municipality"), false);
 });
 
+test("the region of Brussels, which has no province, is also matched at the province level", () => {
+  assert.equal(matchNIS("04000", "Province"), true);
+  assert.equal(matchNIS("04000", "Region"), true);
+  assert.equal(matchName("Bruxelles Capitale", "Province"), true);
+  assert.equal(matchName("Bruxelles Capitale", "Region"), true);
+
+  assert.equal(matchNIS("02000", "Province"), false);
+  assert.equal(matchName("Flandre", "Province"), false);
+  assert.equal(matchNIS("21000", "District"), true);
+});
+
 test("matchPostcode accepts known four-digit postcodes as strings or numbers", () => {
   assert.equal(matchPostcode("1000"), true);
   assert.equal(matchPostcode(1000), true);

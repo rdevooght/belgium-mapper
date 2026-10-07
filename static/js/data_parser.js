@@ -1,4 +1,6 @@
-import nisHierarchy from "../data/nis_hierarchy.json" with { type: "json" };
+// nisEntities is the canonical flat geographic data: {"<nis>": {nis, type, name, alternateNames, parentNis, childrenNis}}
+// (see static/data/structure.md)
+import nisEntities from "../data/nis_entities.json" with { type: "json" };
 
 // postcode2nis is a map from postcode to NIS code of the shape {"postcode": "nis", ...}
 import postcode2nis from "../data/postcode2nis.json" with { type: "json" };
@@ -6,28 +8,33 @@ import postcode2nis from "../data/postcode2nis.json" with { type: "json" };
 const LEVELS = ["Region", "Province", "District", "Municipality"];
 const GEO_THRESHOLD = 0.9;
 
+const ENTITY_TYPE = { Region: "region", Province: "province", District: "district", Municipality: "municipality" };
+const entityList = Object.values(nisEntities);
+
 /**
  * Return all the entities (objects with `nis`, `name` and `alternateNames`) of the given level
+ *
+ * Brussels has no province: its district hangs directly under the region. For the detection of
+ * geographical data, such a region also counts as a province (the old nested hierarchy used to
+ * insert a fictional province with the same NIS and names for it).
  *
  * @param {string} level :  Region | Province | District | Municipality
  */
 function getEntities(level) {
-  const regions = nisHierarchy.regions;
-  if (level === "Region") return regions;
+  const type = ENTITY_TYPE[level];
+  const entities = entityList.filter((entity) => entity.type === type);
 
-  const provinces = regions.flatMap((region) => region.provinces);
-  if (level === "Province") return provinces;
-
-  const districts = provinces.flatMap((province) => province.districts);
-  if (level === "District") return districts;
-
-  return districts.flatMap((district) => district.municipalities);
+  if (level === "Province") {
+    const hasProvince = (region) => region.childrenNis.some((nis) => nisEntities[nis].type === "province");
+    entities.push(...entityList.filter((entity) => entity.type === "region" && !hasProvince(entity)));
+  }
+  return entities;
 }
 
 /**
  * Return the list of normalised names existing for the given level
  *
- * The names are extracted from the nisHierarchy object
+ * The names are extracted from the nisEntities object
  * (and normalised, as the alternate names can contain dashes, e.g. "vlaams-brabant")
  *
  * @param {string} level :  Region | Province | District | Municipality

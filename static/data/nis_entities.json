@@ -1,0 +1,9154 @@
+{
+  "02000": {
+    "nis": "02000",
+    "type": "region",
+    "name": "Vlaams Gewest",
+    "alternateNames": [
+      "vlaams gewest",
+      "region flamande",
+      "flamische region",
+      "flandre"
+    ],
+    "parentNis": null,
+    "childrenNis": [
+      "10000",
+      "20001",
+      "30000",
+      "40000",
+      "70000"
+    ]
+  },
+  "03000": {
+    "nis": "03000",
+    "type": "region",
+    "name": "Région wallonne",
+    "alternateNames": [
+      "region wallonne",
+      "waals gewest",
+      "wallonische region",
+      "wallonie"
+    ],
+    "parentNis": null,
+    "childrenNis": [
+      "20002",
+      "50000",
+      "60000",
+      "80000",
+      "90000"
+    ]
+  },
+  "04000": {
+    "nis": "04000",
+    "type": "region",
+    "name": "Région de Bruxelles-Capitale",
+    "alternateNames": [
+      "region de bruxelles capitale",
+      "brussels hoofdstedelijk gewest",
+      "region brussel hauptstadt",
+      "region bruxelles capitale",
+      "bruxelles capitale"
+    ],
+    "parentNis": null,
+    "childrenNis": [
+      "21000"
+    ]
+  },
+  "10000": {
+    "nis": "10000",
+    "type": "province",
+    "name": "Provincie Antwerpen",
+    "alternateNames": [
+      "provincie antwerpen",
+      "province d'anvers",
+      "provinz antwerpen",
+      "antwerpen",
+      "anvers"
+    ],
+    "parentNis": "02000",
+    "childrenNis": [
+      "11000",
+      "12000",
+      "13000"
+    ]
+  },
+  "11000": {
+    "nis": "11000",
+    "type": "district",
+    "name": "Arrondissement Antwerpen",
+    "alternateNames": [
+      "arrondissement antwerpen",
+      "arrondissement d'anvers",
+      "bezirk antwerpen",
+      "antwerpen",
+      "anvers"
+    ],
+    "parentNis": "10000",
+    "childrenNis": [
+      "11001",
+      "11002",
+      "11004",
+      "11005",
+      "11007",
+      "11008",
+      "11009",
+      "11013",
+      "11016",
+      "11018",
+      "11021",
+      "11022",
+      "11023",
+      "11024",
+      "11025",
+      "11029",
+      "11030",
+      "11035",
+      "11037",
+      "11038",
+      "11039",
+      "11040",
+      "11044",
+      "11050",
+      "11052",
+      "11053",
+      "11054",
+      "11055",
+      "11056",
+      "11057"
+    ]
+  },
+  "11001": {
+    "nis": "11001",
+    "type": "municipality",
+    "name": "Aartselaar",
+    "alternateNames": [
+      "aartselaar",
+      "gemeente aartselaar",
+      "commune d'aartselaar",
+      "gemeinde aartselaar"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11002": {
+    "nis": "11002",
+    "type": "municipality",
+    "name": "Antwerpen",
+    "alternateNames": [
+      "antwerpen",
+      "anvers",
+      "gemeente antwerpen",
+      "commune d'anvers",
+      "gemeinde antwerpen"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11004": {
+    "nis": "11004",
+    "type": "municipality",
+    "name": "Boechout",
+    "alternateNames": [
+      "boechout",
+      "gemeente boechout",
+      "commune de boechout",
+      "gemeinde boechout"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11005": {
+    "nis": "11005",
+    "type": "municipality",
+    "name": "Boom",
+    "alternateNames": [
+      "boom",
+      "gemeente boom",
+      "commune de boom",
+      "gemeinde boom"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11007": {
+    "nis": "11007",
+    "type": "municipality",
+    "name": "Borsbeek",
+    "alternateNames": [
+      "borsbeek",
+      "gemeente borsbeek",
+      "commune de borsbeek",
+      "gemeinde borsbeek"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11008": {
+    "nis": "11008",
+    "type": "municipality",
+    "name": "Brasschaat",
+    "alternateNames": [
+      "brasschaat",
+      "gemeente brasschaat",
+      "commune de brasschaat",
+      "gemeinde brasschaat"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11009": {
+    "nis": "11009",
+    "type": "municipality",
+    "name": "Brecht",
+    "alternateNames": [
+      "brecht",
+      "gemeente brecht",
+      "commune de brecht",
+      "gemeinde brecht"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11013": {
+    "nis": "11013",
+    "type": "municipality",
+    "name": "Edegem",
+    "alternateNames": [
+      "edegem",
+      "gemeente edegem",
+      "commune d'edegem",
+      "gemeinde edegem"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11016": {
+    "nis": "11016",
+    "type": "municipality",
+    "name": "Essen",
+    "alternateNames": [
+      "essen",
+      "gemeente essen",
+      "commune d'essen",
+      "gemeinde essen"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11018": {
+    "nis": "11018",
+    "type": "municipality",
+    "name": "Hemiksem",
+    "alternateNames": [
+      "hemiksem",
+      "gemeente hemiksem",
+      "commune de hemiksem",
+      "gemeinde hemiksem"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11021": {
+    "nis": "11021",
+    "type": "municipality",
+    "name": "Hove (Antwerpen)",
+    "alternateNames": [
+      "hove",
+      "hove (antwerpen)",
+      "hove (anvers)",
+      "gemeente hove",
+      "commune de hove",
+      "gemeinde hove"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11022": {
+    "nis": "11022",
+    "type": "municipality",
+    "name": "Kalmthout",
+    "alternateNames": [
+      "kalmthout",
+      "gemeente kalmthout",
+      "commune de kalmthout",
+      "gemeinde kalmthout"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11023": {
+    "nis": "11023",
+    "type": "municipality",
+    "name": "Kapellen (Antwerpen)",
+    "alternateNames": [
+      "kapellen",
+      "kapellen (antwerpen)",
+      "kapellen (anvers)",
+      "gemeente kapellen",
+      "commune de kapellen",
+      "gemeinde kapellen"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11024": {
+    "nis": "11024",
+    "type": "municipality",
+    "name": "Kontich",
+    "alternateNames": [
+      "kontich",
+      "gemeente kontich",
+      "commune de kontich",
+      "gemeinde kontich"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11025": {
+    "nis": "11025",
+    "type": "municipality",
+    "name": "Lint",
+    "alternateNames": [
+      "lint",
+      "gemeente lint",
+      "commune de lint",
+      "gemeinde lint"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11029": {
+    "nis": "11029",
+    "type": "municipality",
+    "name": "Mortsel",
+    "alternateNames": [
+      "mortsel",
+      "gemeente mortsel",
+      "commune de mortsel",
+      "gemeinde mortsel"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11030": {
+    "nis": "11030",
+    "type": "municipality",
+    "name": "Niel",
+    "alternateNames": [
+      "niel",
+      "gemeente niel",
+      "commune de niel",
+      "gemeinde niel"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11035": {
+    "nis": "11035",
+    "type": "municipality",
+    "name": "Ranst",
+    "alternateNames": [
+      "ranst",
+      "gemeente ranst",
+      "commune de ranst",
+      "gemeinde ranst"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11037": {
+    "nis": "11037",
+    "type": "municipality",
+    "name": "Rumst",
+    "alternateNames": [
+      "rumst",
+      "gemeente rumst",
+      "commune de rumst",
+      "gemeinde rumst"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11038": {
+    "nis": "11038",
+    "type": "municipality",
+    "name": "Schelle",
+    "alternateNames": [
+      "schelle",
+      "gemeente schelle",
+      "commune de schelle",
+      "gemeinde schelle"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11039": {
+    "nis": "11039",
+    "type": "municipality",
+    "name": "Schilde",
+    "alternateNames": [
+      "schilde",
+      "gemeente schilde",
+      "commune de schilde",
+      "gemeinde schilde"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11040": {
+    "nis": "11040",
+    "type": "municipality",
+    "name": "Schoten",
+    "alternateNames": [
+      "schoten",
+      "gemeente schoten",
+      "commune de schoten",
+      "gemeinde schoten"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11044": {
+    "nis": "11044",
+    "type": "municipality",
+    "name": "Stabroek",
+    "alternateNames": [
+      "stabroek",
+      "gemeente stabroek",
+      "commune de stabroek",
+      "gemeinde stabroek"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11050": {
+    "nis": "11050",
+    "type": "municipality",
+    "name": "Wijnegem",
+    "alternateNames": [
+      "wijnegem",
+      "gemeente wijnegem",
+      "commune de wijnegem",
+      "gemeinde wijnegem"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11052": {
+    "nis": "11052",
+    "type": "municipality",
+    "name": "Wommelgem",
+    "alternateNames": [
+      "wommelgem",
+      "gemeente wommelgem",
+      "commune de wommelgem",
+      "gemeinde wommelgem"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11053": {
+    "nis": "11053",
+    "type": "municipality",
+    "name": "Wuustwezel",
+    "alternateNames": [
+      "wuustwezel",
+      "gemeente wuustwezel",
+      "commune de wuustwezel",
+      "gemeinde wuustwezel"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11054": {
+    "nis": "11054",
+    "type": "municipality",
+    "name": "Zandhoven",
+    "alternateNames": [
+      "zandhoven",
+      "gemeente zandhoven",
+      "commune de zandhoven",
+      "gemeinde zandhoven"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11055": {
+    "nis": "11055",
+    "type": "municipality",
+    "name": "Zoersel",
+    "alternateNames": [
+      "zoersel",
+      "gemeente zoersel",
+      "commune de zoersel",
+      "gemeinde zoersel"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11056": {
+    "nis": "11056",
+    "type": "municipality",
+    "name": "Zwijndrecht",
+    "alternateNames": [
+      "zwijndrecht",
+      "gemeente zwijndrecht",
+      "commune de zwijndrecht",
+      "gemeinde zwijndrecht"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "11057": {
+    "nis": "11057",
+    "type": "municipality",
+    "name": "Malle",
+    "alternateNames": [
+      "malle",
+      "gemeente malle",
+      "commune de malle",
+      "gemeinde malle"
+    ],
+    "parentNis": "11000",
+    "childrenNis": []
+  },
+  "12000": {
+    "nis": "12000",
+    "type": "district",
+    "name": "Arrondissement Mechelen",
+    "alternateNames": [
+      "arrondissement mechelen",
+      "arrondissement de malines",
+      "bezirk mechelen",
+      "mechelen",
+      "malines"
+    ],
+    "parentNis": "10000",
+    "childrenNis": [
+      "12002",
+      "12005",
+      "12007",
+      "12009",
+      "12014",
+      "12021",
+      "12025",
+      "12026",
+      "12029",
+      "12035",
+      "12040",
+      "12041"
+    ]
+  },
+  "12002": {
+    "nis": "12002",
+    "type": "municipality",
+    "name": "Berlaar",
+    "alternateNames": [
+      "berlaar",
+      "gemeente berlaar",
+      "commune de berlaar",
+      "gemeinde berlaar"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12005": {
+    "nis": "12005",
+    "type": "municipality",
+    "name": "Bonheiden",
+    "alternateNames": [
+      "bonheiden",
+      "gemeente bonheiden",
+      "commune de bonheiden",
+      "gemeinde bonheiden"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12007": {
+    "nis": "12007",
+    "type": "municipality",
+    "name": "Bornem",
+    "alternateNames": [
+      "bornem",
+      "gemeente bornem",
+      "commune de bornem",
+      "gemeinde bornem"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12009": {
+    "nis": "12009",
+    "type": "municipality",
+    "name": "Duffel",
+    "alternateNames": [
+      "duffel",
+      "gemeente duffel",
+      "commune de duffel",
+      "gemeinde duffel"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12014": {
+    "nis": "12014",
+    "type": "municipality",
+    "name": "Heist-op-den-Berg",
+    "alternateNames": [
+      "heist op den berg",
+      "gemeente heist op den berg",
+      "commune de heist op den berg",
+      "gemeinde heist op den berg"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12021": {
+    "nis": "12021",
+    "type": "municipality",
+    "name": "Lier",
+    "alternateNames": [
+      "lier",
+      "lierre",
+      "gemeente lier",
+      "commune de lierre",
+      "gemeinde lier"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12025": {
+    "nis": "12025",
+    "type": "municipality",
+    "name": "Mechelen",
+    "alternateNames": [
+      "mechelen",
+      "malines",
+      "gemeente mechelen",
+      "commune de malines",
+      "gemeinde mechelen"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12026": {
+    "nis": "12026",
+    "type": "municipality",
+    "name": "Nijlen",
+    "alternateNames": [
+      "nijlen",
+      "gemeente nijlen",
+      "commune de nijlen",
+      "gemeinde nijlen"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12029": {
+    "nis": "12029",
+    "type": "municipality",
+    "name": "Putte",
+    "alternateNames": [
+      "putte",
+      "gemeente putte",
+      "commune de putte",
+      "gemeinde putte"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12035": {
+    "nis": "12035",
+    "type": "municipality",
+    "name": "Sint-Katelijne-Waver",
+    "alternateNames": [
+      "sint katelijne waver",
+      "gemeente sint katelijne waver",
+      "commune de sint katelijne waver",
+      "gemeinde sint katelijne waver"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12040": {
+    "nis": "12040",
+    "type": "municipality",
+    "name": "Willebroek",
+    "alternateNames": [
+      "willebroek",
+      "gemeente willebroek",
+      "commune de willebroek",
+      "gemeinde willebroek"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "12041": {
+    "nis": "12041",
+    "type": "municipality",
+    "name": "Puurs-Sint-Amands",
+    "alternateNames": [
+      "puurs sint amands",
+      "gemeente puurs sint amands",
+      "commune de puurs sint amands",
+      "gemeinde puurs sint amands"
+    ],
+    "parentNis": "12000",
+    "childrenNis": []
+  },
+  "13000": {
+    "nis": "13000",
+    "type": "district",
+    "name": "Arrondissement Turnhout",
+    "alternateNames": [
+      "arrondissement turnhout",
+      "arrondissement de turnhout",
+      "bezirk turnhout",
+      "turnhout"
+    ],
+    "parentNis": "10000",
+    "childrenNis": [
+      "13001",
+      "13002",
+      "13003",
+      "13004",
+      "13006",
+      "13008",
+      "13010",
+      "13011",
+      "13012",
+      "13013",
+      "13014",
+      "13016",
+      "13017",
+      "13019",
+      "13021",
+      "13023",
+      "13025",
+      "13029",
+      "13031",
+      "13035",
+      "13036",
+      "13037",
+      "13040",
+      "13044",
+      "13046",
+      "13049",
+      "13053"
+    ]
+  },
+  "13001": {
+    "nis": "13001",
+    "type": "municipality",
+    "name": "Arendonk",
+    "alternateNames": [
+      "arendonk",
+      "gemeente arendonk",
+      "commune d'arendonk",
+      "gemeinde arendonk"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13002": {
+    "nis": "13002",
+    "type": "municipality",
+    "name": "Baarle-Hertog",
+    "alternateNames": [
+      "baarle hertog",
+      "baerle duc",
+      "gemeente baarle hertog",
+      "commune de baerle duc",
+      "gemeinde baarle hertog"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13003": {
+    "nis": "13003",
+    "type": "municipality",
+    "name": "Balen",
+    "alternateNames": [
+      "balen",
+      "gemeente balen",
+      "commune de balen",
+      "gemeinde balen"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13004": {
+    "nis": "13004",
+    "type": "municipality",
+    "name": "Beerse",
+    "alternateNames": [
+      "beerse",
+      "gemeente beerse",
+      "commune de beerse",
+      "gemeinde beerse"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13006": {
+    "nis": "13006",
+    "type": "municipality",
+    "name": "Dessel",
+    "alternateNames": [
+      "dessel",
+      "gemeente dessel",
+      "commune de dessel",
+      "gemeinde dessel"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13008": {
+    "nis": "13008",
+    "type": "municipality",
+    "name": "Geel",
+    "alternateNames": [
+      "geel",
+      "gemeente geel",
+      "commune de geel",
+      "gemeinde geel"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13010": {
+    "nis": "13010",
+    "type": "municipality",
+    "name": "Grobbendonk",
+    "alternateNames": [
+      "grobbendonk",
+      "gemeente grobbendonk",
+      "commune de grobbendonk",
+      "gemeinde grobbendonk"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13011": {
+    "nis": "13011",
+    "type": "municipality",
+    "name": "Herentals",
+    "alternateNames": [
+      "herentals",
+      "gemeente herentals",
+      "commune de herentals",
+      "gemeinde herentals"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13012": {
+    "nis": "13012",
+    "type": "municipality",
+    "name": "Herenthout",
+    "alternateNames": [
+      "herenthout",
+      "gemeente herenthout",
+      "commune de herenthout",
+      "gemeinde herenthout"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13013": {
+    "nis": "13013",
+    "type": "municipality",
+    "name": "Herselt",
+    "alternateNames": [
+      "herselt",
+      "gemeente herselt",
+      "commune de herselt",
+      "gemeinde herselt"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13014": {
+    "nis": "13014",
+    "type": "municipality",
+    "name": "Hoogstraten",
+    "alternateNames": [
+      "hoogstraten",
+      "gemeente hoogstraten",
+      "commune de hoogstraten",
+      "gemeinde hoogstraten"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13016": {
+    "nis": "13016",
+    "type": "municipality",
+    "name": "Hulshout",
+    "alternateNames": [
+      "hulshout",
+      "gemeente hulshout",
+      "commune de hulshout",
+      "gemeinde hulshout"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13017": {
+    "nis": "13017",
+    "type": "municipality",
+    "name": "Kasterlee",
+    "alternateNames": [
+      "kasterlee",
+      "gemeente kasterlee",
+      "commune de kasterlee",
+      "gemeinde kasterlee"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13019": {
+    "nis": "13019",
+    "type": "municipality",
+    "name": "Lille",
+    "alternateNames": [
+      "lille",
+      "gemeente lille",
+      "commune de lille",
+      "gemeinde lille"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13021": {
+    "nis": "13021",
+    "type": "municipality",
+    "name": "Meerhout",
+    "alternateNames": [
+      "meerhout",
+      "gemeente meerhout",
+      "commune de meerhout",
+      "gemeinde meerhout"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13023": {
+    "nis": "13023",
+    "type": "municipality",
+    "name": "Merksplas",
+    "alternateNames": [
+      "merksplas",
+      "gemeente merksplas",
+      "commune de merksplas",
+      "gemeinde merksplas"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13025": {
+    "nis": "13025",
+    "type": "municipality",
+    "name": "Mol",
+    "alternateNames": [
+      "mol",
+      "gemeente mol",
+      "commune de mol",
+      "gemeinde mol"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13029": {
+    "nis": "13029",
+    "type": "municipality",
+    "name": "Olen",
+    "alternateNames": [
+      "olen",
+      "gemeente olen",
+      "commune d'olen",
+      "gemeinde olen"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13031": {
+    "nis": "13031",
+    "type": "municipality",
+    "name": "Oud-Turnhout",
+    "alternateNames": [
+      "oud turnhout",
+      "gemeente oud turnhout",
+      "commune d'oud turnhout",
+      "gemeinde oud turnhout"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13035": {
+    "nis": "13035",
+    "type": "municipality",
+    "name": "Ravels",
+    "alternateNames": [
+      "ravels",
+      "gemeente ravels",
+      "commune de ravels",
+      "gemeinde ravels"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13036": {
+    "nis": "13036",
+    "type": "municipality",
+    "name": "Retie",
+    "alternateNames": [
+      "retie",
+      "gemeente retie",
+      "commune de retie",
+      "gemeinde retie"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13037": {
+    "nis": "13037",
+    "type": "municipality",
+    "name": "Rijkevorsel",
+    "alternateNames": [
+      "rijkevorsel",
+      "gemeente rijkevorsel",
+      "commune de rijkevorsel",
+      "gemeinde rijkevorsel"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13040": {
+    "nis": "13040",
+    "type": "municipality",
+    "name": "Turnhout",
+    "alternateNames": [
+      "turnhout",
+      "gemeente turnhout",
+      "commune de turnhout",
+      "gemeinde turnhout"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13044": {
+    "nis": "13044",
+    "type": "municipality",
+    "name": "Vorselaar",
+    "alternateNames": [
+      "vorselaar",
+      "gemeente vorselaar",
+      "commune de vorselaar",
+      "gemeinde vorselaar"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13046": {
+    "nis": "13046",
+    "type": "municipality",
+    "name": "Vosselaar",
+    "alternateNames": [
+      "vosselaar",
+      "gemeente vosselaar",
+      "commune de vosselaar",
+      "gemeinde vosselaar"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13049": {
+    "nis": "13049",
+    "type": "municipality",
+    "name": "Westerlo",
+    "alternateNames": [
+      "westerlo",
+      "gemeente westerlo",
+      "commune de westerlo",
+      "gemeinde westerlo"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "13053": {
+    "nis": "13053",
+    "type": "municipality",
+    "name": "Laakdal",
+    "alternateNames": [
+      "laakdal",
+      "gemeente laakdal",
+      "commune de laakdal",
+      "gemeinde laakdal"
+    ],
+    "parentNis": "13000",
+    "childrenNis": []
+  },
+  "20001": {
+    "nis": "20001",
+    "type": "province",
+    "name": "Provincie Vlaams-Brabant",
+    "alternateNames": [
+      "provincie vlaams brabant",
+      "province du brabant flamand",
+      "provinz flamisch brabant",
+      "vlaams brabant",
+      "brabant flamand",
+      "flamisch brabant"
+    ],
+    "parentNis": "02000",
+    "childrenNis": [
+      "23000",
+      "24000"
+    ]
+  },
+  "20002": {
+    "nis": "20002",
+    "type": "province",
+    "name": "Province du Brabant wallon",
+    "alternateNames": [
+      "province du brabant wallon",
+      "provincie waals brabant",
+      "provinz wallonisch brabant",
+      "brabant wallon",
+      "waals brabant",
+      "wallonisch brabant"
+    ],
+    "parentNis": "03000",
+    "childrenNis": [
+      "25000"
+    ]
+  },
+  "21000": {
+    "nis": "21000",
+    "type": "district",
+    "name": "Arrondissement de Bruxelles-Capitale",
+    "alternateNames": [
+      "arrondissement de bruxelles capitale",
+      "arrondissement brussel hoofdstad",
+      "bezirk brussel hauptstadt",
+      "bruxelles capitale",
+      "brussel hoofdstad",
+      "brussel hauptstadt"
+    ],
+    "parentNis": "04000",
+    "childrenNis": [
+      "21001",
+      "21002",
+      "21003",
+      "21004",
+      "21005",
+      "21006",
+      "21007",
+      "21008",
+      "21009",
+      "21010",
+      "21011",
+      "21012",
+      "21013",
+      "21014",
+      "21015",
+      "21016",
+      "21017",
+      "21018",
+      "21019"
+    ]
+  },
+  "21001": {
+    "nis": "21001",
+    "type": "municipality",
+    "name": "Anderlecht",
+    "alternateNames": [
+      "anderlecht",
+      "commune d'anderlecht",
+      "gemeente anderlecht",
+      "gemeinde anderlecht"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21002": {
+    "nis": "21002",
+    "type": "municipality",
+    "name": "Auderghem",
+    "alternateNames": [
+      "auderghem",
+      "oudergem",
+      "commune d'auderghem",
+      "gemeente oudergem",
+      "gemeinde auderghem"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21003": {
+    "nis": "21003",
+    "type": "municipality",
+    "name": "Berchem-Sainte-Agathe",
+    "alternateNames": [
+      "berchem sainte agathe",
+      "sint agatha berchem",
+      "commune de berchem sainte agathe",
+      "gemeente sint agatha berchem",
+      "gemeinde berchem sainte agathe"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21004": {
+    "nis": "21004",
+    "type": "municipality",
+    "name": "Bruxelles",
+    "alternateNames": [
+      "bruxelles",
+      "brussel",
+      "commune de bruxelles",
+      "gemeente brussel",
+      "gemeinde brussel"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21005": {
+    "nis": "21005",
+    "type": "municipality",
+    "name": "Etterbeek",
+    "alternateNames": [
+      "etterbeek",
+      "commune d'etterbeek",
+      "gemeente etterbeek",
+      "gemeinde etterbeek"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21006": {
+    "nis": "21006",
+    "type": "municipality",
+    "name": "Evere",
+    "alternateNames": [
+      "evere",
+      "commune d'evere",
+      "gemeente evere",
+      "gemeinde evere"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21007": {
+    "nis": "21007",
+    "type": "municipality",
+    "name": "Forest (Bruxelles-Capitale)",
+    "alternateNames": [
+      "forest",
+      "vorst",
+      "forest (bruxelles capitale)",
+      "vorst (brussel hoofdstad)",
+      "forest (brussel hauptstadt)",
+      "commune de forest",
+      "gemeente vorst",
+      "gemeinde forest"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21008": {
+    "nis": "21008",
+    "type": "municipality",
+    "name": "Ganshoren",
+    "alternateNames": [
+      "ganshoren",
+      "commune de ganshoren",
+      "gemeente ganshoren",
+      "gemeinde ganshoren"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21009": {
+    "nis": "21009",
+    "type": "municipality",
+    "name": "Ixelles",
+    "alternateNames": [
+      "ixelles",
+      "elsene",
+      "commune d'ixelles",
+      "gemeente elsene",
+      "gemeinde ixelles"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21010": {
+    "nis": "21010",
+    "type": "municipality",
+    "name": "Jette",
+    "alternateNames": [
+      "jette",
+      "commune de jette",
+      "gemeente jette",
+      "gemeinde jette"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21011": {
+    "nis": "21011",
+    "type": "municipality",
+    "name": "Koekelberg",
+    "alternateNames": [
+      "koekelberg",
+      "commune de koekelberg",
+      "gemeente koekelberg",
+      "gemeinde koekelberg"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21012": {
+    "nis": "21012",
+    "type": "municipality",
+    "name": "Molenbeek-Saint-Jean",
+    "alternateNames": [
+      "molenbeek saint jean",
+      "sint jans molenbeek",
+      "commune de molenbeek saint jean",
+      "gemeente sint jans molenbeek",
+      "gemeinde molenbeek saint jean"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21013": {
+    "nis": "21013",
+    "type": "municipality",
+    "name": "Saint-Gilles",
+    "alternateNames": [
+      "saint gilles",
+      "sint gillis",
+      "commune de saint gilles",
+      "gemeente sint gillis",
+      "gemeinde saint gilles"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21014": {
+    "nis": "21014",
+    "type": "municipality",
+    "name": "Saint-Josse-ten-Noode",
+    "alternateNames": [
+      "saint josse ten noode",
+      "sint joost ten node",
+      "commune de saint josse ten noode",
+      "gemeente sint joost ten node",
+      "gemeinde saint josse ten noode"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21015": {
+    "nis": "21015",
+    "type": "municipality",
+    "name": "Schaerbeek",
+    "alternateNames": [
+      "schaerbeek",
+      "schaarbeek",
+      "commune de schaerbeek",
+      "gemeente schaarbeek",
+      "gemeinde schaerbeek"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21016": {
+    "nis": "21016",
+    "type": "municipality",
+    "name": "Uccle",
+    "alternateNames": [
+      "uccle",
+      "ukkel",
+      "commune d'uccle",
+      "gemeente ukkel",
+      "gemeinde uccle"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21017": {
+    "nis": "21017",
+    "type": "municipality",
+    "name": "Watermael-Boitsfort",
+    "alternateNames": [
+      "watermael boitsfort",
+      "watermaal bosvoorde",
+      "commune de watermael boitsfort",
+      "gemeente watermaal bosvoorde",
+      "gemeinde watermael boitsfort"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21018": {
+    "nis": "21018",
+    "type": "municipality",
+    "name": "Woluwe-Saint-Lambert",
+    "alternateNames": [
+      "woluwe saint lambert",
+      "sint lambrechts woluwe",
+      "commune de woluwe saint lambert",
+      "gemeente sint lambrechts woluwe",
+      "gemeinde woluwe saint lambert"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "21019": {
+    "nis": "21019",
+    "type": "municipality",
+    "name": "Woluwe-Saint-Pierre",
+    "alternateNames": [
+      "woluwe saint pierre",
+      "sint pieters woluwe",
+      "commune de woluwe saint pierre",
+      "gemeente sint pieters woluwe",
+      "gemeinde woluwe saint pierre"
+    ],
+    "parentNis": "21000",
+    "childrenNis": []
+  },
+  "23000": {
+    "nis": "23000",
+    "type": "district",
+    "name": "Arrondissement Halle-Vilvoorde",
+    "alternateNames": [
+      "arrondissement halle vilvoorde",
+      "arrondissement de hal vilvorde",
+      "bezirk halle vilvoorde",
+      "halle vilvoorde",
+      "hal vilvorde"
+    ],
+    "parentNis": "20001",
+    "childrenNis": [
+      "23002",
+      "23003",
+      "23009",
+      "23016",
+      "23023",
+      "23024",
+      "23025",
+      "23027",
+      "23032",
+      "23033",
+      "23038",
+      "23039",
+      "23044",
+      "23045",
+      "23047",
+      "23050",
+      "23052",
+      "23060",
+      "23062",
+      "23064",
+      "23077",
+      "23081",
+      "23086",
+      "23088",
+      "23094",
+      "23096",
+      "23097",
+      "23098",
+      "23099",
+      "23100",
+      "23101",
+      "23102",
+      "23103",
+      "23104",
+      "23105"
+    ]
+  },
+  "23002": {
+    "nis": "23002",
+    "type": "municipality",
+    "name": "Asse",
+    "alternateNames": [
+      "asse",
+      "gemeente asse",
+      "commune d'asse",
+      "gemeinde asse"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23003": {
+    "nis": "23003",
+    "type": "municipality",
+    "name": "Beersel",
+    "alternateNames": [
+      "beersel",
+      "gemeente beersel",
+      "commune de beersel",
+      "gemeinde beersel"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23009": {
+    "nis": "23009",
+    "type": "municipality",
+    "name": "Bever",
+    "alternateNames": [
+      "bever",
+      "bievene",
+      "gemeente bever",
+      "commune de bievene",
+      "gemeinde bever"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23016": {
+    "nis": "23016",
+    "type": "municipality",
+    "name": "Dilbeek",
+    "alternateNames": [
+      "dilbeek",
+      "gemeente dilbeek",
+      "commune de dilbeek",
+      "gemeinde dilbeek"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23023": {
+    "nis": "23023",
+    "type": "municipality",
+    "name": "Galmaarden",
+    "alternateNames": [
+      "galmaarden",
+      "gammerages",
+      "gemeente galmaarden",
+      "commune de gammerages",
+      "gemeinde galmaarden"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23024": {
+    "nis": "23024",
+    "type": "municipality",
+    "name": "Gooik",
+    "alternateNames": [
+      "gooik",
+      "gemeente gooik",
+      "commune de gooik",
+      "gemeinde gooik"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23025": {
+    "nis": "23025",
+    "type": "municipality",
+    "name": "Grimbergen",
+    "alternateNames": [
+      "grimbergen",
+      "gemeente grimbergen",
+      "commune de grimbergen",
+      "gemeinde grimbergen"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23027": {
+    "nis": "23027",
+    "type": "municipality",
+    "name": "Halle (Halle-Vilvoorde)",
+    "alternateNames": [
+      "halle",
+      "hal",
+      "halle (halle vilvoorde)",
+      "hal (hal vilvorde)",
+      "gemeente halle",
+      "commune de hal",
+      "gemeinde halle"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23032": {
+    "nis": "23032",
+    "type": "municipality",
+    "name": "Herne",
+    "alternateNames": [
+      "herne",
+      "gemeente herne",
+      "commune de herne",
+      "gemeinde herne"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23033": {
+    "nis": "23033",
+    "type": "municipality",
+    "name": "Hoeilaart",
+    "alternateNames": [
+      "hoeilaart",
+      "gemeente hoeilaart",
+      "commune de hoeilaart",
+      "gemeinde hoeilaart"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23038": {
+    "nis": "23038",
+    "type": "municipality",
+    "name": "Kampenhout",
+    "alternateNames": [
+      "kampenhout",
+      "gemeente kampenhout",
+      "commune de kampenhout",
+      "gemeinde kampenhout"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23039": {
+    "nis": "23039",
+    "type": "municipality",
+    "name": "Kapelle-op-den-Bos",
+    "alternateNames": [
+      "kapelle op den bos",
+      "gemeente kapelle op den bos",
+      "commune de kapelle op den bos",
+      "gemeinde kapelle op den bos"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23044": {
+    "nis": "23044",
+    "type": "municipality",
+    "name": "Liedekerke",
+    "alternateNames": [
+      "liedekerke",
+      "gemeente liedekerke",
+      "commune de liedekerke",
+      "gemeinde liedekerke"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23045": {
+    "nis": "23045",
+    "type": "municipality",
+    "name": "Londerzeel",
+    "alternateNames": [
+      "londerzeel",
+      "gemeente londerzeel",
+      "commune de londerzeel",
+      "gemeinde londerzeel"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23047": {
+    "nis": "23047",
+    "type": "municipality",
+    "name": "Machelen (Halle-Vilvoorde)",
+    "alternateNames": [
+      "machelen",
+      "machelen (halle vilvoorde)",
+      "machelen (hal vilvorde)",
+      "gemeente machelen",
+      "commune de machelen",
+      "gemeinde machelen"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23050": {
+    "nis": "23050",
+    "type": "municipality",
+    "name": "Meise",
+    "alternateNames": [
+      "meise",
+      "gemeente meise",
+      "commune de meise",
+      "gemeinde meise"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23052": {
+    "nis": "23052",
+    "type": "municipality",
+    "name": "Merchtem",
+    "alternateNames": [
+      "merchtem",
+      "gemeente merchtem",
+      "commune de merchtem",
+      "gemeinde merchtem"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23060": {
+    "nis": "23060",
+    "type": "municipality",
+    "name": "Opwijk",
+    "alternateNames": [
+      "opwijk",
+      "gemeente opwijk",
+      "commune d'opwijk",
+      "gemeinde opwijk"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23062": {
+    "nis": "23062",
+    "type": "municipality",
+    "name": "Overijse",
+    "alternateNames": [
+      "overijse",
+      "gemeente overijse",
+      "commune d'overijse",
+      "gemeinde overijse"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23064": {
+    "nis": "23064",
+    "type": "municipality",
+    "name": "Pepingen",
+    "alternateNames": [
+      "pepingen",
+      "gemeente pepingen",
+      "commune de pepingen",
+      "gemeinde pepingen"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23077": {
+    "nis": "23077",
+    "type": "municipality",
+    "name": "Sint-Pieters-Leeuw",
+    "alternateNames": [
+      "sint pieters leeuw",
+      "gemeente sint pieters leeuw",
+      "commune de sint pieters leeuw",
+      "gemeinde sint pieters leeuw"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23081": {
+    "nis": "23081",
+    "type": "municipality",
+    "name": "Steenokkerzeel",
+    "alternateNames": [
+      "steenokkerzeel",
+      "gemeente steenokkerzeel",
+      "commune de steenokkerzeel",
+      "gemeinde steenokkerzeel"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23086": {
+    "nis": "23086",
+    "type": "municipality",
+    "name": "Ternat",
+    "alternateNames": [
+      "ternat",
+      "gemeente ternat",
+      "commune de ternat",
+      "gemeinde ternat"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23088": {
+    "nis": "23088",
+    "type": "municipality",
+    "name": "Vilvoorde",
+    "alternateNames": [
+      "vilvoorde",
+      "vilvorde",
+      "gemeente vilvoorde",
+      "commune de vilvorde",
+      "gemeinde vilvoorde"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23094": {
+    "nis": "23094",
+    "type": "municipality",
+    "name": "Zaventem",
+    "alternateNames": [
+      "zaventem",
+      "gemeente zaventem",
+      "commune de zaventem",
+      "gemeinde zaventem"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23096": {
+    "nis": "23096",
+    "type": "municipality",
+    "name": "Zemst",
+    "alternateNames": [
+      "zemst",
+      "gemeente zemst",
+      "commune de zemst",
+      "gemeinde zemst"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23097": {
+    "nis": "23097",
+    "type": "municipality",
+    "name": "Roosdaal",
+    "alternateNames": [
+      "roosdaal",
+      "gemeente roosdaal",
+      "commune de roosdaal",
+      "gemeinde roosdaal"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23098": {
+    "nis": "23098",
+    "type": "municipality",
+    "name": "Drogenbos",
+    "alternateNames": [
+      "drogenbos",
+      "gemeente drogenbos",
+      "commune de drogenbos",
+      "gemeinde drogenbos"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23099": {
+    "nis": "23099",
+    "type": "municipality",
+    "name": "Kraainem",
+    "alternateNames": [
+      "kraainem",
+      "gemeente kraainem",
+      "commune de kraainem",
+      "gemeinde kraainem"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23100": {
+    "nis": "23100",
+    "type": "municipality",
+    "name": "Linkebeek",
+    "alternateNames": [
+      "linkebeek",
+      "gemeente linkebeek",
+      "commune de linkebeek",
+      "gemeinde linkebeek"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23101": {
+    "nis": "23101",
+    "type": "municipality",
+    "name": "Sint-Genesius-Rode",
+    "alternateNames": [
+      "sint genesius rode",
+      "rhode saint genese",
+      "gemeente sint genesius rode",
+      "commune de rhode saint genese",
+      "gemeinde sint genesius rode"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23102": {
+    "nis": "23102",
+    "type": "municipality",
+    "name": "Wemmel",
+    "alternateNames": [
+      "wemmel",
+      "gemeente wemmel",
+      "commune de wemmel",
+      "gemeinde wemmel"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23103": {
+    "nis": "23103",
+    "type": "municipality",
+    "name": "Wezembeek-Oppem",
+    "alternateNames": [
+      "wezembeek oppem",
+      "gemeente wezembeek oppem",
+      "commune de wezembeek oppem",
+      "gemeinde wezembeek oppem"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23104": {
+    "nis": "23104",
+    "type": "municipality",
+    "name": "Lennik",
+    "alternateNames": [
+      "lennik",
+      "gemeente lennik",
+      "commune de lennik",
+      "gemeinde lennik"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "23105": {
+    "nis": "23105",
+    "type": "municipality",
+    "name": "Affligem",
+    "alternateNames": [
+      "affligem",
+      "gemeente affligem",
+      "commune d'affligem",
+      "gemeinde affligem"
+    ],
+    "parentNis": "23000",
+    "childrenNis": []
+  },
+  "24000": {
+    "nis": "24000",
+    "type": "district",
+    "name": "Arrondissement Leuven",
+    "alternateNames": [
+      "arrondissement leuven",
+      "arrondissement de louvain",
+      "bezirk lowen",
+      "leuven",
+      "louvain",
+      "lowen"
+    ],
+    "parentNis": "20001",
+    "childrenNis": [
+      "24001",
+      "24007",
+      "24008",
+      "24009",
+      "24011",
+      "24014",
+      "24016",
+      "24020",
+      "24028",
+      "24033",
+      "24038",
+      "24041",
+      "24043",
+      "24045",
+      "24048",
+      "24054",
+      "24055",
+      "24059",
+      "24062",
+      "24066",
+      "24086",
+      "24094",
+      "24104",
+      "24107",
+      "24109",
+      "24130",
+      "24133",
+      "24134",
+      "24135",
+      "24137"
+    ]
+  },
+  "24001": {
+    "nis": "24001",
+    "type": "municipality",
+    "name": "Aarschot",
+    "alternateNames": [
+      "aarschot",
+      "gemeente aarschot",
+      "commune d'aarschot",
+      "gemeinde aarschot"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24007": {
+    "nis": "24007",
+    "type": "municipality",
+    "name": "Begijnendijk",
+    "alternateNames": [
+      "begijnendijk",
+      "gemeente begijnendijk",
+      "commune de begijnendijk",
+      "gemeinde begijnendijk"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24008": {
+    "nis": "24008",
+    "type": "municipality",
+    "name": "Bekkevoort",
+    "alternateNames": [
+      "bekkevoort",
+      "gemeente bekkevoort",
+      "commune de bekkevoort",
+      "gemeinde bekkevoort"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24009": {
+    "nis": "24009",
+    "type": "municipality",
+    "name": "Bertem",
+    "alternateNames": [
+      "bertem",
+      "gemeente bertem",
+      "commune de bertem",
+      "gemeinde bertem"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24011": {
+    "nis": "24011",
+    "type": "municipality",
+    "name": "Bierbeek",
+    "alternateNames": [
+      "bierbeek",
+      "gemeente bierbeek",
+      "commune de bierbeek",
+      "gemeinde bierbeek"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24014": {
+    "nis": "24014",
+    "type": "municipality",
+    "name": "Boortmeerbeek",
+    "alternateNames": [
+      "boortmeerbeek",
+      "gemeente boortmeerbeek",
+      "commune de boortmeerbeek",
+      "gemeinde boortmeerbeek"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24016": {
+    "nis": "24016",
+    "type": "municipality",
+    "name": "Boutersem",
+    "alternateNames": [
+      "boutersem",
+      "gemeente boutersem",
+      "commune de boutersem",
+      "gemeinde boutersem"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24020": {
+    "nis": "24020",
+    "type": "municipality",
+    "name": "Diest",
+    "alternateNames": [
+      "diest",
+      "gemeente diest",
+      "commune de diest",
+      "gemeinde diest"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24028": {
+    "nis": "24028",
+    "type": "municipality",
+    "name": "Geetbets",
+    "alternateNames": [
+      "geetbets",
+      "gemeente geetbets",
+      "commune de geetbets",
+      "gemeinde geetbets"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24033": {
+    "nis": "24033",
+    "type": "municipality",
+    "name": "Haacht",
+    "alternateNames": [
+      "haacht",
+      "gemeente haacht",
+      "commune de haacht",
+      "gemeinde haacht"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24038": {
+    "nis": "24038",
+    "type": "municipality",
+    "name": "Herent",
+    "alternateNames": [
+      "herent",
+      "gemeente herent",
+      "commune de herent",
+      "gemeinde herent"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24041": {
+    "nis": "24041",
+    "type": "municipality",
+    "name": "Hoegaarden",
+    "alternateNames": [
+      "hoegaarden",
+      "gemeente hoegaarden",
+      "commune de hoegaarden",
+      "gemeinde hoegaarden"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24043": {
+    "nis": "24043",
+    "type": "municipality",
+    "name": "Holsbeek",
+    "alternateNames": [
+      "holsbeek",
+      "gemeente holsbeek",
+      "commune de holsbeek",
+      "gemeinde holsbeek"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24045": {
+    "nis": "24045",
+    "type": "municipality",
+    "name": "Huldenberg",
+    "alternateNames": [
+      "huldenberg",
+      "gemeente huldenberg",
+      "commune de huldenberg",
+      "gemeinde huldenberg"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24048": {
+    "nis": "24048",
+    "type": "municipality",
+    "name": "Keerbergen",
+    "alternateNames": [
+      "keerbergen",
+      "gemeente keerbergen",
+      "commune de keerbergen",
+      "gemeinde keerbergen"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24054": {
+    "nis": "24054",
+    "type": "municipality",
+    "name": "Kortenaken",
+    "alternateNames": [
+      "kortenaken",
+      "gemeente kortenaken",
+      "commune de kortenaken",
+      "gemeinde kortenaken"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24055": {
+    "nis": "24055",
+    "type": "municipality",
+    "name": "Kortenberg",
+    "alternateNames": [
+      "kortenberg",
+      "gemeente kortenberg",
+      "commune de kortenberg",
+      "gemeinde kortenberg"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24059": {
+    "nis": "24059",
+    "type": "municipality",
+    "name": "Landen",
+    "alternateNames": [
+      "landen",
+      "gemeente landen",
+      "commune de landen",
+      "gemeinde landen"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24062": {
+    "nis": "24062",
+    "type": "municipality",
+    "name": "Leuven",
+    "alternateNames": [
+      "leuven",
+      "louvain",
+      "lowen",
+      "gemeente leuven",
+      "commune de louvain",
+      "gemeinde lowen"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24066": {
+    "nis": "24066",
+    "type": "municipality",
+    "name": "Lubbeek",
+    "alternateNames": [
+      "lubbeek",
+      "gemeente lubbeek",
+      "commune de lubbeek",
+      "gemeinde lubbeek"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24086": {
+    "nis": "24086",
+    "type": "municipality",
+    "name": "Oud-Heverlee",
+    "alternateNames": [
+      "oud heverlee",
+      "gemeente oud heverlee",
+      "commune d'oud heverlee",
+      "gemeinde oud heverlee"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24094": {
+    "nis": "24094",
+    "type": "municipality",
+    "name": "Rotselaar",
+    "alternateNames": [
+      "rotselaar",
+      "gemeente rotselaar",
+      "commune de rotselaar",
+      "gemeinde rotselaar"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24104": {
+    "nis": "24104",
+    "type": "municipality",
+    "name": "Tervuren",
+    "alternateNames": [
+      "tervuren",
+      "gemeente tervuren",
+      "commune de tervuren",
+      "gemeinde tervuren"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24107": {
+    "nis": "24107",
+    "type": "municipality",
+    "name": "Tienen",
+    "alternateNames": [
+      "tienen",
+      "tirlemont",
+      "gemeente tienen",
+      "commune de tirlemont",
+      "gemeinde tienen"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24109": {
+    "nis": "24109",
+    "type": "municipality",
+    "name": "Tremelo",
+    "alternateNames": [
+      "tremelo",
+      "gemeente tremelo",
+      "commune de tremelo",
+      "gemeinde tremelo"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24130": {
+    "nis": "24130",
+    "type": "municipality",
+    "name": "Zoutleeuw",
+    "alternateNames": [
+      "zoutleeuw",
+      "leau",
+      "gemeente zoutleeuw",
+      "commune de leau",
+      "gemeinde zoutleeuw"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24133": {
+    "nis": "24133",
+    "type": "municipality",
+    "name": "Linter",
+    "alternateNames": [
+      "linter",
+      "gemeente linter",
+      "commune de linter",
+      "gemeinde linter"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24134": {
+    "nis": "24134",
+    "type": "municipality",
+    "name": "Scherpenheuvel-Zichem",
+    "alternateNames": [
+      "scherpenheuvel zichem",
+      "montaigu zichem",
+      "gemeente scherpenheuvel zichem",
+      "commune de montaigu zichem",
+      "gemeinde scherpenheuvel zichem"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24135": {
+    "nis": "24135",
+    "type": "municipality",
+    "name": "Tielt-Winge",
+    "alternateNames": [
+      "tielt winge",
+      "gemeente tielt winge",
+      "commune de tielt winge",
+      "gemeinde tielt winge"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "24137": {
+    "nis": "24137",
+    "type": "municipality",
+    "name": "Glabbeek",
+    "alternateNames": [
+      "glabbeek",
+      "gemeente glabbeek",
+      "commune de glabbeek",
+      "gemeinde glabbeek"
+    ],
+    "parentNis": "24000",
+    "childrenNis": []
+  },
+  "25000": {
+    "nis": "25000",
+    "type": "district",
+    "name": "Arrondissement de Nivelles",
+    "alternateNames": [
+      "arrondissement de nivelles",
+      "arrondissement nijvel",
+      "bezirk nivelles",
+      "nivelles",
+      "nijvel"
+    ],
+    "parentNis": "20002",
+    "childrenNis": [
+      "25005",
+      "25014",
+      "25015",
+      "25018",
+      "25023",
+      "25031",
+      "25037",
+      "25043",
+      "25044",
+      "25048",
+      "25050",
+      "25068",
+      "25072",
+      "25084",
+      "25091",
+      "25105",
+      "25107",
+      "25110",
+      "25112",
+      "25117",
+      "25118",
+      "25119",
+      "25120",
+      "25121",
+      "25122",
+      "25123",
+      "25124"
+    ]
+  },
+  "25005": {
+    "nis": "25005",
+    "type": "municipality",
+    "name": "Beauvechain",
+    "alternateNames": [
+      "beauvechain",
+      "bevekom",
+      "commune de beauvechain",
+      "gemeente bevekom",
+      "gemeinde beauvechain"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25014": {
+    "nis": "25014",
+    "type": "municipality",
+    "name": "Braine-l’Alleud",
+    "alternateNames": [
+      "braine l'alleud",
+      "eigenbrakel",
+      "commune de braine l'alleud",
+      "gemeente eigenbrakel",
+      "gemeinde braine l'alleud"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25015": {
+    "nis": "25015",
+    "type": "municipality",
+    "name": "Braine-le-Château",
+    "alternateNames": [
+      "braine le chateau",
+      "kasteelbrakel",
+      "commune de braine le chateau",
+      "gemeente kasteelbrakel",
+      "gemeinde braine le chateau"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25018": {
+    "nis": "25018",
+    "type": "municipality",
+    "name": "Chaumont-Gistoux",
+    "alternateNames": [
+      "chaumont gistoux",
+      "commune de chaumont gistoux",
+      "gemeente chaumont gistoux",
+      "gemeinde chaumont gistoux"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25023": {
+    "nis": "25023",
+    "type": "municipality",
+    "name": "Court-Saint-Etienne",
+    "alternateNames": [
+      "court saint etienne",
+      "commune de court saint etienne",
+      "gemeente court saint etienne",
+      "gemeinde court saint etienne"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25031": {
+    "nis": "25031",
+    "type": "municipality",
+    "name": "Genappe",
+    "alternateNames": [
+      "genappe",
+      "genepien",
+      "commune de genappe",
+      "gemeente genepien",
+      "gemeinde genappe"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25037": {
+    "nis": "25037",
+    "type": "municipality",
+    "name": "Grez-Doiceau",
+    "alternateNames": [
+      "grez doiceau",
+      "graven",
+      "commune de grez doiceau",
+      "gemeente graven",
+      "gemeinde grez doiceau"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25043": {
+    "nis": "25043",
+    "type": "municipality",
+    "name": "Incourt",
+    "alternateNames": [
+      "incourt",
+      "commune d'incourt",
+      "gemeente incourt",
+      "gemeinde incourt"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25044": {
+    "nis": "25044",
+    "type": "municipality",
+    "name": "Ittre",
+    "alternateNames": [
+      "ittre",
+      "itter",
+      "commune d'ittre",
+      "gemeente itter",
+      "gemeinde ittre"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25048": {
+    "nis": "25048",
+    "type": "municipality",
+    "name": "Jodoigne",
+    "alternateNames": [
+      "jodoigne",
+      "geldenaken",
+      "commune de jodoigne",
+      "gemeente geldenaken",
+      "gemeinde jodoigne"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25050": {
+    "nis": "25050",
+    "type": "municipality",
+    "name": "La Hulpe",
+    "alternateNames": [
+      "la hulpe",
+      "terhulpen",
+      "commune de la hulpe",
+      "gemeente terhulpen",
+      "gemeinde la hulpe"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25068": {
+    "nis": "25068",
+    "type": "municipality",
+    "name": "Mont-Saint-Guibert",
+    "alternateNames": [
+      "mont saint guibert",
+      "commune de mont saint guibert",
+      "gemeente mont saint guibert",
+      "gemeinde mont saint guibert"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25072": {
+    "nis": "25072",
+    "type": "municipality",
+    "name": "Nivelles",
+    "alternateNames": [
+      "nivelles",
+      "nijvel",
+      "commune de nivelles",
+      "gemeente nijvel",
+      "gemeinde nivelles"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25084": {
+    "nis": "25084",
+    "type": "municipality",
+    "name": "Perwez (Nivelles)",
+    "alternateNames": [
+      "perwez",
+      "perwijs",
+      "perwez (nivelles)",
+      "perwijs (nijvel)",
+      "commune de perwez",
+      "gemeente perwijs",
+      "gemeinde perwez"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25091": {
+    "nis": "25091",
+    "type": "municipality",
+    "name": "Rixensart",
+    "alternateNames": [
+      "rixensart",
+      "commune de rixensart",
+      "gemeente rixensart",
+      "gemeinde rixensart"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25105": {
+    "nis": "25105",
+    "type": "municipality",
+    "name": "Tubize",
+    "alternateNames": [
+      "tubize",
+      "tubeke",
+      "commune de tubize",
+      "gemeente tubeke",
+      "gemeinde tubize"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25107": {
+    "nis": "25107",
+    "type": "municipality",
+    "name": "Villers-la-Ville",
+    "alternateNames": [
+      "villers la ville",
+      "commune de villers la ville",
+      "gemeente villers la ville",
+      "gemeinde villers la ville"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25110": {
+    "nis": "25110",
+    "type": "municipality",
+    "name": "Waterloo",
+    "alternateNames": [
+      "waterloo",
+      "commune de waterloo",
+      "gemeente waterloo",
+      "gemeinde waterloo"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25112": {
+    "nis": "25112",
+    "type": "municipality",
+    "name": "Wavre",
+    "alternateNames": [
+      "wavre",
+      "waver",
+      "commune de wavre",
+      "gemeente waver",
+      "gemeinde wavre"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25117": {
+    "nis": "25117",
+    "type": "municipality",
+    "name": "Chastre",
+    "alternateNames": [
+      "chastre",
+      "commune de chastre",
+      "gemeente chastre",
+      "gemeinde chastre"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25118": {
+    "nis": "25118",
+    "type": "municipality",
+    "name": "Hélécine",
+    "alternateNames": [
+      "helecine",
+      "commune de helecine",
+      "gemeente helecine",
+      "gemeinde helecine"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25119": {
+    "nis": "25119",
+    "type": "municipality",
+    "name": "Lasne",
+    "alternateNames": [
+      "lasne",
+      "commune de lasne",
+      "gemeente lasne",
+      "gemeinde lasne"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25120": {
+    "nis": "25120",
+    "type": "municipality",
+    "name": "Orp-Jauche",
+    "alternateNames": [
+      "orp jauche",
+      "commune d'orp jauche",
+      "gemeente orp jauche",
+      "gemeinde orp jauche"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25121": {
+    "nis": "25121",
+    "type": "municipality",
+    "name": "Ottignies-Louvain-la-Neuve",
+    "alternateNames": [
+      "ottignies louvain la neuve",
+      "commune d'ottignies louvain la neuve",
+      "gemeente ottignies louvain la neuve",
+      "gemeinde ottignies louvain la neuve"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25122": {
+    "nis": "25122",
+    "type": "municipality",
+    "name": "Ramillies",
+    "alternateNames": [
+      "ramillies",
+      "commune de ramillies",
+      "gemeente ramillies",
+      "gemeinde ramillies"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25123": {
+    "nis": "25123",
+    "type": "municipality",
+    "name": "Rebecq",
+    "alternateNames": [
+      "rebecq",
+      "commune de rebecq",
+      "gemeente rebecq",
+      "gemeinde rebecq"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "25124": {
+    "nis": "25124",
+    "type": "municipality",
+    "name": "Walhain",
+    "alternateNames": [
+      "walhain",
+      "commune de walhain",
+      "gemeente walhain",
+      "gemeinde walhain"
+    ],
+    "parentNis": "25000",
+    "childrenNis": []
+  },
+  "30000": {
+    "nis": "30000",
+    "type": "province",
+    "name": "Provincie West-Vlaanderen",
+    "alternateNames": [
+      "provincie west vlaanderen",
+      "province de flandre occidentale",
+      "provinz westflandern",
+      "west vlaanderen",
+      "flandre occidentale",
+      "westflandern"
+    ],
+    "parentNis": "02000",
+    "childrenNis": [
+      "31000",
+      "32000",
+      "33000",
+      "34000",
+      "35000",
+      "36000",
+      "37000",
+      "38000"
+    ]
+  },
+  "31000": {
+    "nis": "31000",
+    "type": "district",
+    "name": "Arrondissement Brugge",
+    "alternateNames": [
+      "arrondissement brugge",
+      "arrondissement de bruges",
+      "bezirk brugge",
+      "brugge",
+      "bruges"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "31003",
+      "31004",
+      "31005",
+      "31006",
+      "31012",
+      "31022",
+      "31033",
+      "31040",
+      "31042",
+      "31043"
+    ]
+  },
+  "31003": {
+    "nis": "31003",
+    "type": "municipality",
+    "name": "Beernem",
+    "alternateNames": [
+      "beernem",
+      "gemeente beernem",
+      "commune de beernem",
+      "gemeinde beernem"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31004": {
+    "nis": "31004",
+    "type": "municipality",
+    "name": "Blankenberge",
+    "alternateNames": [
+      "blankenberge",
+      "gemeente blankenberge",
+      "commune de blankenberge",
+      "gemeinde blankenberge"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31005": {
+    "nis": "31005",
+    "type": "municipality",
+    "name": "Brugge",
+    "alternateNames": [
+      "brugge",
+      "bruges",
+      "gemeente brugge",
+      "commune de bruges",
+      "gemeinde brugge"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31006": {
+    "nis": "31006",
+    "type": "municipality",
+    "name": "Damme",
+    "alternateNames": [
+      "damme",
+      "gemeente damme",
+      "commune de damme",
+      "gemeinde damme"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31012": {
+    "nis": "31012",
+    "type": "municipality",
+    "name": "Jabbeke",
+    "alternateNames": [
+      "jabbeke",
+      "gemeente jabbeke",
+      "commune de jabbeke",
+      "gemeinde jabbeke"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31022": {
+    "nis": "31022",
+    "type": "municipality",
+    "name": "Oostkamp",
+    "alternateNames": [
+      "oostkamp",
+      "gemeente oostkamp",
+      "commune d'oostkamp",
+      "gemeinde oostkamp"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31033": {
+    "nis": "31033",
+    "type": "municipality",
+    "name": "Torhout",
+    "alternateNames": [
+      "torhout",
+      "gemeente torhout",
+      "commune de torhout",
+      "gemeinde torhout"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31040": {
+    "nis": "31040",
+    "type": "municipality",
+    "name": "Zedelgem",
+    "alternateNames": [
+      "zedelgem",
+      "gemeente zedelgem",
+      "commune de zedelgem",
+      "gemeinde zedelgem"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31042": {
+    "nis": "31042",
+    "type": "municipality",
+    "name": "Zuienkerke",
+    "alternateNames": [
+      "zuienkerke",
+      "gemeente zuienkerke",
+      "commune de zuienkerke",
+      "gemeinde zuienkerke"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "31043": {
+    "nis": "31043",
+    "type": "municipality",
+    "name": "Knokke-Heist",
+    "alternateNames": [
+      "knokke heist",
+      "gemeente knokke heist",
+      "commune de knokke heist",
+      "gemeinde knokke heist"
+    ],
+    "parentNis": "31000",
+    "childrenNis": []
+  },
+  "32000": {
+    "nis": "32000",
+    "type": "district",
+    "name": "Arrondissement Diksmuide",
+    "alternateNames": [
+      "arrondissement diksmuide",
+      "arrondissement de dixmude",
+      "bezirk diksmuide",
+      "diksmuide",
+      "dixmude"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "32003",
+      "32006",
+      "32010",
+      "32011",
+      "32030"
+    ]
+  },
+  "32003": {
+    "nis": "32003",
+    "type": "municipality",
+    "name": "Diksmuide",
+    "alternateNames": [
+      "diksmuide",
+      "dixmude",
+      "gemeente diksmuide",
+      "commune de dixmude",
+      "gemeinde diksmuide"
+    ],
+    "parentNis": "32000",
+    "childrenNis": []
+  },
+  "32006": {
+    "nis": "32006",
+    "type": "municipality",
+    "name": "Houthulst",
+    "alternateNames": [
+      "houthulst",
+      "gemeente houthulst",
+      "commune de houthulst",
+      "gemeinde houthulst"
+    ],
+    "parentNis": "32000",
+    "childrenNis": []
+  },
+  "32010": {
+    "nis": "32010",
+    "type": "municipality",
+    "name": "Koekelare",
+    "alternateNames": [
+      "koekelare",
+      "gemeente koekelare",
+      "commune de koekelare",
+      "gemeinde koekelare"
+    ],
+    "parentNis": "32000",
+    "childrenNis": []
+  },
+  "32011": {
+    "nis": "32011",
+    "type": "municipality",
+    "name": "Kortemark",
+    "alternateNames": [
+      "kortemark",
+      "gemeente kortemark",
+      "commune de kortemark",
+      "gemeinde kortemark"
+    ],
+    "parentNis": "32000",
+    "childrenNis": []
+  },
+  "32030": {
+    "nis": "32030",
+    "type": "municipality",
+    "name": "Lo-Reninge",
+    "alternateNames": [
+      "lo reninge",
+      "gemeente lo reninge",
+      "commune de lo reninge",
+      "gemeinde lo reninge"
+    ],
+    "parentNis": "32000",
+    "childrenNis": []
+  },
+  "33000": {
+    "nis": "33000",
+    "type": "district",
+    "name": "Arrondissement Ieper",
+    "alternateNames": [
+      "arrondissement ieper",
+      "arrondissement d'ypres",
+      "bezirk ypern",
+      "ieper",
+      "ypres",
+      "ypern"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "33011",
+      "33016",
+      "33021",
+      "33029",
+      "33037",
+      "33039",
+      "33040",
+      "33041"
+    ]
+  },
+  "33011": {
+    "nis": "33011",
+    "type": "municipality",
+    "name": "Ieper",
+    "alternateNames": [
+      "ieper",
+      "ypres",
+      "ypern",
+      "gemeente ieper",
+      "commune d'ypres",
+      "gemeinde ypern"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33016": {
+    "nis": "33016",
+    "type": "municipality",
+    "name": "Mesen",
+    "alternateNames": [
+      "mesen",
+      "messines",
+      "gemeente mesen",
+      "commune de messines",
+      "gemeinde mesen"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33021": {
+    "nis": "33021",
+    "type": "municipality",
+    "name": "Poperinge",
+    "alternateNames": [
+      "poperinge",
+      "gemeente poperinge",
+      "commune de poperinge",
+      "gemeinde poperinge"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33029": {
+    "nis": "33029",
+    "type": "municipality",
+    "name": "Wervik",
+    "alternateNames": [
+      "wervik",
+      "gemeente wervik",
+      "commune de wervik",
+      "gemeinde wervik"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33037": {
+    "nis": "33037",
+    "type": "municipality",
+    "name": "Zonnebeke",
+    "alternateNames": [
+      "zonnebeke",
+      "gemeente zonnebeke",
+      "commune de zonnebeke",
+      "gemeinde zonnebeke"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33039": {
+    "nis": "33039",
+    "type": "municipality",
+    "name": "Heuvelland",
+    "alternateNames": [
+      "heuvelland",
+      "gemeente heuvelland",
+      "commune de heuvelland",
+      "gemeinde heuvelland"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33040": {
+    "nis": "33040",
+    "type": "municipality",
+    "name": "Langemark-Poelkapelle",
+    "alternateNames": [
+      "langemark poelkapelle",
+      "gemeente langemark poelkapelle",
+      "commune de langemark poelkapelle",
+      "gemeinde langemark poelkapelle"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "33041": {
+    "nis": "33041",
+    "type": "municipality",
+    "name": "Vleteren",
+    "alternateNames": [
+      "vleteren",
+      "gemeente vleteren",
+      "commune de vleteren",
+      "gemeinde vleteren"
+    ],
+    "parentNis": "33000",
+    "childrenNis": []
+  },
+  "34000": {
+    "nis": "34000",
+    "type": "district",
+    "name": "Arrondissement Kortrijk",
+    "alternateNames": [
+      "arrondissement kortrijk",
+      "arrondissement de courtrai",
+      "bezirk kortrijk",
+      "kortrijk",
+      "courtrai"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "34002",
+      "34003",
+      "34009",
+      "34013",
+      "34022",
+      "34023",
+      "34025",
+      "34027",
+      "34040",
+      "34041",
+      "34042",
+      "34043"
+    ]
+  },
+  "34002": {
+    "nis": "34002",
+    "type": "municipality",
+    "name": "Anzegem",
+    "alternateNames": [
+      "anzegem",
+      "gemeente anzegem",
+      "commune d'anzegem",
+      "gemeinde anzegem"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34003": {
+    "nis": "34003",
+    "type": "municipality",
+    "name": "Avelgem",
+    "alternateNames": [
+      "avelgem",
+      "gemeente avelgem",
+      "commune d'avelgem",
+      "gemeinde avelgem"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34009": {
+    "nis": "34009",
+    "type": "municipality",
+    "name": "Deerlijk",
+    "alternateNames": [
+      "deerlijk",
+      "gemeente deerlijk",
+      "commune de deerlijk",
+      "gemeinde deerlijk"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34013": {
+    "nis": "34013",
+    "type": "municipality",
+    "name": "Harelbeke",
+    "alternateNames": [
+      "harelbeke",
+      "gemeente harelbeke",
+      "commune de harelbeke",
+      "gemeinde harelbeke"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34022": {
+    "nis": "34022",
+    "type": "municipality",
+    "name": "Kortrijk",
+    "alternateNames": [
+      "kortrijk",
+      "courtrai",
+      "gemeente kortrijk",
+      "commune de courtrai",
+      "gemeinde kortrijk"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34023": {
+    "nis": "34023",
+    "type": "municipality",
+    "name": "Kuurne",
+    "alternateNames": [
+      "kuurne",
+      "gemeente kuurne",
+      "commune de kuurne",
+      "gemeinde kuurne"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34025": {
+    "nis": "34025",
+    "type": "municipality",
+    "name": "Lendelede",
+    "alternateNames": [
+      "lendelede",
+      "gemeente lendelede",
+      "commune de lendelede",
+      "gemeinde lendelede"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34027": {
+    "nis": "34027",
+    "type": "municipality",
+    "name": "Menen",
+    "alternateNames": [
+      "menen",
+      "menin",
+      "gemeente menen",
+      "commune de menin",
+      "gemeinde menen"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34040": {
+    "nis": "34040",
+    "type": "municipality",
+    "name": "Waregem",
+    "alternateNames": [
+      "waregem",
+      "gemeente waregem",
+      "commune de waregem",
+      "gemeinde waregem"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34041": {
+    "nis": "34041",
+    "type": "municipality",
+    "name": "Wevelgem",
+    "alternateNames": [
+      "wevelgem",
+      "gemeente wevelgem",
+      "commune de wevelgem",
+      "gemeinde wevelgem"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34042": {
+    "nis": "34042",
+    "type": "municipality",
+    "name": "Zwevegem",
+    "alternateNames": [
+      "zwevegem",
+      "gemeente zwevegem",
+      "commune de zwevegem",
+      "gemeinde zwevegem"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "34043": {
+    "nis": "34043",
+    "type": "municipality",
+    "name": "Spiere-Helkijn",
+    "alternateNames": [
+      "spiere helkijn",
+      "espierres helchin",
+      "gemeente spiere helkijn",
+      "commune d'espierres helchin",
+      "gemeinde spiere helkijn"
+    ],
+    "parentNis": "34000",
+    "childrenNis": []
+  },
+  "35000": {
+    "nis": "35000",
+    "type": "district",
+    "name": "Arrondissement Oostende",
+    "alternateNames": [
+      "arrondissement oostende",
+      "arrondissement d'ostende",
+      "bezirk ostende",
+      "oostende",
+      "ostende"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "35002",
+      "35005",
+      "35006",
+      "35011",
+      "35013",
+      "35014",
+      "35029"
+    ]
+  },
+  "35002": {
+    "nis": "35002",
+    "type": "municipality",
+    "name": "Bredene",
+    "alternateNames": [
+      "bredene",
+      "gemeente bredene",
+      "commune de bredene",
+      "gemeinde bredene"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35005": {
+    "nis": "35005",
+    "type": "municipality",
+    "name": "Gistel",
+    "alternateNames": [
+      "gistel",
+      "gemeente gistel",
+      "commune de gistel",
+      "gemeinde gistel"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35006": {
+    "nis": "35006",
+    "type": "municipality",
+    "name": "Ichtegem",
+    "alternateNames": [
+      "ichtegem",
+      "gemeente ichtegem",
+      "commune d'ichtegem",
+      "gemeinde ichtegem"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35011": {
+    "nis": "35011",
+    "type": "municipality",
+    "name": "Middelkerke",
+    "alternateNames": [
+      "middelkerke",
+      "gemeente middelkerke",
+      "commune de middelkerke",
+      "gemeinde middelkerke"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35013": {
+    "nis": "35013",
+    "type": "municipality",
+    "name": "Oostende",
+    "alternateNames": [
+      "oostende",
+      "ostende",
+      "gemeente oostende",
+      "commune d'ostende",
+      "gemeinde ostende"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35014": {
+    "nis": "35014",
+    "type": "municipality",
+    "name": "Oudenburg",
+    "alternateNames": [
+      "oudenburg",
+      "gemeente oudenburg",
+      "commune d'oudenburg",
+      "gemeinde oudenburg"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "35029": {
+    "nis": "35029",
+    "type": "municipality",
+    "name": "De Haan",
+    "alternateNames": [
+      "de haan",
+      "gemeente de haan",
+      "commune de de haan",
+      "gemeinde de haan"
+    ],
+    "parentNis": "35000",
+    "childrenNis": []
+  },
+  "36000": {
+    "nis": "36000",
+    "type": "district",
+    "name": "Arrondissement Roeselare",
+    "alternateNames": [
+      "arrondissement roeselare",
+      "arrondissement de roulers",
+      "bezirk roeselare",
+      "roeselare",
+      "roulers"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "36006",
+      "36007",
+      "36008",
+      "36010",
+      "36011",
+      "36012",
+      "36015",
+      "36019"
+    ]
+  },
+  "36006": {
+    "nis": "36006",
+    "type": "municipality",
+    "name": "Hooglede",
+    "alternateNames": [
+      "hooglede",
+      "gemeente hooglede",
+      "commune de hooglede",
+      "gemeinde hooglede"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36007": {
+    "nis": "36007",
+    "type": "municipality",
+    "name": "Ingelmunster",
+    "alternateNames": [
+      "ingelmunster",
+      "gemeente ingelmunster",
+      "commune d'ingelmunster",
+      "gemeinde ingelmunster"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36008": {
+    "nis": "36008",
+    "type": "municipality",
+    "name": "Izegem",
+    "alternateNames": [
+      "izegem",
+      "gemeente izegem",
+      "commune d'izegem",
+      "gemeinde izegem"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36010": {
+    "nis": "36010",
+    "type": "municipality",
+    "name": "Ledegem",
+    "alternateNames": [
+      "ledegem",
+      "gemeente ledegem",
+      "commune de ledegem",
+      "gemeinde ledegem"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36011": {
+    "nis": "36011",
+    "type": "municipality",
+    "name": "Lichtervelde",
+    "alternateNames": [
+      "lichtervelde",
+      "gemeente lichtervelde",
+      "commune de lichtervelde",
+      "gemeinde lichtervelde"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36012": {
+    "nis": "36012",
+    "type": "municipality",
+    "name": "Moorslede",
+    "alternateNames": [
+      "moorslede",
+      "gemeente moorslede",
+      "commune de moorslede",
+      "gemeinde moorslede"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36015": {
+    "nis": "36015",
+    "type": "municipality",
+    "name": "Roeselare",
+    "alternateNames": [
+      "roeselare",
+      "roulers",
+      "gemeente roeselare",
+      "commune de roulers",
+      "gemeinde roeselare"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "36019": {
+    "nis": "36019",
+    "type": "municipality",
+    "name": "Staden",
+    "alternateNames": [
+      "staden",
+      "gemeente staden",
+      "commune de staden",
+      "gemeinde staden"
+    ],
+    "parentNis": "36000",
+    "childrenNis": []
+  },
+  "37000": {
+    "nis": "37000",
+    "type": "district",
+    "name": "Arrondissement Tielt",
+    "alternateNames": [
+      "arrondissement tielt",
+      "arrondissement de tielt",
+      "bezirk tielt",
+      "tielt"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "37002",
+      "37007",
+      "37010",
+      "37011",
+      "37012",
+      "37015",
+      "37017",
+      "37018",
+      "37020"
+    ]
+  },
+  "37002": {
+    "nis": "37002",
+    "type": "municipality",
+    "name": "Dentergem",
+    "alternateNames": [
+      "dentergem",
+      "gemeente dentergem",
+      "commune de dentergem",
+      "gemeinde dentergem"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37007": {
+    "nis": "37007",
+    "type": "municipality",
+    "name": "Meulebeke",
+    "alternateNames": [
+      "meulebeke",
+      "gemeente meulebeke",
+      "commune de meulebeke",
+      "gemeinde meulebeke"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37010": {
+    "nis": "37010",
+    "type": "municipality",
+    "name": "Oostrozebeke",
+    "alternateNames": [
+      "oostrozebeke",
+      "gemeente oostrozebeke",
+      "commune d'oostrozebeke",
+      "gemeinde oostrozebeke"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37011": {
+    "nis": "37011",
+    "type": "municipality",
+    "name": "Pittem",
+    "alternateNames": [
+      "pittem",
+      "gemeente pittem",
+      "commune de pittem",
+      "gemeinde pittem"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37012": {
+    "nis": "37012",
+    "type": "municipality",
+    "name": "Ruiselede",
+    "alternateNames": [
+      "ruiselede",
+      "gemeente ruiselede",
+      "commune de ruiselede",
+      "gemeinde ruiselede"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37015": {
+    "nis": "37015",
+    "type": "municipality",
+    "name": "Tielt (Tielt)",
+    "alternateNames": [
+      "tielt",
+      "tielt (tielt)",
+      "gemeente tielt",
+      "commune de tielt",
+      "gemeinde tielt"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37017": {
+    "nis": "37017",
+    "type": "municipality",
+    "name": "Wielsbeke",
+    "alternateNames": [
+      "wielsbeke",
+      "gemeente wielsbeke",
+      "commune de wielsbeke",
+      "gemeinde wielsbeke"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37018": {
+    "nis": "37018",
+    "type": "municipality",
+    "name": "Wingene",
+    "alternateNames": [
+      "wingene",
+      "gemeente wingene",
+      "commune de wingene",
+      "gemeinde wingene"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "37020": {
+    "nis": "37020",
+    "type": "municipality",
+    "name": "Ardooie",
+    "alternateNames": [
+      "ardooie",
+      "gemeente ardooie",
+      "commune d'ardooie",
+      "gemeinde ardooie"
+    ],
+    "parentNis": "37000",
+    "childrenNis": []
+  },
+  "38000": {
+    "nis": "38000",
+    "type": "district",
+    "name": "Arrondissement Veurne",
+    "alternateNames": [
+      "arrondissement veurne",
+      "arrondissement de furnes",
+      "bezirk veurne",
+      "veurne",
+      "furnes"
+    ],
+    "parentNis": "30000",
+    "childrenNis": [
+      "38002",
+      "38008",
+      "38014",
+      "38016",
+      "38025"
+    ]
+  },
+  "38002": {
+    "nis": "38002",
+    "type": "municipality",
+    "name": "Alveringem",
+    "alternateNames": [
+      "alveringem",
+      "gemeente alveringem",
+      "commune d'alveringem",
+      "gemeinde alveringem"
+    ],
+    "parentNis": "38000",
+    "childrenNis": []
+  },
+  "38008": {
+    "nis": "38008",
+    "type": "municipality",
+    "name": "De Panne",
+    "alternateNames": [
+      "de panne",
+      "la panne",
+      "gemeente de panne",
+      "commune de la panne",
+      "gemeinde de panne"
+    ],
+    "parentNis": "38000",
+    "childrenNis": []
+  },
+  "38014": {
+    "nis": "38014",
+    "type": "municipality",
+    "name": "Koksijde",
+    "alternateNames": [
+      "koksijde",
+      "gemeente koksijde",
+      "commune de koksijde",
+      "gemeinde koksijde"
+    ],
+    "parentNis": "38000",
+    "childrenNis": []
+  },
+  "38016": {
+    "nis": "38016",
+    "type": "municipality",
+    "name": "Nieuwpoort",
+    "alternateNames": [
+      "nieuwpoort",
+      "nieuport",
+      "gemeente nieuwpoort",
+      "commune de nieuport",
+      "gemeinde nieuwpoort"
+    ],
+    "parentNis": "38000",
+    "childrenNis": []
+  },
+  "38025": {
+    "nis": "38025",
+    "type": "municipality",
+    "name": "Veurne",
+    "alternateNames": [
+      "veurne",
+      "furnes",
+      "gemeente veurne",
+      "commune de furnes",
+      "gemeinde veurne"
+    ],
+    "parentNis": "38000",
+    "childrenNis": []
+  },
+  "40000": {
+    "nis": "40000",
+    "type": "province",
+    "name": "Provincie Oost-Vlaanderen",
+    "alternateNames": [
+      "provincie oost vlaanderen",
+      "province de flandre orientale",
+      "provinz ostflandern",
+      "oost vlaanderen",
+      "flandre orientale",
+      "ostflandern"
+    ],
+    "parentNis": "02000",
+    "childrenNis": [
+      "41000",
+      "42000",
+      "43000",
+      "44000",
+      "45000",
+      "46000"
+    ]
+  },
+  "41000": {
+    "nis": "41000",
+    "type": "district",
+    "name": "Arrondissement Aalst",
+    "alternateNames": [
+      "arrondissement aalst",
+      "arrondissement d'alost",
+      "bezirk aalst",
+      "aalst",
+      "alost"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "41002",
+      "41011",
+      "41018",
+      "41024",
+      "41027",
+      "41034",
+      "41048",
+      "41063",
+      "41081",
+      "41082"
+    ]
+  },
+  "41002": {
+    "nis": "41002",
+    "type": "municipality",
+    "name": "Aalst (Aalst)",
+    "alternateNames": [
+      "aalst",
+      "alost",
+      "aalst (aalst)",
+      "alost (alost)",
+      "gemeente aalst",
+      "commune d'alost",
+      "gemeinde aalst"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41011": {
+    "nis": "41011",
+    "type": "municipality",
+    "name": "Denderleeuw",
+    "alternateNames": [
+      "denderleeuw",
+      "gemeente denderleeuw",
+      "commune de denderleeuw",
+      "gemeinde denderleeuw"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41018": {
+    "nis": "41018",
+    "type": "municipality",
+    "name": "Geraardsbergen",
+    "alternateNames": [
+      "geraardsbergen",
+      "grammont",
+      "gemeente geraardsbergen",
+      "commune de grammont",
+      "gemeinde geraardsbergen"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41024": {
+    "nis": "41024",
+    "type": "municipality",
+    "name": "Haaltert",
+    "alternateNames": [
+      "haaltert",
+      "gemeente haaltert",
+      "commune de haaltert",
+      "gemeinde haaltert"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41027": {
+    "nis": "41027",
+    "type": "municipality",
+    "name": "Herzele",
+    "alternateNames": [
+      "herzele",
+      "gemeente herzele",
+      "commune de herzele",
+      "gemeinde herzele"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41034": {
+    "nis": "41034",
+    "type": "municipality",
+    "name": "Lede",
+    "alternateNames": [
+      "lede",
+      "gemeente lede",
+      "commune de lede",
+      "gemeinde lede"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41048": {
+    "nis": "41048",
+    "type": "municipality",
+    "name": "Ninove",
+    "alternateNames": [
+      "ninove",
+      "gemeente ninove",
+      "commune de ninove",
+      "gemeinde ninove"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41063": {
+    "nis": "41063",
+    "type": "municipality",
+    "name": "Sint-Lievens-Houtem",
+    "alternateNames": [
+      "sint lievens houtem",
+      "gemeente sint lievens houtem",
+      "commune de sint lievens houtem",
+      "gemeinde sint lievens houtem"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41081": {
+    "nis": "41081",
+    "type": "municipality",
+    "name": "Zottegem",
+    "alternateNames": [
+      "zottegem",
+      "gemeente zottegem",
+      "commune de zottegem",
+      "gemeinde zottegem"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "41082": {
+    "nis": "41082",
+    "type": "municipality",
+    "name": "Erpe-Mere",
+    "alternateNames": [
+      "erpe mere",
+      "gemeente erpe mere",
+      "commune d'erpe mere",
+      "gemeinde erpe mere"
+    ],
+    "parentNis": "41000",
+    "childrenNis": []
+  },
+  "42000": {
+    "nis": "42000",
+    "type": "district",
+    "name": "Arrondissement Dendermonde",
+    "alternateNames": [
+      "arrondissement dendermonde",
+      "arrondissement de termonde",
+      "bezirk dendermonde",
+      "dendermonde",
+      "termonde"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "42003",
+      "42004",
+      "42006",
+      "42008",
+      "42010",
+      "42011",
+      "42023",
+      "42025",
+      "42026",
+      "42028"
+    ]
+  },
+  "42003": {
+    "nis": "42003",
+    "type": "municipality",
+    "name": "Berlare",
+    "alternateNames": [
+      "berlare",
+      "gemeente berlare",
+      "commune de berlare",
+      "gemeinde berlare"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42004": {
+    "nis": "42004",
+    "type": "municipality",
+    "name": "Buggenhout",
+    "alternateNames": [
+      "buggenhout",
+      "gemeente buggenhout",
+      "commune de buggenhout",
+      "gemeinde buggenhout"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42006": {
+    "nis": "42006",
+    "type": "municipality",
+    "name": "Dendermonde",
+    "alternateNames": [
+      "dendermonde",
+      "termonde",
+      "gemeente dendermonde",
+      "commune de termonde",
+      "gemeinde dendermonde"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42008": {
+    "nis": "42008",
+    "type": "municipality",
+    "name": "Hamme (Dendermonde)",
+    "alternateNames": [
+      "hamme",
+      "hamme (dendermonde)",
+      "hamme (termonde)",
+      "gemeente hamme",
+      "commune de hamme",
+      "gemeinde hamme"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42010": {
+    "nis": "42010",
+    "type": "municipality",
+    "name": "Laarne",
+    "alternateNames": [
+      "laarne",
+      "gemeente laarne",
+      "commune de laarne",
+      "gemeinde laarne"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42011": {
+    "nis": "42011",
+    "type": "municipality",
+    "name": "Lebbeke",
+    "alternateNames": [
+      "lebbeke",
+      "gemeente lebbeke",
+      "commune de lebbeke",
+      "gemeinde lebbeke"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42023": {
+    "nis": "42023",
+    "type": "municipality",
+    "name": "Waasmunster",
+    "alternateNames": [
+      "waasmunster",
+      "gemeente waasmunster",
+      "commune de waasmunster",
+      "gemeinde waasmunster"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42025": {
+    "nis": "42025",
+    "type": "municipality",
+    "name": "Wetteren",
+    "alternateNames": [
+      "wetteren",
+      "gemeente wetteren",
+      "commune de wetteren",
+      "gemeinde wetteren"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42026": {
+    "nis": "42026",
+    "type": "municipality",
+    "name": "Wichelen",
+    "alternateNames": [
+      "wichelen",
+      "gemeente wichelen",
+      "commune de wichelen",
+      "gemeinde wichelen"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "42028": {
+    "nis": "42028",
+    "type": "municipality",
+    "name": "Zele",
+    "alternateNames": [
+      "zele",
+      "gemeente zele",
+      "commune de zele",
+      "gemeinde zele"
+    ],
+    "parentNis": "42000",
+    "childrenNis": []
+  },
+  "43000": {
+    "nis": "43000",
+    "type": "district",
+    "name": "Arrondissement Eeklo",
+    "alternateNames": [
+      "arrondissement eeklo",
+      "arrondissement d'eeklo",
+      "bezirk eeklo",
+      "eeklo"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "43002",
+      "43005",
+      "43007",
+      "43010",
+      "43014",
+      "43018"
+    ]
+  },
+  "43002": {
+    "nis": "43002",
+    "type": "municipality",
+    "name": "Assenede",
+    "alternateNames": [
+      "assenede",
+      "gemeente assenede",
+      "commune d'assenede",
+      "gemeinde assenede"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "43005": {
+    "nis": "43005",
+    "type": "municipality",
+    "name": "Eeklo",
+    "alternateNames": [
+      "eeklo",
+      "gemeente eeklo",
+      "commune d'eeklo",
+      "gemeinde eeklo"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "43007": {
+    "nis": "43007",
+    "type": "municipality",
+    "name": "Kaprijke",
+    "alternateNames": [
+      "kaprijke",
+      "gemeente kaprijke",
+      "commune de kaprijke",
+      "gemeinde kaprijke"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "43010": {
+    "nis": "43010",
+    "type": "municipality",
+    "name": "Maldegem",
+    "alternateNames": [
+      "maldegem",
+      "gemeente maldegem",
+      "commune de maldegem",
+      "gemeinde maldegem"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "43014": {
+    "nis": "43014",
+    "type": "municipality",
+    "name": "Sint-Laureins",
+    "alternateNames": [
+      "sint laureins",
+      "gemeente sint laureins",
+      "commune de sint laureins",
+      "gemeinde sint laureins"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "43018": {
+    "nis": "43018",
+    "type": "municipality",
+    "name": "Zelzate",
+    "alternateNames": [
+      "zelzate",
+      "gemeente zelzate",
+      "commune de zelzate",
+      "gemeinde zelzate"
+    ],
+    "parentNis": "43000",
+    "childrenNis": []
+  },
+  "44000": {
+    "nis": "44000",
+    "type": "district",
+    "name": "Arrondissement Gent",
+    "alternateNames": [
+      "arrondissement gent",
+      "arrondissement de gand",
+      "bezirk gent",
+      "gent",
+      "gand"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "44012",
+      "44013",
+      "44019",
+      "44020",
+      "44021",
+      "44034",
+      "44040",
+      "44043",
+      "44045",
+      "44048",
+      "44052",
+      "44064",
+      "44073",
+      "44081",
+      "44083",
+      "44084",
+      "44085"
+    ]
+  },
+  "44012": {
+    "nis": "44012",
+    "type": "municipality",
+    "name": "De Pinte",
+    "alternateNames": [
+      "de pinte",
+      "gemeente de pinte",
+      "commune de de pinte",
+      "gemeinde de pinte"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44013": {
+    "nis": "44013",
+    "type": "municipality",
+    "name": "Destelbergen",
+    "alternateNames": [
+      "destelbergen",
+      "gemeente destelbergen",
+      "commune de destelbergen",
+      "gemeinde destelbergen"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44019": {
+    "nis": "44019",
+    "type": "municipality",
+    "name": "Evergem",
+    "alternateNames": [
+      "evergem",
+      "gemeente evergem",
+      "commune d'evergem",
+      "gemeinde evergem"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44020": {
+    "nis": "44020",
+    "type": "municipality",
+    "name": "Gavere",
+    "alternateNames": [
+      "gavere",
+      "gemeente gavere",
+      "commune de gavere",
+      "gemeinde gavere"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44021": {
+    "nis": "44021",
+    "type": "municipality",
+    "name": "Gent",
+    "alternateNames": [
+      "gent",
+      "gand",
+      "gemeente gent",
+      "commune de gand",
+      "gemeinde gent"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44034": {
+    "nis": "44034",
+    "type": "municipality",
+    "name": "Lochristi",
+    "alternateNames": [
+      "lochristi",
+      "gemeente lochristi",
+      "commune de lochristi",
+      "gemeinde lochristi"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44040": {
+    "nis": "44040",
+    "type": "municipality",
+    "name": "Melle",
+    "alternateNames": [
+      "melle",
+      "gemeente melle",
+      "commune de melle",
+      "gemeinde melle"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44043": {
+    "nis": "44043",
+    "type": "municipality",
+    "name": "Merelbeke",
+    "alternateNames": [
+      "merelbeke",
+      "gemeente merelbeke",
+      "commune de merelbeke",
+      "gemeinde merelbeke"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44045": {
+    "nis": "44045",
+    "type": "municipality",
+    "name": "Moerbeke (Gent)",
+    "alternateNames": [
+      "moerbeke",
+      "moerbeke (gent)",
+      "moerbeke (gand)",
+      "gemeente moerbeke",
+      "commune de moerbeke",
+      "gemeinde moerbeke"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44048": {
+    "nis": "44048",
+    "type": "municipality",
+    "name": "Nazareth",
+    "alternateNames": [
+      "nazareth",
+      "gemeente nazareth",
+      "commune de nazareth",
+      "gemeinde nazareth"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44052": {
+    "nis": "44052",
+    "type": "municipality",
+    "name": "Oosterzele",
+    "alternateNames": [
+      "oosterzele",
+      "gemeente oosterzele",
+      "commune d'oosterzele",
+      "gemeinde oosterzele"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44064": {
+    "nis": "44064",
+    "type": "municipality",
+    "name": "Sint-Martens-Latem",
+    "alternateNames": [
+      "sint martens latem",
+      "gemeente sint martens latem",
+      "commune de sint martens latem",
+      "gemeinde sint martens latem"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44073": {
+    "nis": "44073",
+    "type": "municipality",
+    "name": "Wachtebeke",
+    "alternateNames": [
+      "wachtebeke",
+      "gemeente wachtebeke",
+      "commune de wachtebeke",
+      "gemeinde wachtebeke"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44081": {
+    "nis": "44081",
+    "type": "municipality",
+    "name": "Zulte",
+    "alternateNames": [
+      "zulte",
+      "gemeente zulte",
+      "commune de zulte",
+      "gemeinde zulte"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44083": {
+    "nis": "44083",
+    "type": "municipality",
+    "name": "Deinze",
+    "alternateNames": [
+      "deinze",
+      "gemeente deinze",
+      "commune de deinze",
+      "gemeinde deinze"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44084": {
+    "nis": "44084",
+    "type": "municipality",
+    "name": "Aalter",
+    "alternateNames": [
+      "aalter",
+      "gemeente aalter",
+      "commune d'aalter",
+      "gemeinde aalter"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "44085": {
+    "nis": "44085",
+    "type": "municipality",
+    "name": "Lievegem",
+    "alternateNames": [
+      "lievegem",
+      "gemeente lievegem",
+      "commune de lievegem",
+      "gemeinde lievegem"
+    ],
+    "parentNis": "44000",
+    "childrenNis": []
+  },
+  "45000": {
+    "nis": "45000",
+    "type": "district",
+    "name": "Arrondissement Oudenaarde",
+    "alternateNames": [
+      "arrondissement oudenaarde",
+      "arrondissement d'audenarde",
+      "bezirk oudenaarde",
+      "oudenaarde",
+      "audenarde"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "45035",
+      "45041",
+      "45059",
+      "45060",
+      "45061",
+      "45062",
+      "45063",
+      "45064",
+      "45065",
+      "45068"
+    ]
+  },
+  "45035": {
+    "nis": "45035",
+    "type": "municipality",
+    "name": "Oudenaarde",
+    "alternateNames": [
+      "oudenaarde",
+      "audenarde",
+      "gemeente oudenaarde",
+      "commune d'audenarde",
+      "gemeinde oudenaarde"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45041": {
+    "nis": "45041",
+    "type": "municipality",
+    "name": "Ronse",
+    "alternateNames": [
+      "ronse",
+      "renaix",
+      "gemeente ronse",
+      "commune de renaix",
+      "gemeinde ronse"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45059": {
+    "nis": "45059",
+    "type": "municipality",
+    "name": "Brakel",
+    "alternateNames": [
+      "brakel",
+      "gemeente brakel",
+      "commune de brakel",
+      "gemeinde brakel"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45060": {
+    "nis": "45060",
+    "type": "municipality",
+    "name": "Kluisbergen",
+    "alternateNames": [
+      "kluisbergen",
+      "gemeente kluisbergen",
+      "commune de kluisbergen",
+      "gemeinde kluisbergen"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45061": {
+    "nis": "45061",
+    "type": "municipality",
+    "name": "Wortegem-Petegem",
+    "alternateNames": [
+      "wortegem petegem",
+      "gemeente wortegem petegem",
+      "commune de wortegem petegem",
+      "gemeinde wortegem petegem"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45062": {
+    "nis": "45062",
+    "type": "municipality",
+    "name": "Horebeke",
+    "alternateNames": [
+      "horebeke",
+      "gemeente horebeke",
+      "commune de horebeke",
+      "gemeinde horebeke"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45063": {
+    "nis": "45063",
+    "type": "municipality",
+    "name": "Lierde",
+    "alternateNames": [
+      "lierde",
+      "gemeente lierde",
+      "commune de lierde",
+      "gemeinde lierde"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45064": {
+    "nis": "45064",
+    "type": "municipality",
+    "name": "Maarkedal",
+    "alternateNames": [
+      "maarkedal",
+      "gemeente maarkedal",
+      "commune de maarkedal",
+      "gemeinde maarkedal"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45065": {
+    "nis": "45065",
+    "type": "municipality",
+    "name": "Zwalm",
+    "alternateNames": [
+      "zwalm",
+      "zwalin",
+      "gemeente zwalm",
+      "commune de zwalin",
+      "gemeinde zwalm"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "45068": {
+    "nis": "45068",
+    "type": "municipality",
+    "name": "Kruisem",
+    "alternateNames": [
+      "kruisem",
+      "gemeente kruisem",
+      "commune de kruisem",
+      "gemeinde kruisem"
+    ],
+    "parentNis": "45000",
+    "childrenNis": []
+  },
+  "46000": {
+    "nis": "46000",
+    "type": "district",
+    "name": "Arrondissement Sint-Niklaas",
+    "alternateNames": [
+      "arrondissement sint niklaas",
+      "arrondissement de saint nicolas",
+      "bezirk sint niklaas",
+      "sint niklaas",
+      "saint nicolas"
+    ],
+    "parentNis": "40000",
+    "childrenNis": [
+      "46003",
+      "46013",
+      "46014",
+      "46020",
+      "46021",
+      "46024",
+      "46025"
+    ]
+  },
+  "46003": {
+    "nis": "46003",
+    "type": "municipality",
+    "name": "Beveren (Sint-Niklaas)",
+    "alternateNames": [
+      "beveren",
+      "beveren (sint niklaas)",
+      "beveren (saint nicolas)",
+      "gemeente beveren",
+      "commune de beveren",
+      "gemeinde beveren"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46013": {
+    "nis": "46013",
+    "type": "municipality",
+    "name": "Kruibeke",
+    "alternateNames": [
+      "kruibeke",
+      "gemeente kruibeke",
+      "commune de kruibeke",
+      "gemeinde kruibeke"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46014": {
+    "nis": "46014",
+    "type": "municipality",
+    "name": "Lokeren",
+    "alternateNames": [
+      "lokeren",
+      "gemeente lokeren",
+      "commune de lokeren",
+      "gemeinde lokeren"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46020": {
+    "nis": "46020",
+    "type": "municipality",
+    "name": "Sint-Gillis-Waas",
+    "alternateNames": [
+      "sint gillis waas",
+      "gemeente sint gillis waas",
+      "commune de sint gillis waas",
+      "gemeinde sint gillis waas"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46021": {
+    "nis": "46021",
+    "type": "municipality",
+    "name": "Sint-Niklaas (Sint-Niklaas)",
+    "alternateNames": [
+      "sint niklaas",
+      "saint nicolas",
+      "sint niklaas (sint niklaas)",
+      "saint nicolas (saint nicolas)",
+      "gemeente sint niklaas",
+      "commune de saint nicolas",
+      "gemeinde sint niklaas"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46024": {
+    "nis": "46024",
+    "type": "municipality",
+    "name": "Stekene",
+    "alternateNames": [
+      "stekene",
+      "gemeente stekene",
+      "commune de stekene",
+      "gemeinde stekene"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "46025": {
+    "nis": "46025",
+    "type": "municipality",
+    "name": "Temse",
+    "alternateNames": [
+      "temse",
+      "tamise",
+      "gemeente temse",
+      "commune de tamise",
+      "gemeinde temse"
+    ],
+    "parentNis": "46000",
+    "childrenNis": []
+  },
+  "50000": {
+    "nis": "50000",
+    "type": "province",
+    "name": "Province du Hainaut",
+    "alternateNames": [
+      "province du hainaut",
+      "provincie henegouwen",
+      "provinz hennegau",
+      "hainaut",
+      "henegouwen",
+      "hennegau"
+    ],
+    "parentNis": "03000",
+    "childrenNis": [
+      "51000",
+      "52000",
+      "53000",
+      "55000",
+      "56000",
+      "57000",
+      "58000"
+    ]
+  },
+  "51000": {
+    "nis": "51000",
+    "type": "district",
+    "name": "Arrondissement d’Ath",
+    "alternateNames": [
+      "arrondissement d'ath",
+      "arrondissement aat",
+      "bezirk ath",
+      "ath",
+      "aat"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "51004",
+      "51008",
+      "51009",
+      "51012",
+      "51014",
+      "51017",
+      "51019",
+      "51065",
+      "51067",
+      "51068",
+      "51069"
+    ]
+  },
+  "51004": {
+    "nis": "51004",
+    "type": "municipality",
+    "name": "Ath",
+    "alternateNames": [
+      "ath",
+      "aat",
+      "commune d'ath",
+      "gemeente aat",
+      "gemeinde ath"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51008": {
+    "nis": "51008",
+    "type": "municipality",
+    "name": "Beloeil",
+    "alternateNames": [
+      "beloeil",
+      "commune de beloeil",
+      "gemeente beloeil",
+      "gemeinde beloeil"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51009": {
+    "nis": "51009",
+    "type": "municipality",
+    "name": "Bernissart",
+    "alternateNames": [
+      "bernissart",
+      "commune de bernissart",
+      "gemeente bernissart",
+      "gemeinde bernissart"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51012": {
+    "nis": "51012",
+    "type": "municipality",
+    "name": "Brugelette",
+    "alternateNames": [
+      "brugelette",
+      "commune de brugelette",
+      "gemeente brugelette",
+      "gemeinde brugelette"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51014": {
+    "nis": "51014",
+    "type": "municipality",
+    "name": "Chièvres",
+    "alternateNames": [
+      "chievres",
+      "commune de chievres",
+      "gemeente chievres",
+      "gemeinde chievres"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51017": {
+    "nis": "51017",
+    "type": "municipality",
+    "name": "Ellezelles",
+    "alternateNames": [
+      "ellezelles",
+      "elzele",
+      "commune d'ellezelles",
+      "gemeente elzele",
+      "gemeinde ellezelles"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51019": {
+    "nis": "51019",
+    "type": "municipality",
+    "name": "Flobecq",
+    "alternateNames": [
+      "flobecq",
+      "vloesberg",
+      "commune de flobecq",
+      "gemeente vloesberg",
+      "gemeinde flobecq"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51065": {
+    "nis": "51065",
+    "type": "municipality",
+    "name": "Frasnes-lez-Anvaing",
+    "alternateNames": [
+      "frasnes lez anvaing",
+      "commune de frasnes lez anvaing",
+      "gemeente frasnes lez anvaing",
+      "gemeinde frasnes lez anvaing"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51067": {
+    "nis": "51067",
+    "type": "municipality",
+    "name": "Enghien",
+    "alternateNames": [
+      "enghien",
+      "edingen",
+      "commune d'enghien",
+      "gemeente edingen",
+      "gemeinde enghien"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51068": {
+    "nis": "51068",
+    "type": "municipality",
+    "name": "Silly",
+    "alternateNames": [
+      "silly",
+      "opzullik",
+      "commune de silly",
+      "gemeente opzullik",
+      "gemeinde silly"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "51069": {
+    "nis": "51069",
+    "type": "municipality",
+    "name": "Lessines",
+    "alternateNames": [
+      "lessines",
+      "lessen",
+      "commune de lessines",
+      "gemeente lessen",
+      "gemeinde lessines"
+    ],
+    "parentNis": "51000",
+    "childrenNis": []
+  },
+  "52000": {
+    "nis": "52000",
+    "type": "district",
+    "name": "Arrondissement de Charleroi",
+    "alternateNames": [
+      "arrondissement de charleroi",
+      "arrondissement charleroi",
+      "bezirk charleroi",
+      "charleroi"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "52010",
+      "52011",
+      "52012",
+      "52015",
+      "52018",
+      "52021",
+      "52022",
+      "52025",
+      "52048",
+      "52055",
+      "52074",
+      "52075"
+    ]
+  },
+  "52010": {
+    "nis": "52010",
+    "type": "municipality",
+    "name": "Chapelle-lez-Herlaimont",
+    "alternateNames": [
+      "chapelle lez herlaimont",
+      "commune de chapelle lez herlaimont",
+      "gemeente chapelle lez herlaimont",
+      "gemeinde chapelle lez herlaimont"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52011": {
+    "nis": "52011",
+    "type": "municipality",
+    "name": "Charleroi",
+    "alternateNames": [
+      "charleroi",
+      "commune de charleroi",
+      "gemeente charleroi",
+      "gemeinde charleroi"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52012": {
+    "nis": "52012",
+    "type": "municipality",
+    "name": "Châtelet",
+    "alternateNames": [
+      "chatelet",
+      "commune de chatelet",
+      "gemeente chatelet",
+      "gemeinde chatelet"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52015": {
+    "nis": "52015",
+    "type": "municipality",
+    "name": "Courcelles",
+    "alternateNames": [
+      "courcelles",
+      "commune de courcelles",
+      "gemeente courcelles",
+      "gemeinde courcelles"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52018": {
+    "nis": "52018",
+    "type": "municipality",
+    "name": "Farciennes",
+    "alternateNames": [
+      "farciennes",
+      "commune de farciennes",
+      "gemeente farciennes",
+      "gemeinde farciennes"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52021": {
+    "nis": "52021",
+    "type": "municipality",
+    "name": "Fleurus",
+    "alternateNames": [
+      "fleurus",
+      "commune de fleurus",
+      "gemeente fleurus",
+      "gemeinde fleurus"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52022": {
+    "nis": "52022",
+    "type": "municipality",
+    "name": "Fontaine-l’Evêque",
+    "alternateNames": [
+      "fontaine l'eveque",
+      "commune de fontaine l'eveque",
+      "gemeente fontaine l'eveque",
+      "gemeinde fontaine l'eveque"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52025": {
+    "nis": "52025",
+    "type": "municipality",
+    "name": "Gerpinnes",
+    "alternateNames": [
+      "gerpinnes",
+      "commune de gerpinnes",
+      "gemeente gerpinnes",
+      "gemeinde gerpinnes"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52048": {
+    "nis": "52048",
+    "type": "municipality",
+    "name": "Montigny-le-Tilleul",
+    "alternateNames": [
+      "montigny le tilleul",
+      "commune de montigny le tilleul",
+      "gemeente montigny le tilleul",
+      "gemeinde montigny le tilleul"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52055": {
+    "nis": "52055",
+    "type": "municipality",
+    "name": "Pont-à-Celles",
+    "alternateNames": [
+      "pont a celles",
+      "commune de pont a celles",
+      "gemeente pont a celles",
+      "gemeinde pont a celles"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52074": {
+    "nis": "52074",
+    "type": "municipality",
+    "name": "Aiseau-Presles",
+    "alternateNames": [
+      "aiseau presles",
+      "commune d'aiseau presles",
+      "gemeente aiseau presles",
+      "gemeinde aiseau presles"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "52075": {
+    "nis": "52075",
+    "type": "municipality",
+    "name": "Les Bons Villers",
+    "alternateNames": [
+      "les bons villers",
+      "commune de les bons villers",
+      "gemeente les bons villers",
+      "gemeinde les bons villers"
+    ],
+    "parentNis": "52000",
+    "childrenNis": []
+  },
+  "53000": {
+    "nis": "53000",
+    "type": "district",
+    "name": "Arrondissement de Mons",
+    "alternateNames": [
+      "arrondissement de mons",
+      "arrondissement bergen",
+      "bezirk mons",
+      "mons",
+      "bergen"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "53014",
+      "53020",
+      "53028",
+      "53039",
+      "53044",
+      "53046",
+      "53053",
+      "53065",
+      "53068",
+      "53070",
+      "53082",
+      "53083",
+      "53084"
+    ]
+  },
+  "53014": {
+    "nis": "53014",
+    "type": "municipality",
+    "name": "Boussu",
+    "alternateNames": [
+      "boussu",
+      "commune de boussu",
+      "gemeente boussu",
+      "gemeinde boussu"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53020": {
+    "nis": "53020",
+    "type": "municipality",
+    "name": "Dour",
+    "alternateNames": [
+      "dour",
+      "commune de dour",
+      "gemeente dour",
+      "gemeinde dour"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53028": {
+    "nis": "53028",
+    "type": "municipality",
+    "name": "Frameries",
+    "alternateNames": [
+      "frameries",
+      "commune de frameries",
+      "gemeente frameries",
+      "gemeinde frameries"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53039": {
+    "nis": "53039",
+    "type": "municipality",
+    "name": "Hensies",
+    "alternateNames": [
+      "hensies",
+      "commune de hensies",
+      "gemeente hensies",
+      "gemeinde hensies"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53044": {
+    "nis": "53044",
+    "type": "municipality",
+    "name": "Jurbise",
+    "alternateNames": [
+      "jurbise",
+      "jurbeke",
+      "commune de jurbise",
+      "gemeente jurbeke",
+      "gemeinde jurbise"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53046": {
+    "nis": "53046",
+    "type": "municipality",
+    "name": "Lens",
+    "alternateNames": [
+      "lens",
+      "commune de lens",
+      "gemeente lens",
+      "gemeinde lens"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53053": {
+    "nis": "53053",
+    "type": "municipality",
+    "name": "Mons",
+    "alternateNames": [
+      "mons",
+      "bergen",
+      "commune de mons",
+      "gemeente bergen",
+      "gemeinde mons"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53065": {
+    "nis": "53065",
+    "type": "municipality",
+    "name": "Quaregnon",
+    "alternateNames": [
+      "quaregnon",
+      "commune de quaregnon",
+      "gemeente quaregnon",
+      "gemeinde quaregnon"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53068": {
+    "nis": "53068",
+    "type": "municipality",
+    "name": "Quiévrain",
+    "alternateNames": [
+      "quievrain",
+      "commune de quievrain",
+      "gemeente quievrain",
+      "gemeinde quievrain"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53070": {
+    "nis": "53070",
+    "type": "municipality",
+    "name": "Saint-Ghislain",
+    "alternateNames": [
+      "saint ghislain",
+      "commune de saint ghislain",
+      "gemeente saint ghislain",
+      "gemeinde saint ghislain"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53082": {
+    "nis": "53082",
+    "type": "municipality",
+    "name": "Colfontaine",
+    "alternateNames": [
+      "colfontaine",
+      "commune de colfontaine",
+      "gemeente colfontaine",
+      "gemeinde colfontaine"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53083": {
+    "nis": "53083",
+    "type": "municipality",
+    "name": "Honnelles",
+    "alternateNames": [
+      "honnelles",
+      "commune de honnelles",
+      "gemeente honnelles",
+      "gemeinde honnelles"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "53084": {
+    "nis": "53084",
+    "type": "municipality",
+    "name": "Quévy",
+    "alternateNames": [
+      "quevy",
+      "commune de quevy",
+      "gemeente quevy",
+      "gemeinde quevy"
+    ],
+    "parentNis": "53000",
+    "childrenNis": []
+  },
+  "55000": {
+    "nis": "55000",
+    "type": "district",
+    "name": "Arrondissement de Soignies",
+    "alternateNames": [
+      "arrondissement de soignies",
+      "arrondissement zinnik",
+      "bezirk soignies",
+      "soignies",
+      "zinnik"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "55004",
+      "55035",
+      "55040",
+      "55050",
+      "55085",
+      "55086"
+    ]
+  },
+  "55004": {
+    "nis": "55004",
+    "type": "municipality",
+    "name": "Braine-le-Comte",
+    "alternateNames": [
+      "braine le comte",
+      "'s gravenbrakel",
+      "commune de braine le comte",
+      "gemeente 's gravenbrakel",
+      "gemeinde braine le comte"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "55035": {
+    "nis": "55035",
+    "type": "municipality",
+    "name": "Le Roeulx",
+    "alternateNames": [
+      "le roeulx",
+      "commune de le roeulx",
+      "gemeente le roeulx",
+      "gemeinde le roeulx"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "55040": {
+    "nis": "55040",
+    "type": "municipality",
+    "name": "Soignies",
+    "alternateNames": [
+      "soignies",
+      "zinnik",
+      "commune de soignies",
+      "gemeente zinnik",
+      "gemeinde soignies"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "55050": {
+    "nis": "55050",
+    "type": "municipality",
+    "name": "Ecaussinnes",
+    "alternateNames": [
+      "ecaussinnes",
+      "commune d'ecaussinnes",
+      "gemeente ecaussinnes",
+      "gemeinde ecaussinnes"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "55085": {
+    "nis": "55085",
+    "type": "municipality",
+    "name": "Seneffe",
+    "alternateNames": [
+      "seneffe",
+      "commune de seneffe",
+      "gemeente seneffe",
+      "gemeinde seneffe"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "55086": {
+    "nis": "55086",
+    "type": "municipality",
+    "name": "Manage",
+    "alternateNames": [
+      "manage",
+      "commune de manage",
+      "gemeente manage",
+      "gemeinde manage"
+    ],
+    "parentNis": "55000",
+    "childrenNis": []
+  },
+  "56000": {
+    "nis": "56000",
+    "type": "district",
+    "name": "Arrondissement de Thuin",
+    "alternateNames": [
+      "arrondissement de thuin",
+      "arrondissement thuin",
+      "bezirk thuin",
+      "thuin"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "56001",
+      "56005",
+      "56016",
+      "56022",
+      "56029",
+      "56044",
+      "56049",
+      "56051",
+      "56078",
+      "56086",
+      "56088"
+    ]
+  },
+  "56001": {
+    "nis": "56001",
+    "type": "municipality",
+    "name": "Anderlues",
+    "alternateNames": [
+      "anderlues",
+      "commune d'anderlues",
+      "gemeente anderlues",
+      "gemeinde anderlues"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56005": {
+    "nis": "56005",
+    "type": "municipality",
+    "name": "Beaumont",
+    "alternateNames": [
+      "beaumont",
+      "commune de beaumont",
+      "gemeente beaumont",
+      "gemeinde beaumont"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56016": {
+    "nis": "56016",
+    "type": "municipality",
+    "name": "Chimay",
+    "alternateNames": [
+      "chimay",
+      "commune de chimay",
+      "gemeente chimay",
+      "gemeinde chimay"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56022": {
+    "nis": "56022",
+    "type": "municipality",
+    "name": "Erquelinnes",
+    "alternateNames": [
+      "erquelinnes",
+      "commune d'erquelinnes",
+      "gemeente erquelinnes",
+      "gemeinde erquelinnes"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56029": {
+    "nis": "56029",
+    "type": "municipality",
+    "name": "Froidchapelle",
+    "alternateNames": [
+      "froidchapelle",
+      "commune de froidchapelle",
+      "gemeente froidchapelle",
+      "gemeinde froidchapelle"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56044": {
+    "nis": "56044",
+    "type": "municipality",
+    "name": "Lobbes",
+    "alternateNames": [
+      "lobbes",
+      "commune de lobbes",
+      "gemeente lobbes",
+      "gemeinde lobbes"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56049": {
+    "nis": "56049",
+    "type": "municipality",
+    "name": "Merbes-le-Château",
+    "alternateNames": [
+      "merbes le chateau",
+      "commune de merbes le chateau",
+      "gemeente merbes le chateau",
+      "gemeinde merbes le chateau"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56051": {
+    "nis": "56051",
+    "type": "municipality",
+    "name": "Momignies",
+    "alternateNames": [
+      "momignies",
+      "commune de momignies",
+      "gemeente momignies",
+      "gemeinde momignies"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56078": {
+    "nis": "56078",
+    "type": "municipality",
+    "name": "Thuin",
+    "alternateNames": [
+      "thuin",
+      "commune de thuin",
+      "gemeente thuin",
+      "gemeinde thuin"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56086": {
+    "nis": "56086",
+    "type": "municipality",
+    "name": "Ham-sur-Heure-Nalinnes",
+    "alternateNames": [
+      "ham sur heure nalinnes",
+      "commune de ham sur heure nalinnes",
+      "gemeente ham sur heure nalinnes",
+      "gemeinde ham sur heure nalinnes"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "56088": {
+    "nis": "56088",
+    "type": "municipality",
+    "name": "Sivry-Rance",
+    "alternateNames": [
+      "sivry rance",
+      "commune de sivry rance",
+      "gemeente sivry rance",
+      "gemeinde sivry rance"
+    ],
+    "parentNis": "56000",
+    "childrenNis": []
+  },
+  "57000": {
+    "nis": "57000",
+    "type": "district",
+    "name": "Arrondissement de Tournai-Mouscron",
+    "alternateNames": [
+      "arrondissement de tournai mouscron",
+      "arrondissement doornik moeskroen",
+      "bezirk tournai mouscron",
+      "tournai mouscron",
+      "doornik moeskroen"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "57003",
+      "57018",
+      "57027",
+      "57062",
+      "57064",
+      "57072",
+      "57081",
+      "57093",
+      "57094",
+      "57095",
+      "57096",
+      "57097"
+    ]
+  },
+  "57003": {
+    "nis": "57003",
+    "type": "municipality",
+    "name": "Antoing",
+    "alternateNames": [
+      "antoing",
+      "commune d'antoing",
+      "gemeente antoing",
+      "gemeinde antoing"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57018": {
+    "nis": "57018",
+    "type": "municipality",
+    "name": "Celles (Tournai)",
+    "alternateNames": [
+      "celles",
+      "celles (tournai)",
+      "celles (doornik)",
+      "commune de celles",
+      "gemeente celles",
+      "gemeinde celles"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57027": {
+    "nis": "57027",
+    "type": "municipality",
+    "name": "Estaimpuis",
+    "alternateNames": [
+      "estaimpuis",
+      "commune d'estaimpuis",
+      "gemeente estaimpuis",
+      "gemeinde estaimpuis"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57062": {
+    "nis": "57062",
+    "type": "municipality",
+    "name": "Pecq",
+    "alternateNames": [
+      "pecq",
+      "commune de pecq",
+      "gemeente pecq",
+      "gemeinde pecq"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57064": {
+    "nis": "57064",
+    "type": "municipality",
+    "name": "Péruwelz",
+    "alternateNames": [
+      "peruwelz",
+      "commune de peruwelz",
+      "gemeente peruwelz",
+      "gemeinde peruwelz"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57072": {
+    "nis": "57072",
+    "type": "municipality",
+    "name": "Rumes",
+    "alternateNames": [
+      "rumes",
+      "commune de rumes",
+      "gemeente rumes",
+      "gemeinde rumes"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57081": {
+    "nis": "57081",
+    "type": "municipality",
+    "name": "Tournai",
+    "alternateNames": [
+      "tournai",
+      "doornik",
+      "commune de tournai",
+      "gemeente doornik",
+      "gemeinde tournai"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57093": {
+    "nis": "57093",
+    "type": "municipality",
+    "name": "Brunehaut",
+    "alternateNames": [
+      "brunehaut",
+      "commune de brunehaut",
+      "gemeente brunehaut",
+      "gemeinde brunehaut"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57094": {
+    "nis": "57094",
+    "type": "municipality",
+    "name": "Leuze-en-Hainaut",
+    "alternateNames": [
+      "leuze en hainaut",
+      "commune de leuze en hainaut",
+      "gemeente leuze en hainaut",
+      "gemeinde leuze en hainaut"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57095": {
+    "nis": "57095",
+    "type": "municipality",
+    "name": "Mont-de-l’Enclus",
+    "alternateNames": [
+      "mont de l'enclus",
+      "commune de mont de l'enclus",
+      "gemeente mont de l'enclus",
+      "gemeinde mont de l'enclus"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57096": {
+    "nis": "57096",
+    "type": "municipality",
+    "name": "Mouscron",
+    "alternateNames": [
+      "mouscron",
+      "moeskroen",
+      "commune de mouscron",
+      "gemeente moeskroen",
+      "gemeinde mouscron"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "57097": {
+    "nis": "57097",
+    "type": "municipality",
+    "name": "Comines-Warneton",
+    "alternateNames": [
+      "comines warneton",
+      "komen waasten",
+      "commune de comines warneton",
+      "gemeente komen waasten",
+      "gemeinde comines warneton"
+    ],
+    "parentNis": "57000",
+    "childrenNis": []
+  },
+  "58000": {
+    "nis": "58000",
+    "type": "district",
+    "name": "Arrondissement de La Louvière",
+    "alternateNames": [
+      "arrondissement de la louviere",
+      "arrondissement la louviere",
+      "bezirk la louviere",
+      "la louviere"
+    ],
+    "parentNis": "50000",
+    "childrenNis": [
+      "58001",
+      "58002",
+      "58003",
+      "58004"
+    ]
+  },
+  "58001": {
+    "nis": "58001",
+    "type": "municipality",
+    "name": "La Louvière",
+    "alternateNames": [
+      "la louviere",
+      "commune de la louviere",
+      "gemeente la louviere",
+      "gemeinde la louviere"
+    ],
+    "parentNis": "58000",
+    "childrenNis": []
+  },
+  "58002": {
+    "nis": "58002",
+    "type": "municipality",
+    "name": "Binche",
+    "alternateNames": [
+      "binche",
+      "commune de binche",
+      "gemeente binche",
+      "gemeinde binche"
+    ],
+    "parentNis": "58000",
+    "childrenNis": []
+  },
+  "58003": {
+    "nis": "58003",
+    "type": "municipality",
+    "name": "Estinnes",
+    "alternateNames": [
+      "estinnes",
+      "commune d'estinnes",
+      "gemeente estinnes",
+      "gemeinde estinnes"
+    ],
+    "parentNis": "58000",
+    "childrenNis": []
+  },
+  "58004": {
+    "nis": "58004",
+    "type": "municipality",
+    "name": "Morlanwelz",
+    "alternateNames": [
+      "morlanwelz",
+      "commune de morlanwelz",
+      "gemeente morlanwelz",
+      "gemeinde morlanwelz"
+    ],
+    "parentNis": "58000",
+    "childrenNis": []
+  },
+  "60000": {
+    "nis": "60000",
+    "type": "province",
+    "name": "Province de Liège",
+    "alternateNames": [
+      "province de liege",
+      "provincie luik",
+      "provinz luttich",
+      "liege",
+      "luik",
+      "luttich"
+    ],
+    "parentNis": "03000",
+    "childrenNis": [
+      "61000",
+      "62000",
+      "63000",
+      "64000"
+    ]
+  },
+  "61000": {
+    "nis": "61000",
+    "type": "district",
+    "name": "Arrondissement de Huy",
+    "alternateNames": [
+      "arrondissement de huy",
+      "arrondissement hoei",
+      "bezirk huy",
+      "huy",
+      "hoei"
+    ],
+    "parentNis": "60000",
+    "childrenNis": [
+      "61003",
+      "61010",
+      "61012",
+      "61019",
+      "61024",
+      "61028",
+      "61031",
+      "61039",
+      "61041",
+      "61043",
+      "61048",
+      "61063",
+      "61068",
+      "61072",
+      "61079",
+      "61080",
+      "61081"
+    ]
+  },
+  "61003": {
+    "nis": "61003",
+    "type": "municipality",
+    "name": "Amay",
+    "alternateNames": [
+      "amay",
+      "commune d'amay",
+      "gemeente amay",
+      "gemeinde amay"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61010": {
+    "nis": "61010",
+    "type": "municipality",
+    "name": "Burdinne",
+    "alternateNames": [
+      "burdinne",
+      "commune de burdinne",
+      "gemeente burdinne",
+      "gemeinde burdinne"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61012": {
+    "nis": "61012",
+    "type": "municipality",
+    "name": "Clavier",
+    "alternateNames": [
+      "clavier",
+      "commune de clavier",
+      "gemeente clavier",
+      "gemeinde clavier"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61019": {
+    "nis": "61019",
+    "type": "municipality",
+    "name": "Ferrières",
+    "alternateNames": [
+      "ferrieres",
+      "commune de ferrieres",
+      "gemeente ferrieres",
+      "gemeinde ferrieres"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61024": {
+    "nis": "61024",
+    "type": "municipality",
+    "name": "Hamoir",
+    "alternateNames": [
+      "hamoir",
+      "commune de hamoir",
+      "gemeente hamoir",
+      "gemeinde hamoir"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61028": {
+    "nis": "61028",
+    "type": "municipality",
+    "name": "Héron",
+    "alternateNames": [
+      "heron",
+      "commune de heron",
+      "gemeente heron",
+      "gemeinde heron"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61031": {
+    "nis": "61031",
+    "type": "municipality",
+    "name": "Huy",
+    "alternateNames": [
+      "huy",
+      "hoei",
+      "commune de huy",
+      "gemeente hoei",
+      "gemeinde huy"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61039": {
+    "nis": "61039",
+    "type": "municipality",
+    "name": "Marchin",
+    "alternateNames": [
+      "marchin",
+      "commune de marchin",
+      "gemeente marchin",
+      "gemeinde marchin"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61041": {
+    "nis": "61041",
+    "type": "municipality",
+    "name": "Modave",
+    "alternateNames": [
+      "modave",
+      "commune de modave",
+      "gemeente modave",
+      "gemeinde modave"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61043": {
+    "nis": "61043",
+    "type": "municipality",
+    "name": "Nandrin",
+    "alternateNames": [
+      "nandrin",
+      "commune de nandrin",
+      "gemeente nandrin",
+      "gemeinde nandrin"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61048": {
+    "nis": "61048",
+    "type": "municipality",
+    "name": "Ouffet",
+    "alternateNames": [
+      "ouffet",
+      "commune d'ouffet",
+      "gemeente ouffet",
+      "gemeinde ouffet"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61063": {
+    "nis": "61063",
+    "type": "municipality",
+    "name": "Verlaine",
+    "alternateNames": [
+      "verlaine",
+      "commune de verlaine",
+      "gemeente verlaine",
+      "gemeinde verlaine"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61068": {
+    "nis": "61068",
+    "type": "municipality",
+    "name": "Villers-Le-Bouillet",
+    "alternateNames": [
+      "villers le bouillet",
+      "commune de villers le bouillet",
+      "gemeente villers le bouillet",
+      "gemeinde villers le bouillet"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61072": {
+    "nis": "61072",
+    "type": "municipality",
+    "name": "Wanze",
+    "alternateNames": [
+      "wanze",
+      "commune de wanze",
+      "gemeente wanze",
+      "gemeinde wanze"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61079": {
+    "nis": "61079",
+    "type": "municipality",
+    "name": "Anthisnes",
+    "alternateNames": [
+      "anthisnes",
+      "commune d'anthisnes",
+      "gemeente anthisnes",
+      "gemeinde anthisnes"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61080": {
+    "nis": "61080",
+    "type": "municipality",
+    "name": "Engis",
+    "alternateNames": [
+      "engis",
+      "commune d'engis",
+      "gemeente engis",
+      "gemeinde engis"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "61081": {
+    "nis": "61081",
+    "type": "municipality",
+    "name": "Tinlot",
+    "alternateNames": [
+      "tinlot",
+      "commune de tinlot",
+      "gemeente tinlot",
+      "gemeinde tinlot"
+    ],
+    "parentNis": "61000",
+    "childrenNis": []
+  },
+  "62000": {
+    "nis": "62000",
+    "type": "district",
+    "name": "Arrondissement de Liège",
+    "alternateNames": [
+      "arrondissement de liege",
+      "arrondissement luik",
+      "bezirk luttich",
+      "liege",
+      "luik",
+      "luttich"
+    ],
+    "parentNis": "60000",
+    "childrenNis": [
+      "62003",
+      "62006",
+      "62009",
+      "62011",
+      "62015",
+      "62022",
+      "62026",
+      "62027",
+      "62032",
+      "62038",
+      "62051",
+      "62060",
+      "62063",
+      "62079",
+      "62093",
+      "62096",
+      "62099",
+      "62100",
+      "62108",
+      "62118",
+      "62119",
+      "62120",
+      "62121",
+      "62122"
+    ]
+  },
+  "62003": {
+    "nis": "62003",
+    "type": "municipality",
+    "name": "Ans",
+    "alternateNames": [
+      "ans",
+      "commune d'ans",
+      "gemeente ans",
+      "gemeinde ans"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62006": {
+    "nis": "62006",
+    "type": "municipality",
+    "name": "Awans",
+    "alternateNames": [
+      "awans",
+      "commune d'awans",
+      "gemeente awans",
+      "gemeinde awans"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62009": {
+    "nis": "62009",
+    "type": "municipality",
+    "name": "Aywaille",
+    "alternateNames": [
+      "aywaille",
+      "commune d'aywaille",
+      "gemeente aywaille",
+      "gemeinde aywaille"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62011": {
+    "nis": "62011",
+    "type": "municipality",
+    "name": "Bassenge",
+    "alternateNames": [
+      "bassenge",
+      "bitsingen",
+      "commune de bassenge",
+      "gemeente bitsingen",
+      "gemeinde bassenge"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62015": {
+    "nis": "62015",
+    "type": "municipality",
+    "name": "Beyne-Heusay",
+    "alternateNames": [
+      "beyne heusay",
+      "commune de beyne heusay",
+      "gemeente beyne heusay",
+      "gemeinde beyne heusay"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62022": {
+    "nis": "62022",
+    "type": "municipality",
+    "name": "Chaudfontaine",
+    "alternateNames": [
+      "chaudfontaine",
+      "commune de chaudfontaine",
+      "gemeente chaudfontaine",
+      "gemeinde chaudfontaine"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62026": {
+    "nis": "62026",
+    "type": "municipality",
+    "name": "Comblain-au-Pont",
+    "alternateNames": [
+      "comblain au pont",
+      "commune de comblain au pont",
+      "gemeente comblain au pont",
+      "gemeinde comblain au pont"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62027": {
+    "nis": "62027",
+    "type": "municipality",
+    "name": "Dalhem",
+    "alternateNames": [
+      "dalhem",
+      "commune de dalhem",
+      "gemeente dalhem",
+      "gemeinde dalhem"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62032": {
+    "nis": "62032",
+    "type": "municipality",
+    "name": "Esneux",
+    "alternateNames": [
+      "esneux",
+      "commune d'esneux",
+      "gemeente esneux",
+      "gemeinde esneux"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62038": {
+    "nis": "62038",
+    "type": "municipality",
+    "name": "Fléron",
+    "alternateNames": [
+      "fleron",
+      "commune de fleron",
+      "gemeente fleron",
+      "gemeinde fleron"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62051": {
+    "nis": "62051",
+    "type": "municipality",
+    "name": "Herstal",
+    "alternateNames": [
+      "herstal",
+      "commune de herstal",
+      "gemeente herstal",
+      "gemeinde herstal"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62060": {
+    "nis": "62060",
+    "type": "municipality",
+    "name": "Juprelle",
+    "alternateNames": [
+      "juprelle",
+      "commune de juprelle",
+      "gemeente juprelle",
+      "gemeinde juprelle"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62063": {
+    "nis": "62063",
+    "type": "municipality",
+    "name": "Liège",
+    "alternateNames": [
+      "liege",
+      "luik",
+      "luttich",
+      "commune de liege",
+      "gemeente luik",
+      "gemeinde luttich"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62079": {
+    "nis": "62079",
+    "type": "municipality",
+    "name": "Oupeye",
+    "alternateNames": [
+      "oupeye",
+      "commune d'oupeye",
+      "gemeente oupeye",
+      "gemeinde oupeye"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62093": {
+    "nis": "62093",
+    "type": "municipality",
+    "name": "Saint-Nicolas (Liège)",
+    "alternateNames": [
+      "saint nicolas",
+      "saint nicolas (liege)",
+      "saint nicolas (luik)",
+      "saint nicolas (luttich)",
+      "commune de saint nicolas",
+      "gemeente saint nicolas",
+      "gemeinde saint nicolas"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62096": {
+    "nis": "62096",
+    "type": "municipality",
+    "name": "Seraing",
+    "alternateNames": [
+      "seraing",
+      "commune de seraing",
+      "gemeente seraing",
+      "gemeinde seraing"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62099": {
+    "nis": "62099",
+    "type": "municipality",
+    "name": "Soumagne",
+    "alternateNames": [
+      "soumagne",
+      "commune de soumagne",
+      "gemeente soumagne",
+      "gemeinde soumagne"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62100": {
+    "nis": "62100",
+    "type": "municipality",
+    "name": "Sprimont",
+    "alternateNames": [
+      "sprimont",
+      "commune de sprimont",
+      "gemeente sprimont",
+      "gemeinde sprimont"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62108": {
+    "nis": "62108",
+    "type": "municipality",
+    "name": "Visé",
+    "alternateNames": [
+      "vise",
+      "wezet",
+      "commune de vise",
+      "gemeente wezet",
+      "gemeinde vise"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62118": {
+    "nis": "62118",
+    "type": "municipality",
+    "name": "Grâce-Hollogne",
+    "alternateNames": [
+      "grace hollogne",
+      "commune de grace hollogne",
+      "gemeente grace hollogne",
+      "gemeinde grace hollogne"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62119": {
+    "nis": "62119",
+    "type": "municipality",
+    "name": "Blegny",
+    "alternateNames": [
+      "blegny",
+      "commune de blegny",
+      "gemeente blegny",
+      "gemeinde blegny"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62120": {
+    "nis": "62120",
+    "type": "municipality",
+    "name": "Flémalle",
+    "alternateNames": [
+      "flemalle",
+      "commune de flemalle",
+      "gemeente flemalle",
+      "gemeinde flemalle"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62121": {
+    "nis": "62121",
+    "type": "municipality",
+    "name": "Neupré",
+    "alternateNames": [
+      "neupre",
+      "commune de neupre",
+      "gemeente neupre",
+      "gemeinde neupre"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "62122": {
+    "nis": "62122",
+    "type": "municipality",
+    "name": "Trooz",
+    "alternateNames": [
+      "trooz",
+      "commune de trooz",
+      "gemeente trooz",
+      "gemeinde trooz"
+    ],
+    "parentNis": "62000",
+    "childrenNis": []
+  },
+  "63000": {
+    "nis": "63000",
+    "type": "district",
+    "name": "Arrondissement de Verviers",
+    "alternateNames": [
+      "arrondissement de verviers",
+      "arrondissement verviers",
+      "bezirk verviers",
+      "verviers"
+    ],
+    "parentNis": "60000",
+    "childrenNis": [
+      "63001",
+      "63003",
+      "63004",
+      "63012",
+      "63013",
+      "63020",
+      "63023",
+      "63035",
+      "63038",
+      "63040",
+      "63045",
+      "63046",
+      "63048",
+      "63049",
+      "63057",
+      "63058",
+      "63061",
+      "63067",
+      "63072",
+      "63073",
+      "63075",
+      "63076",
+      "63079",
+      "63080",
+      "63084",
+      "63086",
+      "63087",
+      "63088",
+      "63089"
+    ]
+  },
+  "63001": {
+    "nis": "63001",
+    "type": "municipality",
+    "name": "Amel",
+    "alternateNames": [
+      "amel",
+      "ambleve",
+      "gemeinde amel",
+      "commune d'ambleve",
+      "gemeente amel"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63003": {
+    "nis": "63003",
+    "type": "municipality",
+    "name": "Aubel",
+    "alternateNames": [
+      "aubel",
+      "commune d'aubel",
+      "gemeente aubel",
+      "gemeinde aubel"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63004": {
+    "nis": "63004",
+    "type": "municipality",
+    "name": "Baelen",
+    "alternateNames": [
+      "baelen",
+      "commune de baelen",
+      "gemeente baelen",
+      "gemeinde baelen"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63012": {
+    "nis": "63012",
+    "type": "municipality",
+    "name": "Büllingen",
+    "alternateNames": [
+      "bullingen",
+      "bullange",
+      "gemeinde bullingen",
+      "commune de bullange",
+      "gemeente bullingen"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63013": {
+    "nis": "63013",
+    "type": "municipality",
+    "name": "Bütgenbach",
+    "alternateNames": [
+      "butgenbach",
+      "gemeinde butgenbach",
+      "commune de butgenbach",
+      "gemeente butgenbach"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63020": {
+    "nis": "63020",
+    "type": "municipality",
+    "name": "Dison",
+    "alternateNames": [
+      "dison",
+      "commune de dison",
+      "gemeente dison",
+      "gemeinde dison"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63023": {
+    "nis": "63023",
+    "type": "municipality",
+    "name": "Eupen",
+    "alternateNames": [
+      "eupen",
+      "gemeinde eupen",
+      "commune d'eupen",
+      "gemeente eupen"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63035": {
+    "nis": "63035",
+    "type": "municipality",
+    "name": "Herve",
+    "alternateNames": [
+      "herve",
+      "commune de herve",
+      "gemeente herve",
+      "gemeinde herve"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63038": {
+    "nis": "63038",
+    "type": "municipality",
+    "name": "Jalhay",
+    "alternateNames": [
+      "jalhay",
+      "commune de jalhay",
+      "gemeente jalhay",
+      "gemeinde jalhay"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63040": {
+    "nis": "63040",
+    "type": "municipality",
+    "name": "Kelmis",
+    "alternateNames": [
+      "kelmis",
+      "la calamine",
+      "gemeinde kelmis",
+      "commune de la calamine",
+      "gemeente kelmis"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63045": {
+    "nis": "63045",
+    "type": "municipality",
+    "name": "Lierneux",
+    "alternateNames": [
+      "lierneux",
+      "commune de lierneux",
+      "gemeente lierneux",
+      "gemeinde lierneux"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63046": {
+    "nis": "63046",
+    "type": "municipality",
+    "name": "Limbourg",
+    "alternateNames": [
+      "limbourg",
+      "limburg",
+      "commune de limbourg",
+      "gemeente limburg",
+      "gemeinde limbourg"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63048": {
+    "nis": "63048",
+    "type": "municipality",
+    "name": "Lontzen",
+    "alternateNames": [
+      "lontzen",
+      "gemeinde lontzen",
+      "commune de lontzen",
+      "gemeente lontzen"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63049": {
+    "nis": "63049",
+    "type": "municipality",
+    "name": "Malmedy",
+    "alternateNames": [
+      "malmedy",
+      "commune de malmedy",
+      "gemeente malmedy",
+      "gemeinde malmedy"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63057": {
+    "nis": "63057",
+    "type": "municipality",
+    "name": "Olne",
+    "alternateNames": [
+      "olne",
+      "commune d'olne",
+      "gemeente olne",
+      "gemeinde olne"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63058": {
+    "nis": "63058",
+    "type": "municipality",
+    "name": "Pepinster",
+    "alternateNames": [
+      "pepinster",
+      "commune de pepinster",
+      "gemeente pepinster",
+      "gemeinde pepinster"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63061": {
+    "nis": "63061",
+    "type": "municipality",
+    "name": "Raeren",
+    "alternateNames": [
+      "raeren",
+      "gemeinde raeren",
+      "commune de raeren",
+      "gemeente raeren"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63067": {
+    "nis": "63067",
+    "type": "municipality",
+    "name": "Sankt Vith",
+    "alternateNames": [
+      "sankt vith",
+      "saint vith",
+      "gemeinde sankt vith",
+      "commune de saint vith",
+      "gemeente sankt vith"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63072": {
+    "nis": "63072",
+    "type": "municipality",
+    "name": "Spa",
+    "alternateNames": [
+      "spa",
+      "commune de spa",
+      "gemeente spa",
+      "gemeinde spa"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63073": {
+    "nis": "63073",
+    "type": "municipality",
+    "name": "Stavelot",
+    "alternateNames": [
+      "stavelot",
+      "commune de stavelot",
+      "gemeente stavelot",
+      "gemeinde stavelot"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63075": {
+    "nis": "63075",
+    "type": "municipality",
+    "name": "Stoumont",
+    "alternateNames": [
+      "stoumont",
+      "commune de stoumont",
+      "gemeente stoumont",
+      "gemeinde stoumont"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63076": {
+    "nis": "63076",
+    "type": "municipality",
+    "name": "Theux",
+    "alternateNames": [
+      "theux",
+      "commune de theux",
+      "gemeente theux",
+      "gemeinde theux"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63079": {
+    "nis": "63079",
+    "type": "municipality",
+    "name": "Verviers",
+    "alternateNames": [
+      "verviers",
+      "commune de verviers",
+      "gemeente verviers",
+      "gemeinde verviers"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63080": {
+    "nis": "63080",
+    "type": "municipality",
+    "name": "Waimes",
+    "alternateNames": [
+      "waimes",
+      "weismes",
+      "commune de waimes",
+      "gemeente weismes",
+      "gemeinde weismes"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63084": {
+    "nis": "63084",
+    "type": "municipality",
+    "name": "Welkenraedt",
+    "alternateNames": [
+      "welkenraedt",
+      "commune de welkenraedt",
+      "gemeente welkenraedt",
+      "gemeinde welkenraedt"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63086": {
+    "nis": "63086",
+    "type": "municipality",
+    "name": "Trois-Ponts",
+    "alternateNames": [
+      "trois ponts",
+      "commune de trois ponts",
+      "gemeente trois ponts",
+      "gemeinde trois ponts"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63087": {
+    "nis": "63087",
+    "type": "municipality",
+    "name": "Burg-Reuland",
+    "alternateNames": [
+      "burg reuland",
+      "gemeinde burg reuland",
+      "commune de burg reuland",
+      "gemeente burg reuland"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63088": {
+    "nis": "63088",
+    "type": "municipality",
+    "name": "Plombières",
+    "alternateNames": [
+      "plombieres",
+      "commune de plombieres",
+      "gemeente plombieres",
+      "gemeinde plombieres"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "63089": {
+    "nis": "63089",
+    "type": "municipality",
+    "name": "Thimister-Clermont",
+    "alternateNames": [
+      "thimister clermont",
+      "commune de thimister clermont",
+      "gemeente thimister clermont",
+      "gemeinde thimister clermont"
+    ],
+    "parentNis": "63000",
+    "childrenNis": []
+  },
+  "64000": {
+    "nis": "64000",
+    "type": "district",
+    "name": "Arrondissement de Waremme",
+    "alternateNames": [
+      "arrondissement de waremme",
+      "arrondissement borgworm",
+      "bezirk waremme",
+      "waremme",
+      "borgworm"
+    ],
+    "parentNis": "60000",
+    "childrenNis": [
+      "64008",
+      "64015",
+      "64021",
+      "64023",
+      "64025",
+      "64029",
+      "64034",
+      "64047",
+      "64056",
+      "64063",
+      "64065",
+      "64074",
+      "64075",
+      "64076"
+    ]
+  },
+  "64008": {
+    "nis": "64008",
+    "type": "municipality",
+    "name": "Berloz",
+    "alternateNames": [
+      "berloz",
+      "commune de berloz",
+      "gemeente berloz",
+      "gemeinde berloz"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64015": {
+    "nis": "64015",
+    "type": "municipality",
+    "name": "Braives",
+    "alternateNames": [
+      "braives",
+      "commune de braives",
+      "gemeente braives",
+      "gemeinde braives"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64021": {
+    "nis": "64021",
+    "type": "municipality",
+    "name": "Crisnée",
+    "alternateNames": [
+      "crisnee",
+      "commune de crisnee",
+      "gemeente crisnee",
+      "gemeinde crisnee"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64023": {
+    "nis": "64023",
+    "type": "municipality",
+    "name": "Donceel",
+    "alternateNames": [
+      "donceel",
+      "commune de donceel",
+      "gemeente donceel",
+      "gemeinde donceel"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64025": {
+    "nis": "64025",
+    "type": "municipality",
+    "name": "Fexhe-le-Haut-Clocher",
+    "alternateNames": [
+      "fexhe le haut clocher",
+      "commune de fexhe le haut clocher",
+      "gemeente fexhe le haut clocher",
+      "gemeinde fexhe le haut clocher"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64029": {
+    "nis": "64029",
+    "type": "municipality",
+    "name": "Geer",
+    "alternateNames": [
+      "geer",
+      "commune de geer",
+      "gemeente geer",
+      "gemeinde geer"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64034": {
+    "nis": "64034",
+    "type": "municipality",
+    "name": "Hannut",
+    "alternateNames": [
+      "hannut",
+      "hannuit",
+      "commune de hannut",
+      "gemeente hannuit",
+      "gemeinde hannut"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64047": {
+    "nis": "64047",
+    "type": "municipality",
+    "name": "Lincent",
+    "alternateNames": [
+      "lincent",
+      "lijsem",
+      "commune de lincent",
+      "gemeente lijsem",
+      "gemeinde lincent"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64056": {
+    "nis": "64056",
+    "type": "municipality",
+    "name": "Oreye",
+    "alternateNames": [
+      "oreye",
+      "oerle",
+      "commune d'oreye",
+      "gemeente oerle",
+      "gemeinde oreye"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64063": {
+    "nis": "64063",
+    "type": "municipality",
+    "name": "Remicourt",
+    "alternateNames": [
+      "remicourt",
+      "commune de remicourt",
+      "gemeente remicourt",
+      "gemeinde remicourt"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64065": {
+    "nis": "64065",
+    "type": "municipality",
+    "name": "Saint-Georges-sur-Meuse",
+    "alternateNames": [
+      "saint georges sur meuse",
+      "commune de saint georges sur meuse",
+      "gemeente saint georges sur meuse",
+      "gemeinde saint georges sur meuse"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64074": {
+    "nis": "64074",
+    "type": "municipality",
+    "name": "Waremme",
+    "alternateNames": [
+      "waremme",
+      "borgworm",
+      "commune de waremme",
+      "gemeente borgworm",
+      "gemeinde waremme"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64075": {
+    "nis": "64075",
+    "type": "municipality",
+    "name": "Wasseiges",
+    "alternateNames": [
+      "wasseiges",
+      "commune de wasseiges",
+      "gemeente wasseiges",
+      "gemeinde wasseiges"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "64076": {
+    "nis": "64076",
+    "type": "municipality",
+    "name": "Faimes",
+    "alternateNames": [
+      "faimes",
+      "commune de faimes",
+      "gemeente faimes",
+      "gemeinde faimes"
+    ],
+    "parentNis": "64000",
+    "childrenNis": []
+  },
+  "70000": {
+    "nis": "70000",
+    "type": "province",
+    "name": "Provincie Limburg",
+    "alternateNames": [
+      "provincie limburg",
+      "province du limbourg",
+      "provinz limburg",
+      "limburg",
+      "limbourg"
+    ],
+    "parentNis": "02000",
+    "childrenNis": [
+      "71000",
+      "72000",
+      "73000"
+    ]
+  },
+  "71000": {
+    "nis": "71000",
+    "type": "district",
+    "name": "Arrondissement Hasselt",
+    "alternateNames": [
+      "arrondissement hasselt",
+      "arrondissement de hasselt",
+      "bezirk hasselt",
+      "hasselt"
+    ],
+    "parentNis": "70000",
+    "childrenNis": [
+      "71002",
+      "71004",
+      "71011",
+      "71016",
+      "71017",
+      "71020",
+      "71022",
+      "71024",
+      "71034",
+      "71037",
+      "71045",
+      "71053",
+      "71057",
+      "71066",
+      "71067",
+      "71069",
+      "71070"
+    ]
+  },
+  "71002": {
+    "nis": "71002",
+    "type": "municipality",
+    "name": "As",
+    "alternateNames": [
+      "as",
+      "gemeente as",
+      "commune d'as",
+      "gemeinde as"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71004": {
+    "nis": "71004",
+    "type": "municipality",
+    "name": "Beringen",
+    "alternateNames": [
+      "beringen",
+      "gemeente beringen",
+      "commune de beringen",
+      "gemeinde beringen"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71011": {
+    "nis": "71011",
+    "type": "municipality",
+    "name": "Diepenbeek",
+    "alternateNames": [
+      "diepenbeek",
+      "gemeente diepenbeek",
+      "commune de diepenbeek",
+      "gemeinde diepenbeek"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71016": {
+    "nis": "71016",
+    "type": "municipality",
+    "name": "Genk",
+    "alternateNames": [
+      "genk",
+      "gemeente genk",
+      "commune de genk",
+      "gemeinde genk"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71017": {
+    "nis": "71017",
+    "type": "municipality",
+    "name": "Gingelom",
+    "alternateNames": [
+      "gingelom",
+      "gemeente gingelom",
+      "commune de gingelom",
+      "gemeinde gingelom"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71020": {
+    "nis": "71020",
+    "type": "municipality",
+    "name": "Halen",
+    "alternateNames": [
+      "halen",
+      "gemeente halen",
+      "commune de halen",
+      "gemeinde halen"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71022": {
+    "nis": "71022",
+    "type": "municipality",
+    "name": "Hasselt",
+    "alternateNames": [
+      "hasselt",
+      "gemeente hasselt",
+      "commune de hasselt",
+      "gemeinde hasselt"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71024": {
+    "nis": "71024",
+    "type": "municipality",
+    "name": "Herk-de-Stad",
+    "alternateNames": [
+      "herk de stad",
+      "herck la ville",
+      "gemeente herk de stad",
+      "commune de herck la ville",
+      "gemeinde herk de stad"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71034": {
+    "nis": "71034",
+    "type": "municipality",
+    "name": "Leopoldsburg",
+    "alternateNames": [
+      "leopoldsburg",
+      "bourg leopold",
+      "gemeente leopoldsburg",
+      "commune de bourg leopold",
+      "gemeinde leopoldsburg"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71037": {
+    "nis": "71037",
+    "type": "municipality",
+    "name": "Lummen",
+    "alternateNames": [
+      "lummen",
+      "gemeente lummen",
+      "commune de lummen",
+      "gemeinde lummen"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71045": {
+    "nis": "71045",
+    "type": "municipality",
+    "name": "Nieuwerkerken (Hasselt)",
+    "alternateNames": [
+      "nieuwerkerken",
+      "nieuwerkerken (hasselt)",
+      "gemeente nieuwerkerken",
+      "commune de nieuwerkerken",
+      "gemeinde nieuwerkerken"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71053": {
+    "nis": "71053",
+    "type": "municipality",
+    "name": "Sint-Truiden",
+    "alternateNames": [
+      "sint truiden",
+      "saint trond",
+      "gemeente sint truiden",
+      "commune de saint trond",
+      "gemeinde sint truiden"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71057": {
+    "nis": "71057",
+    "type": "municipality",
+    "name": "Tessenderlo",
+    "alternateNames": [
+      "tessenderlo",
+      "gemeente tessenderlo",
+      "commune de tessenderlo",
+      "gemeinde tessenderlo"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71066": {
+    "nis": "71066",
+    "type": "municipality",
+    "name": "Zonhoven",
+    "alternateNames": [
+      "zonhoven",
+      "gemeente zonhoven",
+      "commune de zonhoven",
+      "gemeinde zonhoven"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71067": {
+    "nis": "71067",
+    "type": "municipality",
+    "name": "Zutendaal",
+    "alternateNames": [
+      "zutendaal",
+      "gemeente zutendaal",
+      "commune de zutendaal",
+      "gemeinde zutendaal"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71069": {
+    "nis": "71069",
+    "type": "municipality",
+    "name": "Ham",
+    "alternateNames": [
+      "ham",
+      "gemeente ham",
+      "commune de ham",
+      "gemeinde ham"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "71070": {
+    "nis": "71070",
+    "type": "municipality",
+    "name": "Heusden-Zolder",
+    "alternateNames": [
+      "heusden zolder",
+      "gemeente heusden zolder",
+      "commune de heusden zolder",
+      "gemeinde heusden zolder"
+    ],
+    "parentNis": "71000",
+    "childrenNis": []
+  },
+  "72000": {
+    "nis": "72000",
+    "type": "district",
+    "name": "Arrondissement Maaseik",
+    "alternateNames": [
+      "arrondissement maaseik",
+      "arrondissement de maaseik",
+      "bezirk maaseik",
+      "maaseik"
+    ],
+    "parentNis": "70000",
+    "childrenNis": [
+      "72003",
+      "72004",
+      "72018",
+      "72020",
+      "72021",
+      "72030",
+      "72037",
+      "72038",
+      "72039",
+      "72041",
+      "72042",
+      "72043"
+    ]
+  },
+  "72003": {
+    "nis": "72003",
+    "type": "municipality",
+    "name": "Bocholt",
+    "alternateNames": [
+      "bocholt",
+      "gemeente bocholt",
+      "commune de bocholt",
+      "gemeinde bocholt"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72004": {
+    "nis": "72004",
+    "type": "municipality",
+    "name": "Bree",
+    "alternateNames": [
+      "bree",
+      "gemeente bree",
+      "commune de bree",
+      "gemeinde bree"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72018": {
+    "nis": "72018",
+    "type": "municipality",
+    "name": "Kinrooi",
+    "alternateNames": [
+      "kinrooi",
+      "gemeente kinrooi",
+      "commune de kinrooi",
+      "gemeinde kinrooi"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72020": {
+    "nis": "72020",
+    "type": "municipality",
+    "name": "Lommel",
+    "alternateNames": [
+      "lommel",
+      "gemeente lommel",
+      "commune de lommel",
+      "gemeinde lommel"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72021": {
+    "nis": "72021",
+    "type": "municipality",
+    "name": "Maaseik",
+    "alternateNames": [
+      "maaseik",
+      "gemeente maaseik",
+      "commune de maaseik",
+      "gemeinde maaseik"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72030": {
+    "nis": "72030",
+    "type": "municipality",
+    "name": "Peer",
+    "alternateNames": [
+      "peer",
+      "gemeente peer",
+      "commune de peer",
+      "gemeinde peer"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72037": {
+    "nis": "72037",
+    "type": "municipality",
+    "name": "Hamont-Achel",
+    "alternateNames": [
+      "hamont achel",
+      "gemeente hamont achel",
+      "commune de hamont achel",
+      "gemeinde hamont achel"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72038": {
+    "nis": "72038",
+    "type": "municipality",
+    "name": "Hechtel-Eksel",
+    "alternateNames": [
+      "hechtel eksel",
+      "gemeente hechtel eksel",
+      "commune de hechtel eksel",
+      "gemeinde hechtel eksel"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72039": {
+    "nis": "72039",
+    "type": "municipality",
+    "name": "Houthalen-Helchteren",
+    "alternateNames": [
+      "houthalen helchteren",
+      "gemeente houthalen helchteren",
+      "commune de houthalen helchteren",
+      "gemeinde houthalen helchteren"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72041": {
+    "nis": "72041",
+    "type": "municipality",
+    "name": "Dilsen-Stokkem",
+    "alternateNames": [
+      "dilsen stokkem",
+      "gemeente dilsen stokkem",
+      "commune de dilsen stokkem",
+      "gemeinde dilsen stokkem"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72042": {
+    "nis": "72042",
+    "type": "municipality",
+    "name": "Oudsbergen",
+    "alternateNames": [
+      "oudsbergen",
+      "gemeente oudsbergen",
+      "commune d'oudsbergen",
+      "gemeinde oudsbergen"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "72043": {
+    "nis": "72043",
+    "type": "municipality",
+    "name": "Pelt",
+    "alternateNames": [
+      "pelt",
+      "gemeente pelt",
+      "commune de pelt",
+      "gemeinde pelt"
+    ],
+    "parentNis": "72000",
+    "childrenNis": []
+  },
+  "73000": {
+    "nis": "73000",
+    "type": "district",
+    "name": "Arrondissement Tongeren",
+    "alternateNames": [
+      "arrondissement tongeren",
+      "arrondissement de tongres",
+      "bezirk tongeren",
+      "tongeren",
+      "tongres"
+    ],
+    "parentNis": "70000",
+    "childrenNis": [
+      "73001",
+      "73006",
+      "73009",
+      "73022",
+      "73028",
+      "73032",
+      "73040",
+      "73042",
+      "73066",
+      "73083",
+      "73098",
+      "73107",
+      "73109"
+    ]
+  },
+  "73001": {
+    "nis": "73001",
+    "type": "municipality",
+    "name": "Alken",
+    "alternateNames": [
+      "alken",
+      "gemeente alken",
+      "commune d'alken",
+      "gemeinde alken"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73006": {
+    "nis": "73006",
+    "type": "municipality",
+    "name": "Bilzen",
+    "alternateNames": [
+      "bilzen",
+      "gemeente bilzen",
+      "commune de bilzen",
+      "gemeinde bilzen"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73009": {
+    "nis": "73009",
+    "type": "municipality",
+    "name": "Borgloon",
+    "alternateNames": [
+      "borgloon",
+      "looz",
+      "gemeente borgloon",
+      "commune de looz",
+      "gemeinde borgloon"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73022": {
+    "nis": "73022",
+    "type": "municipality",
+    "name": "Heers",
+    "alternateNames": [
+      "heers",
+      "gemeente heers",
+      "commune de heers",
+      "gemeinde heers"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73028": {
+    "nis": "73028",
+    "type": "municipality",
+    "name": "Herstappe",
+    "alternateNames": [
+      "herstappe",
+      "gemeente herstappe",
+      "commune de herstappe",
+      "gemeinde herstappe"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73032": {
+    "nis": "73032",
+    "type": "municipality",
+    "name": "Hoeselt",
+    "alternateNames": [
+      "hoeselt",
+      "gemeente hoeselt",
+      "commune de hoeselt",
+      "gemeinde hoeselt"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73040": {
+    "nis": "73040",
+    "type": "municipality",
+    "name": "Kortessem",
+    "alternateNames": [
+      "kortessem",
+      "gemeente kortessem",
+      "commune de kortessem",
+      "gemeinde kortessem"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73042": {
+    "nis": "73042",
+    "type": "municipality",
+    "name": "Lanaken",
+    "alternateNames": [
+      "lanaken",
+      "gemeente lanaken",
+      "commune de lanaken",
+      "gemeinde lanaken"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73066": {
+    "nis": "73066",
+    "type": "municipality",
+    "name": "Riemst",
+    "alternateNames": [
+      "riemst",
+      "gemeente riemst",
+      "commune de riemst",
+      "gemeinde riemst"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73083": {
+    "nis": "73083",
+    "type": "municipality",
+    "name": "Tongeren",
+    "alternateNames": [
+      "tongeren",
+      "tongres",
+      "gemeente tongeren",
+      "commune de tongres",
+      "gemeinde tongeren"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73098": {
+    "nis": "73098",
+    "type": "municipality",
+    "name": "Wellen",
+    "alternateNames": [
+      "wellen",
+      "gemeente wellen",
+      "commune de wellen",
+      "gemeinde wellen"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73107": {
+    "nis": "73107",
+    "type": "municipality",
+    "name": "Maasmechelen",
+    "alternateNames": [
+      "maasmechelen",
+      "gemeente maasmechelen",
+      "commune de maasmechelen",
+      "gemeinde maasmechelen"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "73109": {
+    "nis": "73109",
+    "type": "municipality",
+    "name": "Voeren",
+    "alternateNames": [
+      "voeren",
+      "fourons",
+      "gemeente voeren",
+      "commune de fourons",
+      "gemeinde voeren"
+    ],
+    "parentNis": "73000",
+    "childrenNis": []
+  },
+  "80000": {
+    "nis": "80000",
+    "type": "province",
+    "name": "Province du Luxembourg",
+    "alternateNames": [
+      "province du luxembourg",
+      "provincie luxemburg",
+      "provinz luxemburg",
+      "luxembourg",
+      "luxemburg"
+    ],
+    "parentNis": "03000",
+    "childrenNis": [
+      "81000",
+      "82000",
+      "83000",
+      "84000",
+      "85000"
+    ]
+  },
+  "81000": {
+    "nis": "81000",
+    "type": "district",
+    "name": "Arrondissement d’Arlon",
+    "alternateNames": [
+      "arrondissement d'arlon",
+      "arrondissement aarlen",
+      "bezirk arlon",
+      "arlon",
+      "aarlen"
+    ],
+    "parentNis": "80000",
+    "childrenNis": [
+      "81001",
+      "81003",
+      "81004",
+      "81013",
+      "81015"
+    ]
+  },
+  "81001": {
+    "nis": "81001",
+    "type": "municipality",
+    "name": "Arlon",
+    "alternateNames": [
+      "arlon",
+      "aarlen",
+      "commune d'arlon",
+      "gemeente aarlen",
+      "gemeinde arlon"
+    ],
+    "parentNis": "81000",
+    "childrenNis": []
+  },
+  "81003": {
+    "nis": "81003",
+    "type": "municipality",
+    "name": "Attert",
+    "alternateNames": [
+      "attert",
+      "commune d'attert",
+      "gemeente attert",
+      "gemeinde attert"
+    ],
+    "parentNis": "81000",
+    "childrenNis": []
+  },
+  "81004": {
+    "nis": "81004",
+    "type": "municipality",
+    "name": "Aubange",
+    "alternateNames": [
+      "aubange",
+      "commune d'aubange",
+      "gemeente aubange",
+      "gemeinde aubange"
+    ],
+    "parentNis": "81000",
+    "childrenNis": []
+  },
+  "81013": {
+    "nis": "81013",
+    "type": "municipality",
+    "name": "Martelange",
+    "alternateNames": [
+      "martelange",
+      "commune de martelange",
+      "gemeente martelange",
+      "gemeinde martelange"
+    ],
+    "parentNis": "81000",
+    "childrenNis": []
+  },
+  "81015": {
+    "nis": "81015",
+    "type": "municipality",
+    "name": "Messancy",
+    "alternateNames": [
+      "messancy",
+      "commune de messancy",
+      "gemeente messancy",
+      "gemeinde messancy"
+    ],
+    "parentNis": "81000",
+    "childrenNis": []
+  },
+  "82000": {
+    "nis": "82000",
+    "type": "district",
+    "name": "Arrondissement de Bastogne",
+    "alternateNames": [
+      "arrondissement de bastogne",
+      "arrondissement bastenaken",
+      "bezirk bastogne",
+      "bastogne",
+      "bastenaken"
+    ],
+    "parentNis": "80000",
+    "childrenNis": [
+      "82003",
+      "82005",
+      "82009",
+      "82014",
+      "82032",
+      "82036",
+      "82037",
+      "82038"
+    ]
+  },
+  "82003": {
+    "nis": "82003",
+    "type": "municipality",
+    "name": "Bastogne",
+    "alternateNames": [
+      "bastogne",
+      "bastenaken",
+      "bastnach",
+      "commune de bastogne",
+      "gemeente bastenaken",
+      "gemeinde bastnach"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82005": {
+    "nis": "82005",
+    "type": "municipality",
+    "name": "Bertogne",
+    "alternateNames": [
+      "bertogne",
+      "commune de bertogne",
+      "gemeente bertogne",
+      "gemeinde bertogne"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82009": {
+    "nis": "82009",
+    "type": "municipality",
+    "name": "Fauvillers",
+    "alternateNames": [
+      "fauvillers",
+      "commune de fauvillers",
+      "gemeente fauvillers",
+      "gemeinde fauvillers"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82014": {
+    "nis": "82014",
+    "type": "municipality",
+    "name": "Houffalize",
+    "alternateNames": [
+      "houffalize",
+      "commune de houffalize",
+      "gemeente houffalize",
+      "gemeinde houffalize"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82032": {
+    "nis": "82032",
+    "type": "municipality",
+    "name": "Vielsalm",
+    "alternateNames": [
+      "vielsalm",
+      "commune de vielsalm",
+      "gemeente vielsalm",
+      "gemeinde vielsalm"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82036": {
+    "nis": "82036",
+    "type": "municipality",
+    "name": "Vaux-sur-Sûre",
+    "alternateNames": [
+      "vaux sur sure",
+      "commune de vaux sur sure",
+      "gemeente vaux sur sure",
+      "gemeinde vaux sur sure"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82037": {
+    "nis": "82037",
+    "type": "municipality",
+    "name": "Gouvy",
+    "alternateNames": [
+      "gouvy",
+      "commune de gouvy",
+      "gemeente gouvy",
+      "gemeinde gouvy"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "82038": {
+    "nis": "82038",
+    "type": "municipality",
+    "name": "Sainte-Ode",
+    "alternateNames": [
+      "sainte ode",
+      "commune de sainte ode",
+      "gemeente sainte ode",
+      "gemeinde sainte ode"
+    ],
+    "parentNis": "82000",
+    "childrenNis": []
+  },
+  "83000": {
+    "nis": "83000",
+    "type": "district",
+    "name": "Arrondissement de Marche-en-Famenne",
+    "alternateNames": [
+      "arrondissement de marche en famenne",
+      "arrondissement marche en famenne",
+      "bezirk marche en famenne",
+      "marche en famenne"
+    ],
+    "parentNis": "80000",
+    "childrenNis": [
+      "83012",
+      "83013",
+      "83028",
+      "83031",
+      "83034",
+      "83040",
+      "83044",
+      "83049",
+      "83055"
+    ]
+  },
+  "83012": {
+    "nis": "83012",
+    "type": "municipality",
+    "name": "Durbuy",
+    "alternateNames": [
+      "durbuy",
+      "commune de durbuy",
+      "gemeente durbuy",
+      "gemeinde durbuy"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83013": {
+    "nis": "83013",
+    "type": "municipality",
+    "name": "Erezée",
+    "alternateNames": [
+      "erezee",
+      "commune d'erezee",
+      "gemeente erezee",
+      "gemeinde erezee"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83028": {
+    "nis": "83028",
+    "type": "municipality",
+    "name": "Hotton",
+    "alternateNames": [
+      "hotton",
+      "commune de hotton",
+      "gemeente hotton",
+      "gemeinde hotton"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83031": {
+    "nis": "83031",
+    "type": "municipality",
+    "name": "La Roche-en-Ardenne",
+    "alternateNames": [
+      "la roche en ardenne",
+      "commune de la roche en ardenne",
+      "gemeente la roche en ardenne",
+      "gemeinde la roche en ardenne"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83034": {
+    "nis": "83034",
+    "type": "municipality",
+    "name": "Marche-en-Famenne",
+    "alternateNames": [
+      "marche en famenne",
+      "commune de marche en famenne",
+      "gemeente marche en famenne",
+      "gemeinde marche en famenne"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83040": {
+    "nis": "83040",
+    "type": "municipality",
+    "name": "Nassogne",
+    "alternateNames": [
+      "nassogne",
+      "commune de nassogne",
+      "gemeente nassogne",
+      "gemeinde nassogne"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83044": {
+    "nis": "83044",
+    "type": "municipality",
+    "name": "Rendeux",
+    "alternateNames": [
+      "rendeux",
+      "commune de rendeux",
+      "gemeente rendeux",
+      "gemeinde rendeux"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83049": {
+    "nis": "83049",
+    "type": "municipality",
+    "name": "Tenneville",
+    "alternateNames": [
+      "tenneville",
+      "commune de tenneville",
+      "gemeente tenneville",
+      "gemeinde tenneville"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "83055": {
+    "nis": "83055",
+    "type": "municipality",
+    "name": "Manhay",
+    "alternateNames": [
+      "manhay",
+      "commune de manhay",
+      "gemeente manhay",
+      "gemeinde manhay"
+    ],
+    "parentNis": "83000",
+    "childrenNis": []
+  },
+  "84000": {
+    "nis": "84000",
+    "type": "district",
+    "name": "Arrondissement de Neufchâteau",
+    "alternateNames": [
+      "arrondissement de neufchateau",
+      "arrondissement neufchateau",
+      "bezirk neufchateau",
+      "neufchateau"
+    ],
+    "parentNis": "80000",
+    "childrenNis": [
+      "84009",
+      "84010",
+      "84016",
+      "84029",
+      "84033",
+      "84035",
+      "84043",
+      "84050",
+      "84059",
+      "84068",
+      "84075",
+      "84077"
+    ]
+  },
+  "84009": {
+    "nis": "84009",
+    "type": "municipality",
+    "name": "Bertrix",
+    "alternateNames": [
+      "bertrix",
+      "commune de bertrix",
+      "gemeente bertrix",
+      "gemeinde bertrix"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84010": {
+    "nis": "84010",
+    "type": "municipality",
+    "name": "Bouillon",
+    "alternateNames": [
+      "bouillon",
+      "commune de bouillon",
+      "gemeente bouillon",
+      "gemeinde bouillon"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84016": {
+    "nis": "84016",
+    "type": "municipality",
+    "name": "Daverdisse",
+    "alternateNames": [
+      "daverdisse",
+      "commune de daverdisse",
+      "gemeente daverdisse",
+      "gemeinde daverdisse"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84029": {
+    "nis": "84029",
+    "type": "municipality",
+    "name": "Herbeumont",
+    "alternateNames": [
+      "herbeumont",
+      "commune de herbeumont",
+      "gemeente herbeumont",
+      "gemeinde herbeumont"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84033": {
+    "nis": "84033",
+    "type": "municipality",
+    "name": "Léglise",
+    "alternateNames": [
+      "leglise",
+      "commune de leglise",
+      "gemeente leglise",
+      "gemeinde leglise"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84035": {
+    "nis": "84035",
+    "type": "municipality",
+    "name": "Libin",
+    "alternateNames": [
+      "libin",
+      "commune de libin",
+      "gemeente libin",
+      "gemeinde libin"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84043": {
+    "nis": "84043",
+    "type": "municipality",
+    "name": "Neufchâteau (Neufchâteau)",
+    "alternateNames": [
+      "neufchateau",
+      "neufchateau (neufchateau)",
+      "commune de neufchateau",
+      "gemeente neufchateau",
+      "gemeinde neufchateau"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84050": {
+    "nis": "84050",
+    "type": "municipality",
+    "name": "Paliseul",
+    "alternateNames": [
+      "paliseul",
+      "commune de paliseul",
+      "gemeente paliseul",
+      "gemeinde paliseul"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84059": {
+    "nis": "84059",
+    "type": "municipality",
+    "name": "Saint-Hubert",
+    "alternateNames": [
+      "saint hubert",
+      "commune de saint hubert",
+      "gemeente saint hubert",
+      "gemeinde saint hubert"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84068": {
+    "nis": "84068",
+    "type": "municipality",
+    "name": "Tellin",
+    "alternateNames": [
+      "tellin",
+      "commune de tellin",
+      "gemeente tellin",
+      "gemeinde tellin"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84075": {
+    "nis": "84075",
+    "type": "municipality",
+    "name": "Wellin",
+    "alternateNames": [
+      "wellin",
+      "commune de wellin",
+      "gemeente wellin",
+      "gemeinde wellin"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "84077": {
+    "nis": "84077",
+    "type": "municipality",
+    "name": "Libramont-Chevigny",
+    "alternateNames": [
+      "libramont chevigny",
+      "commune de libramont chevigny",
+      "gemeente libramont chevigny",
+      "gemeinde libramont chevigny"
+    ],
+    "parentNis": "84000",
+    "childrenNis": []
+  },
+  "85000": {
+    "nis": "85000",
+    "type": "district",
+    "name": "Arrondissement de Virton",
+    "alternateNames": [
+      "arrondissement de virton",
+      "arrondissement virton",
+      "bezirk virton",
+      "virton"
+    ],
+    "parentNis": "80000",
+    "childrenNis": [
+      "85007",
+      "85009",
+      "85011",
+      "85024",
+      "85026",
+      "85034",
+      "85039",
+      "85045",
+      "85046",
+      "85047"
+    ]
+  },
+  "85007": {
+    "nis": "85007",
+    "type": "municipality",
+    "name": "Chiny",
+    "alternateNames": [
+      "chiny",
+      "commune de chiny",
+      "gemeente chiny",
+      "gemeinde chiny"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85009": {
+    "nis": "85009",
+    "type": "municipality",
+    "name": "Etalle",
+    "alternateNames": [
+      "etalle",
+      "commune d'etalle",
+      "gemeente etalle",
+      "gemeinde etalle"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85011": {
+    "nis": "85011",
+    "type": "municipality",
+    "name": "Florenville",
+    "alternateNames": [
+      "florenville",
+      "commune de florenville",
+      "gemeente florenville",
+      "gemeinde florenville"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85024": {
+    "nis": "85024",
+    "type": "municipality",
+    "name": "Meix-devant-Virton",
+    "alternateNames": [
+      "meix devant virton",
+      "commune de meix devant virton",
+      "gemeente meix devant virton",
+      "gemeinde meix devant virton"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85026": {
+    "nis": "85026",
+    "type": "municipality",
+    "name": "Musson",
+    "alternateNames": [
+      "musson",
+      "commune de musson",
+      "gemeente musson",
+      "gemeinde musson"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85034": {
+    "nis": "85034",
+    "type": "municipality",
+    "name": "Saint-Léger (Virton)",
+    "alternateNames": [
+      "saint leger",
+      "saint leger (virton)",
+      "commune de saint leger",
+      "gemeente saint leger",
+      "gemeinde saint leger"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85039": {
+    "nis": "85039",
+    "type": "municipality",
+    "name": "Tintigny",
+    "alternateNames": [
+      "tintigny",
+      "commune de tintigny",
+      "gemeente tintigny",
+      "gemeinde tintigny"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85045": {
+    "nis": "85045",
+    "type": "municipality",
+    "name": "Virton",
+    "alternateNames": [
+      "virton",
+      "commune de virton",
+      "gemeente virton",
+      "gemeinde virton"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85046": {
+    "nis": "85046",
+    "type": "municipality",
+    "name": "Habay",
+    "alternateNames": [
+      "habay",
+      "commune de habay",
+      "gemeente habay",
+      "gemeinde habay"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "85047": {
+    "nis": "85047",
+    "type": "municipality",
+    "name": "Rouvroy",
+    "alternateNames": [
+      "rouvroy",
+      "commune de rouvroy",
+      "gemeente rouvroy",
+      "gemeinde rouvroy"
+    ],
+    "parentNis": "85000",
+    "childrenNis": []
+  },
+  "90000": {
+    "nis": "90000",
+    "type": "province",
+    "name": "Province de Namur",
+    "alternateNames": [
+      "province de namur",
+      "provincie namen",
+      "provinz namur",
+      "namur",
+      "namen"
+    ],
+    "parentNis": "03000",
+    "childrenNis": [
+      "91000",
+      "92000",
+      "93000"
+    ]
+  },
+  "91000": {
+    "nis": "91000",
+    "type": "district",
+    "name": "Arrondissement de Dinant",
+    "alternateNames": [
+      "arrondissement de dinant",
+      "arrondissement dinant",
+      "bezirk dinant",
+      "dinant"
+    ],
+    "parentNis": "90000",
+    "childrenNis": [
+      "91005",
+      "91013",
+      "91015",
+      "91030",
+      "91034",
+      "91054",
+      "91059",
+      "91064",
+      "91072",
+      "91103",
+      "91114",
+      "91120",
+      "91141",
+      "91142",
+      "91143"
+    ]
+  },
+  "91005": {
+    "nis": "91005",
+    "type": "municipality",
+    "name": "Anhée",
+    "alternateNames": [
+      "anhee",
+      "commune d'anhee",
+      "gemeente anhee",
+      "gemeinde anhee"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91013": {
+    "nis": "91013",
+    "type": "municipality",
+    "name": "Beauraing",
+    "alternateNames": [
+      "beauraing",
+      "commune de beauraing",
+      "gemeente beauraing",
+      "gemeinde beauraing"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91015": {
+    "nis": "91015",
+    "type": "municipality",
+    "name": "Bièvre",
+    "alternateNames": [
+      "bievre",
+      "commune de bievre",
+      "gemeente bievre",
+      "gemeinde bievre"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91030": {
+    "nis": "91030",
+    "type": "municipality",
+    "name": "Ciney",
+    "alternateNames": [
+      "ciney",
+      "commune de ciney",
+      "gemeente ciney",
+      "gemeinde ciney"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91034": {
+    "nis": "91034",
+    "type": "municipality",
+    "name": "Dinant",
+    "alternateNames": [
+      "dinant",
+      "commune de dinant",
+      "gemeente dinant",
+      "gemeinde dinant"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91054": {
+    "nis": "91054",
+    "type": "municipality",
+    "name": "Gedinne",
+    "alternateNames": [
+      "gedinne",
+      "commune de gedinne",
+      "gemeente gedinne",
+      "gemeinde gedinne"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91059": {
+    "nis": "91059",
+    "type": "municipality",
+    "name": "Hamois",
+    "alternateNames": [
+      "hamois",
+      "commune de hamois",
+      "gemeente hamois",
+      "gemeinde hamois"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91064": {
+    "nis": "91064",
+    "type": "municipality",
+    "name": "Havelange",
+    "alternateNames": [
+      "havelange",
+      "commune de havelange",
+      "gemeente havelange",
+      "gemeinde havelange"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91072": {
+    "nis": "91072",
+    "type": "municipality",
+    "name": "Houyet",
+    "alternateNames": [
+      "houyet",
+      "commune de houyet",
+      "gemeente houyet",
+      "gemeinde houyet"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91103": {
+    "nis": "91103",
+    "type": "municipality",
+    "name": "Onhaye",
+    "alternateNames": [
+      "onhaye",
+      "commune d'onhaye",
+      "gemeente onhaye",
+      "gemeinde onhaye"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91114": {
+    "nis": "91114",
+    "type": "municipality",
+    "name": "Rochefort",
+    "alternateNames": [
+      "rochefort",
+      "commune de rochefort",
+      "gemeente rochefort",
+      "gemeinde rochefort"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91120": {
+    "nis": "91120",
+    "type": "municipality",
+    "name": "Somme-Leuze",
+    "alternateNames": [
+      "somme leuze",
+      "commune de somme leuze",
+      "gemeente somme leuze",
+      "gemeinde somme leuze"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91141": {
+    "nis": "91141",
+    "type": "municipality",
+    "name": "Yvoir",
+    "alternateNames": [
+      "yvoir",
+      "commune d'yvoir",
+      "gemeente yvoir",
+      "gemeinde yvoir"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91142": {
+    "nis": "91142",
+    "type": "municipality",
+    "name": "Hastière",
+    "alternateNames": [
+      "hastiere",
+      "commune de hastiere",
+      "gemeente hastiere",
+      "gemeinde hastiere"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "91143": {
+    "nis": "91143",
+    "type": "municipality",
+    "name": "Vresse-sur-Semois",
+    "alternateNames": [
+      "vresse sur semois",
+      "commune de vresse sur semois",
+      "gemeente vresse sur semois",
+      "gemeinde vresse sur semois"
+    ],
+    "parentNis": "91000",
+    "childrenNis": []
+  },
+  "92000": {
+    "nis": "92000",
+    "type": "district",
+    "name": "Arrondissement de Namur",
+    "alternateNames": [
+      "arrondissement de namur",
+      "arrondissement namen",
+      "bezirk namur",
+      "namur",
+      "namen"
+    ],
+    "parentNis": "90000",
+    "childrenNis": [
+      "92003",
+      "92006",
+      "92035",
+      "92045",
+      "92048",
+      "92054",
+      "92087",
+      "92094",
+      "92097",
+      "92101",
+      "92114",
+      "92137",
+      "92138",
+      "92140",
+      "92141",
+      "92142"
+    ]
+  },
+  "92003": {
+    "nis": "92003",
+    "type": "municipality",
+    "name": "Andenne",
+    "alternateNames": [
+      "andenne",
+      "commune d'andenne",
+      "gemeente andenne",
+      "gemeinde andenne"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92006": {
+    "nis": "92006",
+    "type": "municipality",
+    "name": "Assesse",
+    "alternateNames": [
+      "assesse",
+      "commune d'assesse",
+      "gemeente assesse",
+      "gemeinde assesse"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92035": {
+    "nis": "92035",
+    "type": "municipality",
+    "name": "Eghezée",
+    "alternateNames": [
+      "eghezee",
+      "commune d'eghezee",
+      "gemeente eghezee",
+      "gemeinde eghezee"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92045": {
+    "nis": "92045",
+    "type": "municipality",
+    "name": "Floreffe",
+    "alternateNames": [
+      "floreffe",
+      "commune de floreffe",
+      "gemeente floreffe",
+      "gemeinde floreffe"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92048": {
+    "nis": "92048",
+    "type": "municipality",
+    "name": "Fosses-la-Ville",
+    "alternateNames": [
+      "fosses la ville",
+      "commune de fosses la ville",
+      "gemeente fosses la ville",
+      "gemeinde fosses la ville"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92054": {
+    "nis": "92054",
+    "type": "municipality",
+    "name": "Gesves",
+    "alternateNames": [
+      "gesves",
+      "commune de gesves",
+      "gemeente gesves",
+      "gemeinde gesves"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92087": {
+    "nis": "92087",
+    "type": "municipality",
+    "name": "Mettet",
+    "alternateNames": [
+      "mettet",
+      "commune de mettet",
+      "gemeente mettet",
+      "gemeinde mettet"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92094": {
+    "nis": "92094",
+    "type": "municipality",
+    "name": "Namur",
+    "alternateNames": [
+      "namur",
+      "namen",
+      "commune de namur",
+      "gemeente namen",
+      "gemeinde namur"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92097": {
+    "nis": "92097",
+    "type": "municipality",
+    "name": "Ohey",
+    "alternateNames": [
+      "ohey",
+      "commune d'ohey",
+      "gemeente ohey",
+      "gemeinde ohey"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92101": {
+    "nis": "92101",
+    "type": "municipality",
+    "name": "Profondeville",
+    "alternateNames": [
+      "profondeville",
+      "commune de profondeville",
+      "gemeente profondeville",
+      "gemeinde profondeville"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92114": {
+    "nis": "92114",
+    "type": "municipality",
+    "name": "Sombreffe",
+    "alternateNames": [
+      "sombreffe",
+      "commune de sombreffe",
+      "gemeente sombreffe",
+      "gemeinde sombreffe"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92137": {
+    "nis": "92137",
+    "type": "municipality",
+    "name": "Sambreville",
+    "alternateNames": [
+      "sambreville",
+      "commune de sambreville",
+      "gemeente sambreville",
+      "gemeinde sambreville"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92138": {
+    "nis": "92138",
+    "type": "municipality",
+    "name": "Fernelmont",
+    "alternateNames": [
+      "fernelmont",
+      "commune de fernelmont",
+      "gemeente fernelmont",
+      "gemeinde fernelmont"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92140": {
+    "nis": "92140",
+    "type": "municipality",
+    "name": "Jemeppe-sur-Sambre",
+    "alternateNames": [
+      "jemeppe sur sambre",
+      "commune de jemeppe sur sambre",
+      "gemeente jemeppe sur sambre",
+      "gemeinde jemeppe sur sambre"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92141": {
+    "nis": "92141",
+    "type": "municipality",
+    "name": "La Bruyère",
+    "alternateNames": [
+      "la bruyere",
+      "commune de la bruyere",
+      "gemeente la bruyere",
+      "gemeinde la bruyere"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "92142": {
+    "nis": "92142",
+    "type": "municipality",
+    "name": "Gembloux",
+    "alternateNames": [
+      "gembloux",
+      "commune de gembloux",
+      "gemeente gembloux",
+      "gemeinde gembloux"
+    ],
+    "parentNis": "92000",
+    "childrenNis": []
+  },
+  "93000": {
+    "nis": "93000",
+    "type": "district",
+    "name": "Arrondissement de Philippeville",
+    "alternateNames": [
+      "arrondissement de philippeville",
+      "arrondissement philippeville",
+      "bezirk philippeville",
+      "philippeville"
+    ],
+    "parentNis": "90000",
+    "childrenNis": [
+      "93010",
+      "93014",
+      "93018",
+      "93022",
+      "93056",
+      "93088",
+      "93090"
+    ]
+  },
+  "93010": {
+    "nis": "93010",
+    "type": "municipality",
+    "name": "Cerfontaine",
+    "alternateNames": [
+      "cerfontaine",
+      "commune de cerfontaine",
+      "gemeente cerfontaine",
+      "gemeinde cerfontaine"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93014": {
+    "nis": "93014",
+    "type": "municipality",
+    "name": "Couvin",
+    "alternateNames": [
+      "couvin",
+      "commune de couvin",
+      "gemeente couvin",
+      "gemeinde couvin"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93018": {
+    "nis": "93018",
+    "type": "municipality",
+    "name": "Doische",
+    "alternateNames": [
+      "doische",
+      "commune de doische",
+      "gemeente doische",
+      "gemeinde doische"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93022": {
+    "nis": "93022",
+    "type": "municipality",
+    "name": "Florennes",
+    "alternateNames": [
+      "florennes",
+      "commune de florennes",
+      "gemeente florennes",
+      "gemeinde florennes"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93056": {
+    "nis": "93056",
+    "type": "municipality",
+    "name": "Philippeville",
+    "alternateNames": [
+      "philippeville",
+      "commune de philippeville",
+      "gemeente philippeville",
+      "gemeinde philippeville"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93088": {
+    "nis": "93088",
+    "type": "municipality",
+    "name": "Walcourt",
+    "alternateNames": [
+      "walcourt",
+      "commune de walcourt",
+      "gemeente walcourt",
+      "gemeinde walcourt"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  },
+  "93090": {
+    "nis": "93090",
+    "type": "municipality",
+    "name": "Viroinval",
+    "alternateNames": [
+      "viroinval",
+      "commune de viroinval",
+      "gemeente viroinval",
+      "gemeinde viroinval"
+    ],
+    "parentNis": "93000",
+    "childrenNis": []
+  }
+}

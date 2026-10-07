@@ -29,8 +29,10 @@ def _(mo):
     mo.md(r"""
     # Hiérarchie NIS de la Belgique
 
-    Transforme `TU_COM_REFNIS.csv` en JSON hiérarchique
-    **région > province > arrondissement > commune**.
+    Transforme `TU_COM_REFNIS.csv` en une **table plate d'entités indexée par code NIS**
+    (`static/data/nis_entities.json`). La hiérarchie
+    **région > province > arrondissement > commune** n'est plus imbriquée : elle se
+    reconstruit avec `parentNis` / `childrenNis`.
 
     Règles appliquées :
 
@@ -40,7 +42,12 @@ def _(mo):
       français en Wallonie et à Bruxelles, allemand dans les 9 communes germanophones) ;
     - `alternateNames` = noms dans les 3 langues, avec et sans le qualificatif de niveau ;
     - tous les noms sont *trimmés*, en **minuscules**, avec des apostrophes droites (`'`) ;
-    - Bruxelles n'a pas de province : un **niveau fictif** est inséré (voir `BRUSSELS_REGION`).
+    - une seule entité par NIS, clés et valeurs NIS toujours en **chaînes** de 5 chiffres
+      (zéros initiaux conservés) ;
+    - Bruxelles n'a pas de province : l'arrondissement 21000 a directement la région
+      (04000) pour parent (aucun niveau fictif : ça produirait deux entités avec le NIS 04000) ;
+    - le fichier ne contient aucun index applicatif (ex. nom → NIS) : ils se construisent
+      à l'exécution côté JavaScript.
     """)
     return
 
@@ -49,7 +56,7 @@ def _(mo):
 def _(OUTPUT_FOLDER, mo):
     # --- Configuration ---------------------------------------------------------
     CSV_PATH = mo.notebook_dir() / "source_data/TU_COM_REFNIS.csv"
-    OUTPUT_PATH = mo.notebook_dir() / OUTPUT_FOLDER / "nis_hierarchy.json"
+    OUTPUT_PATH = mo.notebook_dir() / OUTPUT_FOLDER / "nis_entities.json"
 
     VALID_END = "31/12/9999"  # entités encore en vigueur
 
@@ -57,11 +64,6 @@ def _(OUTPUT_FOLDER, mo):
 
     # Langue principale par région (clé = NIS de la région)
     REGION_LANG = {"02000": "nl", "03000": "fr", "04000": "fr"}
-
-    # Région de Bruxelles-Capitale : son arrondissement (21000) est rattaché
-    # directement à la région, sans province. On insère donc un niveau fictif
-    # ("province") portant le NIS et les noms de la région.
-    BRUSSELS_REGION = "04000"
 
     # Communes germanophones (NIS) : leur langue principale est l'allemand
     GERMAN_SPEAKING = {
@@ -78,7 +80,6 @@ def _(OUTPUT_FOLDER, mo):
 
     LANGS = ("fr", "nl", "de")  # ordre de repli pour les noms alternatifs
     return (
-        BRUSSELS_REGION,
         CSV_PATH,
         GERMAN_SPEAKING,
         LANGS,
@@ -241,7 +242,6 @@ def _(
 
 @app.cell
 def _(
-    BRUSSELS_REGION,
     LEVEL_DISTRICT,
     LEVEL_MUNICIPALITY,
     LEVEL_PROVINCE,
@@ -254,49 +254,56 @@ def _(
     region_node,
     rows_by_level: dict[str, list[dict]],
 ):
-    # --- Assemblage de l'arbre -------------------------------------------------
-    def children(level: str, parent_nis: str) -> list[dict]:
-        return sorted(
-            (r for r in rows_by_level.get(level, []) if r["CD_SUP_REFNIS"].strip() == parent_nis),
-            key=lambda r: r["CD_REFNIS"],
-        )
+    # --- Assemblage de la table plate -----------------------------------------
+    # Une entité par NIS. La hiérarchie est portée par `parentNis` (lu dans
+    # CD_SUP_REFNIS) et `childrenNis`. On parcourt les niveaux de haut en bas :
+    # le parent existe donc toujours quand on ajoute un enfant.
+    #
+    # Bruxelles n'a pas de province : l'arrondissement 21000 a pour parent la
+    # région 04000, comme dans le CSV.
+    entities: dict[str, dict] = {}
+    main_lang: dict[str, str] = {}  # NIS -> langue principale (héritée de la région)
 
-    def build_municipalities(district_nis: str, region_main: str) -> list[dict]:
-        return [
-            municipality_node(r, municipality_lang(r["CD_REFNIS"], region_main))
-            for r in children(LEVEL_MUNICIPALITY, district_nis)
-        ]
+    def add_entity(node: dict, entity_type: str, parent_nis: str | None, main: str) -> None:
+        nis = node["nis"]
+        if nis in entities:
+            raise ValueError(f"NIS en double : {nis}")
+        entities[nis] = {
+            "nis": nis,
+            "type": entity_type,
+            "name": node["name"],
+            "alternateNames": node["alternateNames"],
+            "parentNis": parent_nis,
+            "childrenNis": [],
+        }
+        main_lang[nis] = main
+        if parent_nis is not None:
+            entities[parent_nis]["childrenNis"].append(nis)
 
-    def build_districts(parent_nis: str, region_main: str) -> list[dict]:
-        return [
-            {**district_node(r, region_main), "municipalities": build_municipalities(r["CD_REFNIS"], region_main)}
-            for r in children(LEVEL_DISTRICT, parent_nis)
-        ]
+    def sorted_rows(level: str) -> list[dict]:
+        return sorted(rows_by_level.get(level, []), key=lambda r: r["CD_REFNIS"])
 
-    def build_region(region_row: dict) -> dict:
-        nis = region_row["CD_REFNIS"]
-        main = REGION_LANG[nis]
-        node = region_node(region_row)
+    for _r in sorted_rows(LEVEL_REGION):
+        add_entity(region_node(_r), "region", None, REGION_LANG[_r["CD_REFNIS"]])
 
-        if nis == BRUSSELS_REGION:
-            # Niveau fictif : mêmes NIS et noms que la région ; l'arrondissement
-            # réel (21000) est rattaché directement à la région dans le CSV.
-            provinces = [{**region_node(region_row), "districts": build_districts(nis, main)}]
-        else:
-            provinces = [
-                {**province_node(p, main), "districts": build_districts(p["CD_REFNIS"], main)}
-                for p in children(LEVEL_PROVINCE, nis)
-            ]
-        return {**node, "provinces": provinces}
-
-    hierarchy = {
-        "regions": [build_region(r) for r in sorted(rows_by_level[LEVEL_REGION], key=lambda r: r["CD_REFNIS"])]
-    }
-    return (hierarchy,)
+    for _level, _type, _build in (
+        (LEVEL_PROVINCE, "province", province_node),
+        (LEVEL_DISTRICT, "district", district_node),
+        (LEVEL_MUNICIPALITY, "municipality", municipality_node),
+    ):
+        for _r in sorted_rows(_level):
+            _parent = _r["CD_SUP_REFNIS"].strip()
+            if _parent not in entities:
+                raise ValueError(f"Parent {_parent} introuvable pour {_r['CD_REFNIS']} (entité orpheline)")
+            _main = main_lang[_parent]
+            if _type == "municipality":
+                _main = municipality_lang(_r["CD_REFNIS"], _main)
+            add_entity(_build(_r, _main), _type, _parent, _main)
+    return (entities,)
 
 
 @app.cell
-def _(hierarchy, norm):
+def _(entities: dict[str, dict], norm, unique):
     # Ajouts manuels
 
     MANUAL_ADD = {
@@ -305,50 +312,65 @@ def _(hierarchy, norm):
         '04000': ['Région Bruxelles Capitale', 'Bruxelles Capitale'],
     }
 
-    def _walk(h):
-        for reg in h["regions"]:
-            yield reg
-            for prov in reg["provinces"]:
-                yield prov
-                for dist in prov["districts"]:
-                    yield dist
-                    for mun in dist['municipalities']:
-                        yield mun
-
-    for entity in _walk(hierarchy):
-        if entity['nis'] in MANUAL_ADD:
-            entity['alternateNames'] = list(set(entity['alternateNames'] + [norm(x) for x in MANUAL_ADD[entity['nis']]]))
-
+    for _nis, _extra in MANUAL_ADD.items():
+        _entity = entities[_nis]
+        # `unique` (et non `set`) : l'ordre reste déterministe d'une exécution à l'autre
+        _entity['alternateNames'] = unique(_entity['alternateNames'] + [norm(x) for x in _extra])
     return
 
 
 @app.cell
-def _(hierarchy, mo, norm, rows_by_level: dict[str, list[dict]]):
+def _(
+    entities: dict[str, dict],
+    mo,
+    norm,
+    re,
+    rows_by_level: dict[str, list[dict]],
+):
     # --- Contrôles d'intégrité -------------------------------------------------
-    def _walk(h):
-        for reg in h["regions"]:
-            for prov in reg["provinces"]:
-                for dist in prov["districts"]:
-                    yield reg, prov, dist
+    # Types de parent autorisés. Bruxelles : un arrondissement peut avoir une région pour parent.
+    ALLOWED_PARENT_TYPES = {
+        "region": {None},
+        "province": {"region"},
+        "district": {"province", "region"},
+        "municipality": {"district"},
+    }
 
-    _n_prov = sum(len(r["provinces"]) for r in hierarchy["regions"])
-    _n_dist = sum(len(p["districts"]) for r in hierarchy["regions"] for p in r["provinces"])
-    _n_mun = sum(len(d["municipalities"]) for _, _, d in _walk(hierarchy))
+    _count = {_t: sum(1 for _e in entities.values() if _e["type"] == _t) for _t in ALLOWED_PARENT_TYPES}
 
-    # Aucune entité orpheline : tout ce qui est valide dans le CSV est dans l'arbre
-    assert _n_mun == len(rows_by_level["4"]), "communes orphelines"
-    assert _n_dist == len(rows_by_level["3"]), "arrondissements orphelins"
-    assert _n_prov - 1 == len(rows_by_level["2"]), "provinces orphelines (hors niveau fictif)"
+    # Aucune entité perdue : tout ce qui est valide dans le CSV est dans la table
+    assert _count["municipality"] == len(rows_by_level["4"]), "communes manquantes"
+    assert _count["district"] == len(rows_by_level["3"]), "arrondissements manquants"
+    assert _count["province"] == len(rows_by_level["2"]), "provinces manquantes"
+    assert _count["region"] == len(rows_by_level["1"]), "régions manquantes"
 
-    # Noms propres : trimés, minuscules, jamais vides
-    def _names(h):
-        for reg, prov, dist in _walk(h):
-            for node in (reg, prov, dist, *dist["municipalities"]):
-                yield node
-    for _node in _names(hierarchy):
-        for _n in (_node["name"], *_node["alternateNames"]):
+    for _nis, _e in entities.items():
+        # Un NIS est une chaîne de 5 chiffres (zéros initiaux conservés), identique à sa clé
+        assert isinstance(_nis, str) and re.fullmatch(r"\d{5}", _nis), f"NIS invalide : {_nis!r}"
+        assert _e["nis"] == _nis, f"clé et nis différents : {_nis!r} / {_e['nis']!r}"
+        assert _e["type"] in ALLOWED_PARENT_TYPES, f"type inconnu : {_e['type']!r}"
+
+        # Parent : existe, de type cohérent, et nous liste parmi ses enfants
+        _parent_nis = _e["parentNis"]
+        if _parent_nis is None:
+            assert None in ALLOWED_PARENT_TYPES[_e["type"]], f"{_nis} sans parent"
+        else:
+            assert isinstance(_parent_nis, str), f"parentNis non textuel : {_nis}"
+            assert _parent_nis in entities, f"parentNis inconnu : {_nis} -> {_parent_nis}"
+            assert entities[_parent_nis]["type"] in ALLOWED_PARENT_TYPES[_e["type"]], f"parent incohérent : {_nis}"
+            assert _nis in entities[_parent_nis]["childrenNis"], f"{_nis} absent des enfants de {_parent_nis}"
+
+        # Enfants : existent, sans doublon, et nous ont pour parent
+        assert len(set(_e["childrenNis"])) == len(_e["childrenNis"]), f"enfants en double : {_nis}"
+        for _child_nis in _e["childrenNis"]:
+            assert isinstance(_child_nis, str), f"childNis non textuel : {_nis}"
+            assert _child_nis in entities, f"childNis inconnu : {_nis} -> {_child_nis}"
+            assert entities[_child_nis]["parentNis"] == _nis, f"{_child_nis} n'a pas {_nis} pour parent"
+
+        # Noms propres : trimés, jamais vides
+        for _n in (_e["name"], *_e["alternateNames"]):
             assert _n and _n == _n.strip(), f"nom invalide : {_n!r}"
-        assert norm(_node["name"]) in _node["alternateNames"]
+        assert norm(_e["name"]) in _e["alternateNames"]
 
     mo.md(
         f"""
@@ -356,17 +378,17 @@ def _(hierarchy, mo, norm, rows_by_level: dict[str, list[dict]]):
 
         | Niveau | Nombre |
         |---|---|
-        | Régions | {len(hierarchy['regions'])} |
-        | Provinces | {_n_prov - 1} (+ 1 niveau fictif pour Bruxelles) |
-        | Arrondissements | {_n_dist} |
-        | Communes | {_n_mun} |
+        | Régions | {_count['region']} |
+        | Provinces | {_count['province']} |
+        | Arrondissements | {_count['district']} |
+        | Communes | {_count['municipality']} |
         """
     )
     return
 
 
 @app.cell
-def _(hierarchy, mo):
+def _(entities: dict[str, dict], mo):
     # --- Unicité des noms par niveau -------------------------------------------
     # Pour chaque niveau (sur toute la Belgique) :
     #   1. entités ayant le même nom principal (`name`) ;
@@ -374,18 +396,13 @@ def _(hierarchy, mo):
     # Les cas sont listés, pas rejetés : certains homonymes sont légitimes.
 
     _levels = {
-        "Régions": [r for r in hierarchy["regions"]],
-        "Provinces": [p for r in hierarchy["regions"] for p in r["provinces"]],
-        "Arrondissements": [
-            d for r in hierarchy["regions"] for p in r["provinces"] for d in p["districts"]
-        ],
-        "Communes": [
-            m
-            for r in hierarchy["regions"]
-            for p in r["provinces"]
-            for d in p["districts"]
-            for m in d["municipalities"]
-        ],
+        _label: [_e for _e in entities.values() if _e["type"] == _type]
+        for _label, _type in (
+            ("Régions", "region"),
+            ("Provinces", "province"),
+            ("Arrondissements", "district"),
+            ("Communes", "municipality"),
+        )
     }
 
     def _group(pairs):
@@ -424,7 +441,7 @@ def _(hierarchy, mo):
                     ### {_level} ({len(_nodes)})
 
                     **Même nom principal : {len(_same_main)} cas** {"\n" if len(_same_main) else ""}{_table(_same_main)}
-        
+    
                     **Nom principal ou alternatif en commun : {len(_shared_any)} cas** {"\n" if len(_shared_any) else ""}            {_table(_shared_any)}
                     """
                 )
@@ -435,10 +452,13 @@ def _(hierarchy, mo):
 
 
 @app.cell
-def _(OUTPUT_PATH, hierarchy, json, mo):
+def _(OUTPUT_PATH, entities: dict[str, dict], json, mo):
     # --- Export ----------------------------------------------------------------
+    # Table plate triée par NIS (diffs stables). Les clés JSON sont toujours textuelles,
+    # et `nis`, `parentNis`, `childrenNis` sont des chaînes (zéros initiaux conservés).
+    _flat = dict(sorted(entities.items()))
     OUTPUT_PATH.write_text(
-        json.dumps(hierarchy, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
+        json.dumps(_flat, ensure_ascii=False, indent=2) + "\n", encoding="utf-8"
     )
     mo.md(f"## Export\n\nFichier écrit : `{OUTPUT_PATH}`")
     return
@@ -476,8 +496,8 @@ def _(df):
 
 
 @app.cell
-def _(df, mo):
-    df[['postcode', 'nis']].drop_duplicates().set_index('postcode')['nis'].to_json(mo.notebook_dir() / '../postcode2nis.json')
+def _(OUTPUT_FOLDER, df, mo):
+    df[['postcode', 'nis']].drop_duplicates().set_index('postcode')['nis'].to_json(mo.notebook_dir() / OUTPUT_FOLDER / 'postcode2nis.json')
     return
 
 
