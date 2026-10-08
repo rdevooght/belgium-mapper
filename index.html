@@ -65,18 +65,25 @@
                     </dl>
                     <div class="filter-buttons">
                       <button type="button" class="filter-button"
-                              x-show="selectedGuess(column).unmatchedValues.length > 0"
+                              x-show="!column.resolution && selectedGuess(column).unmatchedValues.length > 0"
                               :class="{ active: isFilterActive(index, 'unmatched') }"
                               :aria-pressed="isFilterActive(index, 'unmatched')"
                               @click="toggleFilter(index, 'unmatched')">
                         Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)
                       </button>
                       <button type="button" class="filter-button"
-                              x-show="column.emptyCount > 0"
+                              x-show="!column.resolution && column.emptyCount > 0"
                               :class="{ active: isFilterActive(index, 'empty') }"
                               :aria-pressed="isFilterActive(index, 'empty')"
                               @click="toggleFilter(index, 'empty')">
                         Empty values (<span x-text="column.emptyCount"></span>)
+                      </button>
+                      <button type="button" class="filter-button"
+                              x-show="column.resolution && unresolvedCount(column) > 0"
+                              :class="{ active: isFilterActive(index, 'notResolved') }"
+                              :aria-pressed="isFilterActive(index, 'notResolved')"
+                              @click="toggleFilter(index, 'notResolved')">
+                        Not resolved (<span x-text="unresolvedCount(column)"></span>)
                       </button>
                     </div>
                   </div>

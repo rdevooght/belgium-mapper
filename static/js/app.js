@@ -11,7 +11,7 @@ function App() {
     fileName: "",
     rows: [], // array of objects, one per line: { columnName: value, ... }
     columns: [], // { name, guesses, selectedGuessIndex, emptyCount, resolution }: resolution is null unless the selected type is geographic, see column_resolution.js
-    filter: null, // null, or { columnIndex, kind: "unmatched" | "empty" }: at most one filter at a time
+    filter: null, // null, or { columnIndex, kind: "unmatched" | "empty" | "notResolved" }: at most one filter at a time
     matchingRows: null, // null when no filter is active, otherwise the Set of the indexes of the rows matching it
     error: "",
 
@@ -49,7 +49,7 @@ function App() {
     selectGuess(columnIndex, guessIndex) {
       const column = this.columns[columnIndex];
       selectColumnGuess(column, Number(guessIndex), this.columnValues(column));
-      this.resetUnmatchedFilter(columnIndex);
+      this.resetColumnFilter(columnIndex);
     },
 
     columnValues(column) {
@@ -59,6 +59,10 @@ function App() {
     // The active resolution of a cell, null if its column is not geographic
     cellResolution(column, rowIndex) {
       return column.resolution?.cells[rowIndex] ?? null;
+    },
+
+    unresolvedCount(column) {
+      return column.resolution?.cells.filter(({ status }) => status !== "resolved").length ?? 0;
     },
 
     cellClass(column, rowIndex) {
@@ -90,8 +94,11 @@ function App() {
     },
 
     // Replace the resolution of the cell with the candidate chosen by the user
-    chooseCandidate(columnIndex, rowIndex, nis) {
+    chooseCandidate(columnIndex, rowIndex, nis, updateFilter = false) {
       if (nis) setManualResolution(this.columns[columnIndex], rowIndex, nis);
+      if (updateFilter && this.filter?.columnIndex === columnIndex && this.filter.kind === "notResolved") {
+        this.matchingRows = this.findMatchingRows(this.filter);
+      }
     },
 
     // All the rows stay in the table, the ones that do not match the filter are hidden:
@@ -114,8 +121,8 @@ function App() {
     },
 
     // The unmatched values depend on the selected type: a filter on them no longer applies when it changes
-    resetUnmatchedFilter(columnIndex) {
-      if (this.isFilterActive(columnIndex, "unmatched")) this.setFilter(null);
+    resetColumnFilter(columnIndex) {
+      if (this.filter?.columnIndex === columnIndex) this.setFilter(null);
     },
 
     setFilter(filter) {
@@ -123,7 +130,7 @@ function App() {
       this.matchingRows = filter ? this.findMatchingRows(filter) : null;
     },
 
-    // Indexes of the rows with an empty / unmatched value in the filter's column
+    // Indexes of rows matching the selected value or resolution filter
     findMatchingRows({ columnIndex, kind }) {
       const column = this.columns[columnIndex];
       // Empty cells are never "unmatched": they are not part of unmatchedValues
@@ -132,7 +139,11 @@ function App() {
       const matching = new Set();
       this.rows.forEach((row, rowIndex) => {
         const value = row[column.name];
-        if (unmatched ? unmatched.has(value) : isEmpty(value)) matching.add(rowIndex);
+        const resolution = this.cellResolution(column, rowIndex);
+        if (
+          kind === "notResolved" ? resolution?.status !== "resolved" : unmatched ? unmatched.has(value) : isEmpty(value)
+        )
+          matching.add(rowIndex);
       });
       return matching;
     },
