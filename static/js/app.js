@@ -23,7 +23,7 @@ function App() {
         const result = await loadFileUtil(file);
         this.rows = result.rows;
         this.columns = result.columns.map((name) => {
-          const values = columnValues({ name });
+          const values = this.columnValues({ name });
           const column = {
             name,
             guesses: guessType(values),
