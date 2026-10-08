@@ -45,9 +45,9 @@
                     <label class="type-label">
                       Guessed type
                       <template x-if="column.guesses.length > 1">
-                        <select x-model.number="column.selectedGuessIndex" @change="resetUnmatchedFilter(index)">
+                        <select @change="selectGuess(index, $event.target.value)">
                           <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
-                            <option :value="guessIndex" x-text="guessLabel(guess)"></option>
+                            <option :value="guessIndex" :selected="guessIndex === column.selectedGuessIndex" x-text="guessLabel(guess)"></option>
                           </template>
                         </select>
                       </template>
@@ -88,7 +88,18 @@
             <template x-for="(row, rowIndex) in rows" :key="rowIndex">
               <tr :hidden="!isRowVisible(rowIndex)">
                 <template x-for="(column, columnIndex) in columns" :key="columnIndex">
-                  <td x-text="row[column.name]"></td>
+                  <td :class="cellClass(column, rowIndex)" :title="cellTitle(column, rowIndex)">
+                    <span x-text="row[column.name]"></span>
+                    <template x-if="cellResolution(column, rowIndex)?.status === 'ambiguous'">
+                      <select class="candidate-select" aria-label="Choose the geographic entity"
+                              @change="chooseCandidate(columnIndex, rowIndex, $event.target.value)">
+                        <option value="">Choose…</option>
+                        <template x-for="entity in cellCandidates(column, rowIndex)" :key="entity.nis">
+                          <option :value="entity.nis" x-text="entityLabel(entity)"></option>
+                        </template>
+                      </select>
+                    </template>
+                  </td>
                 </template>
               </tr>
             </template>

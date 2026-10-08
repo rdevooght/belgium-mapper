@@ -28,6 +28,12 @@ export function createGeographicIndex(entities, postcodeMap = {}) {
   }
 
   const lookup = (map, key) => [...(map.get(key) || [])];
+
+  // Brussels has no province: its region stands in for one (see above)
+  const hasType = (entity, type) =>
+    entity.type === type ||
+    (type === "province" && entity.type === "region" && (entity.childrenNis || []).every((c) => entities[c]?.type !== "province"));
+
   return Object.freeze({
     getEntityByNis(nis) {
       return typeof nis === "string" ? (entities[nis] ?? null) : null;
@@ -37,6 +43,11 @@ export function createGeographicIndex(entities, postcodeMap = {}) {
     },
     findByNameAndType(name, type) {
       return lookup(byTypeAndName, `${String(type).toLowerCase()}\u0000${normalizeGeographicName(name)}`);
+    },
+    // NIS is a 5 digit string. Returns [nis] when it exists and is an entity of the given type, [] otherwise
+    findByNisAndType(nis, type) {
+      const entity = typeof nis === "string" ? entities[nis] : null;
+      return entity && hasType(entity, String(type).toLowerCase()) ? [nis] : [];
     },
     findByPostcode(postcode) {
       const key = String(postcode).trim();

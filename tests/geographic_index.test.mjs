@@ -74,3 +74,13 @@ test("postcode lookup uses the postcode to NIS mapping", () => {
   assert.equal(geographicIndex.getEntityByNis(geographicIndex.findByPostcode("1000")[0]), entities[postcodes["1000"]]);
   assert.deepEqual(index.findByPostcode("9999"), []);
 });
+
+test("NIS lookup by type, with Brussels counting as a province", () => {
+  assert.deepEqual(index.findByNisAndType("01001", "municipality"), ["01001"]);
+  assert.deepEqual(index.findByNisAndType("01001", "province"), []);
+  assert.deepEqual(index.findByNisAndType("99999", "municipality"), []);
+  assert.deepEqual(index.findByNisAndType(1001, "municipality"), []);
+  assert.deepEqual(geographicIndex.findByNisAndType("04000", "region"), ["04000"]);
+  assert.deepEqual(geographicIndex.findByNisAndType("04000", "province"), ["04000"]);
+  assert.deepEqual(geographicIndex.findByNisAndType("02000", "province"), []);
+});

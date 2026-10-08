@@ -1,6 +1,7 @@
 // nisEntities is the canonical flat geographic data: {"<nis>": {nis, type, name, alternateNames, parentNis, childrenNis}}
 // (see static/data/structure.md)
 import { geographicIndex, normalizeGeographicName } from "./geographic_index.js";
+import { isEmpty, toDigits } from "./utils.js";
 
 const LEVELS = ["Region", "Province", "District", "Municipality"];
 const GEO_THRESHOLD = 0.9;
@@ -106,37 +107,6 @@ export function guessType(values) {
   );
 
   return guesses.map(({ guess }) => guess);
-}
-
-/**
- * Return true if the value is empty: null, undefined, NaN or a blank string
- *
- * @param {*} value
- */
-export function isEmpty(value) {
-  return (
-    value === null ||
-    value === undefined ||
-    (typeof value === "number" && Number.isNaN(value)) ||
-    (typeof value === "string" && value.trim() === "")
-  );
-}
-
-/**
- * Return the value as a string of digits if it is a non-negative integer
- * (stored as a number or as a string), null otherwise
- *
- * @param {string or int} value
- */
-function toDigits(value) {
-  if (typeof value === "number") {
-    return Number.isInteger(value) && value >= 0 ? String(value) : null;
-  }
-  if (typeof value === "string") {
-    const s = value.trim();
-    return /^\d+$/.test(s) ? s : null;
-  }
-  return null;
 }
 
 /**

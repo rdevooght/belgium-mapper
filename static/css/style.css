@@ -6,6 +6,7 @@
     --accent: #1f5fd1;
     --accent-soft: #e6eefc;
     --error: #b42318;
+    --warn: #b54708;
     box-sizing: border-box;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
@@ -19,6 +20,7 @@
         --accent: #6b9bf2;
         --accent-soft: #1d2740;
         --error: #f97066;
+        --warn: #fdb022;
     }
 }
 :root[data-theme="dark"] {
@@ -29,6 +31,7 @@
     --accent: #6b9bf2;
     --accent-soft: #1d2740;
     --error: #f97066;
+    --warn: #fdb022;
 }
 
 body {
@@ -186,6 +189,22 @@ h1 {
     background: var(--accent-soft);
     color: var(--text);
     font-weight: 600;
+}
+.data-table td.cell-unmatched {
+    box-shadow: inset 3px 0 0 var(--error);
+}
+.data-table td.cell-ambiguous {
+    box-shadow: inset 3px 0 0 var(--warn);
+}
+.data-table td.cell-resolved {
+    box-shadow: inset 3px 0 0 var(--accent);
+}
+.candidate-select {
+    display: block;
+    max-width: 100%;
+    margin-top: 0.35rem;
+    font: inherit;
+    font-size: 0.85rem;
 }
 [x-cloak] {
     display: none !important;
