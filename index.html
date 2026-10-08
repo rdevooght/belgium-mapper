@@ -29,7 +29,7 @@
     <section x-show="fileName" x-cloak>
       <p class="count">
         <strong x-text="fileName"></strong>:
-        <span x-show="filter" x-cloak><span x-text="visibleCount"></span> of</span>
+        <span x-show="hasActiveFilters" x-cloak><span x-text="visibleCount"></span> of</span>
         <span x-text="rows.length"></span> rows
       </p>
 
@@ -42,6 +42,8 @@
                 <th scope="col">
                   <div class="column-info">
                     <h3 x-text="column.name"></h3>
+
+
                     <label class="type-label">
                       Guessed type
                       <template x-if="column.guesses.length > 1">
@@ -63,6 +65,24 @@
                         <dd x-text="selectedGuess(column).uniqueMatches"></dd>
                       </div>
                     </dl>
+                    <div class="filters">
+                    Filters
+                    <template x-if="isNumericColumn(column)">
+                      <div class="numeric-search">
+                        <input type="number" inputmode="decimal" :id="`column-search-${index}`"
+                               :aria-label="`Minimum value for ${column.name}`" placeholder="Min"
+                               x-model="columnSearches[index].min" @input="updateColumnSearch()">
+                        <input type="number" inputmode="decimal"
+                               :aria-label="`Maximum value for ${column.name}`" placeholder="Max"
+                               x-model="columnSearches[index].max" @input="updateColumnSearch()">
+                      </div>
+                    </template>
+                    <template x-if="!isNumericColumn(column)">
+                      <input class="text-search" type="search" :id="`column-search-${index}`"
+                             :aria-label="`Search ${column.name}`" placeholder="Search…"
+                             x-model="columnSearches[index].text" @input="updateColumnSearch()">
+                    </template>
+
                     <div class="filter-buttons">
                       <button type="button" class="filter-button"
                               x-show="!column.resolution && selectedGuess(column).unmatchedValues.length > 0"
@@ -85,6 +105,7 @@
                               @click="toggleFilter(index, 'notResolved')">
                         Not resolved (<span x-text="unresolvedCount(column)"></span>)
                       </button>
+                    </div>
                     </div>
                   </div>
                 </th>

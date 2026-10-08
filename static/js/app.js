@@ -13,6 +13,7 @@ function App() {
     columns: [], // { name, guesses, selectedGuessIndex, emptyCount, resolution }: resolution is null unless the selected type is geographic, see column_resolution.js
     filter: null, // null, or { columnIndex, kind: "unmatched" | "empty" | "notResolved" }: at most one filter at a time
     matchingRows: null, // null when no filter is active, otherwise the Set of the indexes of the rows matching it
+    columnSearches: {}, // column index -> { text, min, max }
     error: "",
 
     async loadFile(file) {
@@ -34,6 +35,7 @@ function App() {
           resolveSelectedGuess(column, values);
           return column;
         });
+        this.columnSearches = Object.fromEntries(this.columns.map((_, index) => [index, { text: "", min: "", max: "" }]));
         this.setFilter(null);
         this.fileName = result.fileName;
       } catch (e) {
@@ -50,6 +52,25 @@ function App() {
       const column = this.columns[columnIndex];
       selectColumnGuess(column, Number(guessIndex), this.columnValues(column));
       this.resetColumnFilter(columnIndex);
+    },
+
+    isNumericColumn(column) {
+      return this.selectedGuess(column).type === "numeric";
+    },
+
+    updateColumnSearch() {
+      if (this.hasColumnSearches) this.filter = null;
+      this.refreshMatchingRows();
+    },
+
+    get hasColumnSearches() {
+      return Object.values(this.columnSearches).some(({ text, min, max }) =>
+        text.trim() !== "" || min !== "" || max !== "",
+      );
+    },
+
+    get hasActiveFilters() {
+      return Boolean(this.filter) || this.hasColumnSearches;
     },
 
     columnValues(column) {
@@ -97,7 +118,7 @@ function App() {
     chooseCandidate(columnIndex, rowIndex, nis, updateFilter = false) {
       if (nis) setManualResolution(this.columns[columnIndex], rowIndex, nis);
       if (updateFilter && this.filter?.columnIndex === columnIndex && this.filter.kind === "notResolved") {
-        this.matchingRows = this.findMatchingRows(this.filter);
+        this.refreshMatchingRows();
       }
     },
 
@@ -127,7 +148,40 @@ function App() {
 
     setFilter(filter) {
       this.filter = filter;
-      this.matchingRows = filter ? this.findMatchingRows(filter) : null;
+      if (filter) {
+        this.columnSearches = Object.fromEntries(
+          this.columns.map((_, index) => [index, { text: "", min: "", max: "" }]),
+        );
+      }
+      this.refreshMatchingRows();
+    },
+
+    refreshMatchingRows() {
+      if (!this.hasActiveFilters) {
+        this.matchingRows = null;
+        return;
+      }
+      const legacyMatches = this.filter ? this.findMatchingRows(this.filter) : null;
+      this.matchingRows = new Set();
+      this.rows.forEach((row, rowIndex) => {
+        if (legacyMatches && !legacyMatches.has(rowIndex)) return;
+        const passesSearches = this.columns.every((column, columnIndex) => {
+          const search = this.columnSearches[columnIndex];
+          const value = row[column.name];
+          if (this.isNumericColumn(column)) {
+            if (search.min !== "" || search.max !== "") {
+              const numericValue = typeof value === "number" ? value : Number(String(value).trim().replace(",", "."));
+              if (!Number.isFinite(numericValue)) return false;
+              if (search.min !== "" && numericValue < Number(search.min)) return false;
+              if (search.max !== "" && numericValue > Number(search.max)) return false;
+            }
+          } else if (search.text.trim() !== "") {
+            if (!normalizeSearchString(value).includes(normalizeSearchString(search.text))) return false;
+          }
+          return true;
+        });
+        if (passesSearches) this.matchingRows.add(rowIndex);
+      });
     },
 
     // Indexes of rows matching the selected value or resolution filter
@@ -160,6 +214,14 @@ function App() {
       return guess.level ? `${label} — ${guess.level}` : label;
     },
   };
+}
+
+function normalizeSearchString(value) {
+  return String(value ?? "")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLocaleLowerCase()
+    .trim();
 }
 
 Alpine.data("App", App);

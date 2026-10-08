@@ -129,6 +129,34 @@ h1 {
     margin: 0 0 0.75rem;
     overflow-wrap: anywhere;
 }
+
+.filters {
+    display: grid;
+    gap: 0.35rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+}
+.text-search,
+.numeric-search input {
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid var(--line);
+    border-radius: 0.35rem;
+    background: var(--bg);
+    color: var(--text);
+    font: inherit;
+}
+.text-search {
+    width: 100%;
+}
+.numeric-search {
+    display: flex;
+    gap: 0.4rem;
+}
+.numeric-search input {
+    width: 50%;
+}
 .type-label {
     display: grid;
     gap: 0.35rem;
@@ -168,7 +196,6 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: 0.75rem;
 }
 .filter-button {
     padding: 0.35rem 0.7rem;
