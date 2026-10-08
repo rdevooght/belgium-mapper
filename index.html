@@ -1,140 +1,173 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Table loader</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Table loader</title>
 
-  <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-  <script type="module" src="static/js/app.js"></script>
-</head>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
+    <script type="module" src="static/js/app.js"></script>
+  </head>
 
-<body>
-  <main x-data="App">
-    <h1>Load a CSV or Excel file</h1>
+  <body>
+    <main x-data="App">
+      <h1>Load a CSV or Excel file</h1>
 
-    <!-- Clicking the label opens the file picker; dropping a file on it loads it -->
-    <label class="dropzone"
-           :class="{ dragging }"
-           @dragover.prevent="dragging = true"
-           @dragleave.prevent="dragging = false"
-           @drop.prevent="dragging = false; loadFile($event.dataTransfer.files[0])">
-      Drop a file here, or click to choose one (.csv, .xlsx, .xls)
-      <input type="file" accept=".csv,.xlsx,.xls" hidden
-             @change="loadFile($event.target.files[0])">
-    </label>
+      <!-- Clicking the label opens the file picker; dropping a file on it loads it -->
+      <label
+        class="dropzone"
+        :class="{ dragging }"
+        @dragover.prevent="dragging = true"
+        @dragleave.prevent="dragging = false"
+        @drop.prevent="dragging = false; loadFile($event.dataTransfer.files[0])"
+      >
+        Drop a file here, or click to choose one (.csv, .xlsx, .xls)
+        <input type="file" accept=".csv,.xlsx,.xls" hidden @change="loadFile($event.target.files[0])" />
+      </label>
 
-    <p class="error" x-show="error" x-text="error" x-cloak></p>
+      <p class="error" x-show="error" x-text="error" x-cloak></p>
 
-    <section x-show="fileName" x-cloak>
-      <p class="count">
-        <strong x-text="fileName"></strong>:
-        <span x-show="hasActiveFilters" x-cloak><span x-text="visibleCount"></span> of</span>
-        <span x-text="rows.length"></span> rows
-      </p>
+      <section x-show="fileName" x-cloak>
+        <p class="count">
+          <strong x-text="fileName"></strong>:
+          <span x-show="hasActiveFilters" x-cloak><span x-text="visibleCount"></span> of</span>
+          <span x-text="rows.length"></span> rows
+        </p>
 
-      <h2>Data preview</h2>
-      <div class="table-scroll" role="region" aria-label="Data preview table" tabindex="0">
-        <table class="data-table">
-          <thead>
-            <tr>
-              <template x-for="(column, index) in columns" :key="index">
-                <th scope="col">
-                  <div class="column-info">
-                    <h3 x-text="column.name"></h3>
+        <h2>Data preview</h2>
+        <div class="table-scroll" role="region" aria-label="Data preview table" tabindex="0">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <template x-for="(column, index) in columns" :key="index">
+                  <th scope="col">
+                    <div class="column-info">
+                      <h3 x-text="column.name"></h3>
 
+                      <label class="type-label">
+                        Guessed type
+                        <template x-if="column.guesses.length > 1">
+                          <select @change="selectGuess(index, $event.target.value)">
+                            <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
+                              <option
+                                :value="guessIndex"
+                                :selected="guessIndex === column.selectedGuessIndex"
+                                x-text="guessLabel(guess)"
+                              ></option>
+                            </template>
+                          </select>
+                        </template>
+                        <strong x-show="column.guesses.length === 1" x-text="guessLabel(column.guesses[0])"></strong>
+                      </label>
+                      <dl class="guess-stats">
+                        <div>
+                          <dt>Matching values</dt>
+                          <dd x-text="`${(selectedGuess(column).matchRate * 100).toFixed(1)}%`"></dd>
+                        </div>
+                        <div>
+                          <dt>Unique matches</dt>
+                          <dd x-text="selectedGuess(column).uniqueMatches"></dd>
+                        </div>
+                      </dl>
+                      <div class="filters">
+                        Filters
+                        <template x-if="isNumericColumn(column)">
+                          <div class="numeric-search">
+                            <input
+                              type="number"
+                              inputmode="decimal"
+                              :id="`column-search-${index}`"
+                              :aria-label="`Minimum value for ${column.name}`"
+                              placeholder="Min"
+                              x-model="columnSearches[index].min"
+                              @input="updateColumnSearch()"
+                            />
+                            <input
+                              type="number"
+                              inputmode="decimal"
+                              :aria-label="`Maximum value for ${column.name}`"
+                              placeholder="Max"
+                              x-model="columnSearches[index].max"
+                              @input="updateColumnSearch()"
+                            />
+                          </div>
+                        </template>
+                        <template x-if="!isNumericColumn(column)">
+                          <input
+                            class="text-search"
+                            type="search"
+                            :id="`column-search-${index}`"
+                            :aria-label="`Search ${column.name}`"
+                            placeholder="Search…"
+                            x-model="columnSearches[index].text"
+                            @input="updateColumnSearch()"
+                          />
+                        </template>
 
-                    <label class="type-label">
-                      Guessed type
-                      <template x-if="column.guesses.length > 1">
-                        <select @change="selectGuess(index, $event.target.value)">
-                          <template x-for="(guess, guessIndex) in column.guesses" :key="guessIndex">
-                            <option :value="guessIndex" :selected="guessIndex === column.selectedGuessIndex" x-text="guessLabel(guess)"></option>
+                        <div class="filter-buttons">
+                          <button
+                            type="button"
+                            class="filter-button"
+                            x-show="!column.resolution && selectedGuess(column).unmatchedValues.length > 0"
+                            :class="{ active: isFilterActive(index, 'unmatched') }"
+                            :aria-pressed="isFilterActive(index, 'unmatched')"
+                            @click="toggleFilter(index, 'unmatched')"
+                          >
+                            Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)
+                          </button>
+                          <button
+                            type="button"
+                            class="filter-button"
+                            x-show="!column.resolution && column.emptyCount > 0"
+                            :class="{ active: isFilterActive(index, 'empty') }"
+                            :aria-pressed="isFilterActive(index, 'empty')"
+                            @click="toggleFilter(index, 'empty')"
+                          >
+                            Empty values (<span x-text="column.emptyCount"></span>)
+                          </button>
+                          <button
+                            type="button"
+                            class="filter-button"
+                            x-show="column.resolution && unresolvedCount(column) > 0"
+                            :class="{ active: isFilterActive(index, 'notResolved') }"
+                            :aria-pressed="isFilterActive(index, 'notResolved')"
+                            @click="toggleFilter(index, 'notResolved')"
+                          >
+                            Not resolved (<span x-text="unresolvedCount(column)"></span>)
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </th>
+                </template>
+              </tr>
+            </thead>
+            <tbody>
+              <template x-for="(row, rowIndex) in rows" :key="rowIndex">
+                <tr :hidden="!isRowVisible(rowIndex)">
+                  <template x-for="(column, columnIndex) in columns" :key="columnIndex">
+                    <td :class="cellClass(column, rowIndex)" :title="cellTitle(column, rowIndex)">
+                      <span x-text="row[column.name]"></span>
+                      <template x-if="cellResolution(column, rowIndex)?.status === 'ambiguous'">
+                        <select
+                          class="candidate-select"
+                          aria-label="Choose the geographic entity"
+                          @change="chooseCandidate(columnIndex, rowIndex, $event.target.value)"
+                        >
+                          <option value="">Choose…</option>
+                          <template x-for="entity in cellCandidates(column, rowIndex)" :key="entity.nis">
+                            <option :value="entity.nis" x-text="entityLabel(entity)"></option>
                           </template>
                         </select>
                       </template>
-                      <strong x-show="column.guesses.length === 1" x-text="guessLabel(column.guesses[0])"></strong>
-                    </label>
-                    <dl class="guess-stats">
-                      <div>
-                        <dt>Matching values</dt>
-                        <dd x-text="`${(selectedGuess(column).matchRate * 100).toFixed(1)}%`"></dd>
-                      </div>
-                      <div>
-                        <dt>Unique matches</dt>
-                        <dd x-text="selectedGuess(column).uniqueMatches"></dd>
-                      </div>
-                    </dl>
-                    <div class="filters">
-                    Filters
-                    <template x-if="isNumericColumn(column)">
-                      <div class="numeric-search">
-                        <input type="number" inputmode="decimal" :id="`column-search-${index}`"
-                               :aria-label="`Minimum value for ${column.name}`" placeholder="Min"
-                               x-model="columnSearches[index].min" @input="updateColumnSearch()">
-                        <input type="number" inputmode="decimal"
-                               :aria-label="`Maximum value for ${column.name}`" placeholder="Max"
-                               x-model="columnSearches[index].max" @input="updateColumnSearch()">
-                      </div>
-                    </template>
-                    <template x-if="!isNumericColumn(column)">
-                      <input class="text-search" type="search" :id="`column-search-${index}`"
-                             :aria-label="`Search ${column.name}`" placeholder="Search…"
-                             x-model="columnSearches[index].text" @input="updateColumnSearch()">
-                    </template>
-
-                    <div class="filter-buttons">
-                      <button type="button" class="filter-button"
-                              x-show="!column.resolution && selectedGuess(column).unmatchedValues.length > 0"
-                              :class="{ active: isFilterActive(index, 'unmatched') }"
-                              :aria-pressed="isFilterActive(index, 'unmatched')"
-                              @click="toggleFilter(index, 'unmatched')">
-                        Unmatched values (<span x-text="selectedGuess(column).unmatchedValues.length"></span>)
-                      </button>
-                      <button type="button" class="filter-button"
-                              x-show="!column.resolution && column.emptyCount > 0"
-                              :class="{ active: isFilterActive(index, 'empty') }"
-                              :aria-pressed="isFilterActive(index, 'empty')"
-                              @click="toggleFilter(index, 'empty')">
-                        Empty values (<span x-text="column.emptyCount"></span>)
-                      </button>
-                      <button type="button" class="filter-button"
-                              x-show="column.resolution && unresolvedCount(column) > 0"
-                              :class="{ active: isFilterActive(index, 'notResolved') }"
-                              :aria-pressed="isFilterActive(index, 'notResolved')"
-                              @click="toggleFilter(index, 'notResolved')">
-                        Not resolved (<span x-text="unresolvedCount(column)"></span>)
-                      </button>
-                    </div>
-                    </div>
-                  </div>
-                </th>
+                    </td>
+                  </template>
+                </tr>
               </template>
-            </tr>
-          </thead>
-          <tbody>
-            <template x-for="(row, rowIndex) in rows" :key="rowIndex">
-              <tr :hidden="!isRowVisible(rowIndex)">
-                <template x-for="(column, columnIndex) in columns" :key="columnIndex">
-                  <td :class="cellClass(column, rowIndex)" :title="cellTitle(column, rowIndex)">
-                    <span x-text="row[column.name]"></span>
-                    <template x-if="cellResolution(column, rowIndex)?.status === 'ambiguous'">
-                      <select class="candidate-select" aria-label="Choose the geographic entity"
-                              @change="chooseCandidate(columnIndex, rowIndex, $event.target.value)">
-                        <option value="">Choose…</option>
-                        <template x-for="entity in cellCandidates(column, rowIndex)" :key="entity.nis">
-                          <option :value="entity.nis" x-text="entityLabel(entity)"></option>
-                        </template>
-                      </select>
-                    </template>
-                  </td>
-                </template>
-              </tr>
-            </template>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
-</body>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
